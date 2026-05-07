@@ -1,0 +1,58 @@
+bucket,cluster,priority,keyword,intent,volume,notes
+keep,Crypto Basics / Prices,P1,what is cryptocurrency,I,450000,Strong evergreen pillar candidate
+keep,Crypto Basics / Prices,P1,cryptocurrency concepts,I,450000,Useful glossary companion
+keep,Blockchain Basics / Use Cases,P1,what is blockchain,I,368000,Best-fit authority page
+keep,Blockchain Basics / Use Cases,P1,blockchain technology,I,201000,High-demand explainer
+keep,Ethereum Basics / Price,P1,ethereum,N,201000,Core ETH page
+keep,Ethereum Basics / Price,P1,eth,I,165000,Support ETH glossary / price page
+keep,Ethereum Basics / Price,P1,ethereum price usd,I,165000,Needs market-data framing
+keep,Crypto Basics / Prices,P1,cryptocurrency,I,135000,Broad evergreen
+keep,Blockchain Basics / Use Cases,P1,blockchain,IN,110000,Broad but important
+keep,Crypto Basics / Prices,P1,crypto prices,I,60500,Good hub/support page
+keep,Ethereum Basics / Price,P1,ethereum news,I,60500,Can support ETH news hub
+keep,Bitcoin Basics / Price / Education,P1,what is bitcoin,I,40500,Best Bitcoin pillar candidate
+keep,Bitcoin Basics / Price / Education,P1,bit coin,I,33100,Variant for semantic support
+keep,Crypto Basics / Prices,P1,cryptocurrency prices,I,27100,Price explainer companion
+keep,Crypto Exchanges / Trading / Tools,P1,crypto exchange,I,22200,Commercial intent but on-topic
+keep,Crypto Basics / Prices,P1,what is crypto,I,22200,Glossary intent
+keep,Bitcoin Basics / Price / Education,P1,bitcoin meaning,I,18100,Good support page
+keep,Blockchain Tools / Explorer / Wallet,P1,blockchain explorer,N,18100,Clear user-intent explainer
+keep,Crypto Exchanges / Trading / Tools,P1,cryptocurrency trading,IC,18100,Educational trading intent
+keep,Blockchain Basics / Use Cases,P1,blockchain in healthcare,I,14800,Use-case cluster page
+keep,Blockchain Basics / Use Cases,P1,blockchain in supply chain,I,12100,Use-case cluster page
+keep,Bitcoin Basics / Price / Education,P1,how does bitcoin work,I,12100,Strong Bitcoin support page
+keep,Crypto Exchanges / Trading / Tools,P1,cryptocurrency exchanges,IC,12100,Cluster support
+keep,Memecoin,P2,meme coin,I,18100,Good trend-adjacent evergreen
+keep,Memecoin,P2,meme coins,I,14800,Support page
+keep,Memecoin,P2,memecoin,I,14800,Variant support
+keep,Ethereum Basics / Price,P2,what is ethereum,I,6600,Core explainer
+keep,Bitcoin Basics / Price / Education,P2,what is a bitcoin,I,8100,Variant support
+keep,Bitcoin Basics / Price / Education,P2,bitcoin exchange,I,5400,Needs careful page intent
+keep,Blockchain Tools / Explorer / Wallet,P2,what is a blockchain explorer,I,6600,Strong support page
+keep,Blockchain Tools / Explorer / Wallet,P2,what is a blockchain wallet,I,6600,Strong support page
+keep,Crypto Exchanges / Trading / Tools,P2,best crypto exchange,C,6600,Commercial but relevant
+keep,Crypto Exchanges / Trading / Tools,P2,crypto trading,I,6600,Educational trading page
+keep,Crypto Exchanges / Trading / Tools,P2,metamask login,NT,6600,Only if framed as safe navigation/help
+keep,Stellar / XLM,P3,stellar,I,33100,Only if Coincu wants altcoin basics depth
+keep,Stellar / XLM,P3,stellar lumens,I,9900,Altcoin support page
+keep,Stellar / XLM,P3,xlm,I,8100,Altcoin support page
+keep,Other Crypto Entities / Tools,P3,notcoin,I,12100,Selective entity coverage
+keep,Other Crypto Entities / Tools,P3,chainalysis,NC,6600,Entity / company explainer
+selective,Collectibles / Alternative Assets Test,P3,pokemon card size,I,6600,Use only under What 1 Bitcoin Can Buy or collectible-asset framing
+selective,Collectibles / Alternative Assets Test,P3,pokemon card dimensions,I,6600,Same as above
+selective,Collectibles / Alternative Assets Test,P3,how to grade pokemon cards,I,4400,Only if tied to graded-card market analysis or BTC purchasing power
+selective,Collectibles / Alternative Assets Test,P3,where to sell pokemon cards near me,T,2400,Weak fit unless strongly reframed around collectible liquidity
+selective,Collectibles / Alternative Assets Test,P3,what is shadowless pokemon card,I,1300,Only as supporting collectible vocabulary inside a BTC/asset cluster
+selective,Luxury Reframed Through Bitcoin,P3,luxury villas italy le collectionist,NC,40500,Do not target directly; only use this class of topic inside What 1 Bitcoin Can Buy style content
+selective,Luxury Reframed Through Bitcoin,P3,affordable luxury jewelry,C,14800,Only if reframed as BTC purchasing power not jewelry shopping intent
+selective,Luxury Reframed Through Bitcoin,P3,luxury mattress,C,9900,Very weak fit; test only if real-world purchasing-power angle is explicit
+selective,Crypto-Linked Net Worth Only,P3,michael saylor net worth,I,0,Keep only if keyword exists later and page is tightly tied to Bitcoin holdings or crypto influence
+selective,Crypto-Linked Net Worth Only,P3,jack mallers net worth,I,0,Keep only if keyword exists later and page is tightly tied to Bitcoin adoption or payments
+selective,Crypto-Linked Net Worth Only,P3,nayib bukele net worth,I,0,Keep only if page focus stays on Bitcoin strategy and policy relevance
+drop,Net Worth / Celebrity,Reject,damon darling net worth,I,22200,Off-topic for Coincu
+drop,Net Worth / Celebrity,Reject,misha ezratti net worth,I,18100,Off-topic for Coincu
+drop,Physical Coin Collecting,Reject,coin value checker,I,18100,Not crypto; physical coin collector intent
+drop,Physical Coin Collecting,Reject,coin identifier,I,8100,Not crypto; physical coin collector intent
+drop,Sports Cards,Reject,basketball card boxes,I,1000,Off-topic card hobby
+drop,Pokemon ROM / Emulator / Cheats,Reject,pokemon firered rom,I,1300,Risky and irrelevant
+drop,NSFW / Adult,Reject,pokemon porn comics,I,27100,Hard reject
