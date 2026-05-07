@@ -5,7 +5,7 @@ Meta description: See what 1 Bitcoin can buy across luxury cars, watches, travel
 Slug: what-can-1-bitcoin-buy  
 Last updated: May 7, 2026
 
-As of May 7, 2026, 1 Bitcoin is worth about $81,402. That is enough to buy a meaningful range of premium goods, experiences, and asset exposure in the real world, but not the top end of every category. In some markets, one coin still buys outright ownership. In others, it functions more like a threshold, a deposit, or a serious partial claim on something more expensive.
+At the reference price used for this guide, 1 Bitcoin still buys a meaningful range of premium goods, experiences, and asset exposure in the real world, but not the top end of every category. In some markets, one coin still buys outright ownership. In others, it functions more like a threshold, a deposit, or a serious partial claim on something more expensive.
 
 That is why Bitcoin purchasing power matters more than the chart alone. A headline price tells the market what BTC is worth in dollars. A purchasing-power guide shows what one coin can actually command outside crypto. For anyone trying to understand whether Bitcoin still represents substantial wealth in practical terms, that second lens is often the more useful one.
 
