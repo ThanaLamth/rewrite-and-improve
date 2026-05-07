@@ -114,9 +114,9 @@ That is why a guide like this should not hard-code time-sensitive values across 
 
 ## How To Use This Guide
 
-This page works best as a hub rather than a shopping list. It should answer the big question first, then route into deeper category pages where exact model lists, watch references, travel comps, and collectible benchmarks can be updated more frequently.
+This page works best as a hub rather than a shopping list. It should answer the big question first, then create a stable framework that can later support deeper category comparisons in cars, watches, collectibles, travel, gold, and real estate.
 
-Used that way, the pillar stays evergreen. The live BTC box can be refreshed. The category logic remains stable. The deeper comparisons can evolve underneath it without forcing a full rewrite each time the market moves.
+Used that way, the pillar stays evergreen. The live BTC box can be refreshed. The category logic remains stable. Detailed comparison pages can be added underneath it over time without forcing a full rewrite each time the market moves.
 
 ## Methodology
 
@@ -172,15 +172,6 @@ The real value of a one-Bitcoin comparison is not the novelty of buying somethin
 At today's reference level, one BTC still commands serious real-world value. It can reach deep into premium categories, provide visible hard-asset exposure, and function as meaningful entry capital in markets that matter. It still does not guarantee top-tier ownership everywhere, and that is exactly why the threshold analysis matters.
 
 The most durable way to read Bitcoin is not only through price targets. It is through purchasing power. When that lens is clear, the number on the chart becomes much easier to understand.
-
-## Suggested Internal Links For The Cluster
-
-- What 1 Bitcoin Can Buy in 2026: 10 Luxury Cars Compared
-- What 1 Bitcoin Can Buy: Watches Edition
-- What 1 Bitcoin Can Buy: Cards Edition
-- What 1 Bitcoin Can Buy: Travel Edition
-- What 1 Bitcoin Can Buy: Gold and Hard Assets
-- What 1 Bitcoin Can Buy: Real Estate Entry Points
 
 ## References
 
