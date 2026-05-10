@@ -7,6 +7,7 @@ Last updated: 2026-05-10
 Kế hoạch này tóm tắt:
 
 - các hubpage Coincu đang ưu tiên build
+- dự án pillar/cluster đang build song song
 - từng hub dùng để gom loại bài nào
 - thứ tự rollout hợp lý
 - các file draft public-ready đã có sẵn để tiếp tục triển khai
@@ -26,6 +27,12 @@ Các hub này là lớp nền để:
 - gom bớt content đang nằm rải rác ở archive
 - tạo internal linking sạch hơn giữa review, ecosystem, glossary, guide
 
+Song song với đó, Coincu cũng đang có một nhánh **pillar consumer-style** riêng:
+
+- `What 1 Bitcoin Can Buy`
+
+Đây không phải hub review truyền thống. Nó là một cụm pillar/cluster dùng góc nhìn purchasing power của BTC để mở rộng traffic theo hướng consumer, finance-adjacent, và topical bridge giữa crypto với các chủ đề đời sống có thể quy đổi hợp lý.
+
 ## Thứ tự rollout đề xuất
 
 ### Giai đoạn 1: Build ngay
@@ -34,18 +41,19 @@ Các hub này là lớp nền để:
 2. `Exchange Reviews`
 3. `Protocol Reviews`
 4. `Wallet Reviews`
+5. `What 1 Bitcoin Can Buy`
 
 ### Giai đoạn 2: Build sau khi 4 hub nền ổn
 
-5. `Ecosystem Hubs`
-6. `Crypto Glossary` tối ưu lại
-7. `On-chain Movers / Why Is X Pumping`
+6. `Ecosystem Hubs`
+7. `Crypto Glossary` tối ưu lại
+8. `On-chain Movers / Why Is X Pumping`
 
 ### Giai đoạn 3: Chỉ làm nếu có đủ lực cập nhật
 
-8. `Airdrop Guides`
-9. `DeFi Strategy / Staking / Yield`
-10. `Security / Scam / Incident Guides`
+9. `Airdrop Guides`
+10. `DeFi Strategy / Staking / Yield`
+11. `Security / Scam / Incident Guides`
 
 ## 1. Coin Reviews
 
@@ -188,7 +196,78 @@ Hub này dùng để gom các bài review ví, self-custody workflow, ecosystem 
 
 - `coincu_wallet_reviews_hubpage_public_ready.md`
 
-## 5. Ecosystem Hubs
+## 5. What 1 Bitcoin Can Buy
+
+### Vai trò
+
+Đây là một **pillar project** riêng, không phải review hub thuần crypto. Nó dùng một framework rất dễ hiểu với người dùng phổ thông:
+
+- `1 BTC hiện tại mua được gì`
+
+Mục tiêu của cụm này là:
+
+- tạo một pillar mạnh xoay quanh sức mua của Bitcoin
+- mở rộng ra nhiều cluster consumer-friendly nhưng vẫn giữ BTC là trung tâm
+- tránh rơi vào generic lifestyle traffic quá xa chủ đề crypto bằng cách luôn giữ góc nhìn quy đổi từ BTC
+
+### Loại bài nên nằm trong cụm này
+
+- pillar gốc `What 1 Bitcoin Can Buy`
+- comparison article theo từng ngành hàng
+- category edition pages
+- listicle so sánh theo budget 1 BTC
+- bài quy đổi BTC sang tài sản/đồ vật/collectible có thị trường rõ ràng
+
+### Cấu trúc nên có
+
+#### Pillar gốc
+
+- `What 1 Bitcoin Can Buy`
+
+#### Cluster nên ưu tiên
+
+- `Cars Edition`
+- `Cards Edition`
+- `Watches Edition`
+- `Real Estate Edition`
+- `Luxury Goods Edition`
+
+### Loại bài con phù hợp
+
+- `What 1 Bitcoin Can Buy in 2026: 10 Luxury Cars Compared`
+- `What 1 Bitcoin Can Buy: Pokemon Cards Edition`
+- `What 1 Bitcoin Can Buy: Football Cards Edition`
+- `What 1 Bitcoin Can Buy: Baseball Cards Edition`
+- `What 1 Bitcoin Can Buy: Basketball Cards Edition`
+- `What 1 Bitcoin Can Buy: One Piece Cards Edition`
+
+### Ghi chú chiến lược
+
+Đây là hướng mở rộng hợp lý hơn nhiều so với:
+
+- generic luxury content không gắn BTC
+- generic card content không gắn BTC
+- traffic play kiểu celebrity/networth quá xa crypto
+
+Nói ngắn:
+
+- nếu làm `luxury`, `cards`, `watches`, `real estate`
+- thì nên làm dưới chiếc ô `What 1 Bitcoin Can Buy`
+- không nên tách thành các hub lifestyle độc lập quá sớm
+
+### Không nên làm
+
+- bài generic kiểu chỉ nói về luxury cars mà không gắn BTC
+- bài generic collectibles không có angle Bitcoin
+- bài lifestyle không có quan hệ rõ với purchasing power của BTC
+
+### File draft hiện có
+
+- `coincu_what_1_bitcoin_can_buy_pillar_skeleton.md`
+- `coincu_what_can_1_bitcoin_buy_pillar_draft.md`
+- `coincu_bitcoin_luxury_cars_internal_link_map.md`
+
+## 6. Ecosystem Hubs
 
 ### Vai trò
 
@@ -221,7 +300,7 @@ Hub này dùng để gom các bài review ví, self-custody workflow, ecosystem 
 - `TONUP review`
 - `TON Place review`
 
-## 6. Crypto Glossary
+## 7. Crypto Glossary
 
 ### Vai trò
 
@@ -239,7 +318,7 @@ Hub reference/evergreen dùng để đỡ toàn site và hỗ trợ internal lin
 
 Hub này đã tồn tại công khai nhưng nên được tối ưu điều hướng lại thay vì làm mới từ đầu.
 
-## 7. On-chain Movers / Why Is X Pumping
+## 8. On-chain Movers / Why Is X Pumping
 
 ### Vai trò
 
@@ -296,6 +375,14 @@ Chỉ nên build sau khi 4 hub nền đã ổn.
 - recovery guide
 - ecosystem wallet picks
 
+### What 1 Bitcoin Can Buy
+
+- BTC purchasing-power pillar
+- consumer comparison pages gắn BTC
+- cars / cards / watches / real estate / luxury cluster
+- evergreen comparison content có angle quy đổi 1 BTC
+- topical bridge giữa crypto và consumer intent
+
 ### Ecosystem Hubs
 
 - TON / Sui / Solana / Base clusters
@@ -310,14 +397,26 @@ Chỉ nên build sau khi 4 hub nền đã ổn.
 - `coincu_exchange_reviews_hubpage_public_ready.md`
 - `coincu_wallet_reviews_hubpage_public_ready.md`
 
+## File pillar / cluster hiện có
+
+- `coincu_what_1_bitcoin_can_buy_pillar_skeleton.md`
+- `coincu_what_can_1_bitcoin_buy_pillar_draft.md`
+- `coincu_bitcoin_luxury_cars_internal_link_map.md`
+
 ## Kết luận thực dụng
 
-Nếu Coincu chỉ làm đúng hướng trong giai đoạn này, nên coi 4 hub dưới đây là xương sống:
+Nếu Coincu chỉ làm đúng hướng trong giai đoạn này, nên coi 2 trục dưới đây là xương sống:
+
+### Trục 1: Review authority
 
 1. `Coin Reviews`
 2. `Protocol Reviews`
 3. `Exchange Reviews`
 4. `Wallet Reviews`
+
+### Trục 2: Consumer pillar mở rộng từ BTC
+
+5. `What 1 Bitcoin Can Buy`
 
 Sau đó mới mở rộng sang:
 
