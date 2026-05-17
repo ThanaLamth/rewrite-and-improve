@@ -1,0 +1,109 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="114" y1="84" x2="1480" y2="836" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F7F0E4"/>
+      <stop offset="0.45" stop-color="#EEE1CD"/>
+      <stop offset="1" stop-color="#E5D5C0"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="826" y1="152" x2="1438" y2="688" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1E2430"/>
+      <stop offset="1" stop-color="#2D3442"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="1022" y1="224" x2="1316" y2="496" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF8E44"/>
+      <stop offset="1" stop-color="#D14F2A"/>
+    </linearGradient>
+    <filter id="shadow" x="729" y="89" width="770" height="660" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dx="12" dy="16"/>
+      <feGaussianBlur stdDeviation="18"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.180392 0 0 0 0 0.141176 0 0 0 0 0.117647 0 0 0 0.18 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_1"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_1" result="shape"/>
+    </filter>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" stroke="#B49F89" stroke-opacity="0.22" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+
+  <circle cx="1432" cy="136" r="96" fill="#EADBC7"/>
+  <circle cx="1388" cy="168" r="44" fill="#1E2430"/>
+  <circle cx="1326" cy="736" r="124" fill="#E0CBAF"/>
+  <circle cx="1290" cy="736" r="34" fill="#C95C2B"/>
+
+  <path d="M96 720C220 624 334 588 466 584C576 580 652 610 786 670" stroke="#B87345" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 15"/>
+
+  <rect x="110" y="126" width="560" height="32" fill="#1E2430"/>
+  <text x="110" y="230" fill="#1E2430" font-size="94" font-weight="700" font-family="Georgia, 'Times New Roman', serif">
+    Coin Reviews
+  </text>
+  <text x="114" y="288" fill="#5A5248" font-size="28" font-weight="500" font-family="Arial, Helvetica, sans-serif">
+    Tokenomics, narratives, demand drivers, and risk
+  </text>
+  <text x="114" y="332" fill="#5A5248" font-size="28" font-weight="500" font-family="Arial, Helvetica, sans-serif">
+    organized into one research hub
+  </text>
+
+  <text x="114" y="432" fill="#8B5A37" font-size="16" font-weight="700" letter-spacing="2.5" font-family="Arial, Helvetica, sans-serif">
+    QUICK READS
+  </text>
+
+  <rect x="114" y="462" width="222" height="84" rx="16" fill="#F9F4EC" stroke="#C9B296"/>
+  <text x="140" y="498" fill="#1E2430" font-size="28" font-weight="700" font-family="Arial, Helvetica, sans-serif">AI tokens</text>
+  <text x="140" y="530" fill="#665D53" font-size="18" font-family="Arial, Helvetica, sans-serif">Product vs token role</text>
+
+  <rect x="354" y="462" width="222" height="84" rx="16" fill="#F9F4EC" stroke="#C9B296"/>
+  <text x="380" y="498" fill="#1E2430" font-size="28" font-weight="700" font-family="Arial, Helvetica, sans-serif">Meme coins</text>
+  <text x="380" y="530" fill="#665D53" font-size="18" font-family="Arial, Helvetica, sans-serif">Narrative vs durability</text>
+
+  <rect x="114" y="566" width="222" height="84" rx="16" fill="#F9F4EC" stroke="#C9B296"/>
+  <text x="140" y="602" fill="#1E2430" font-size="28" font-weight="700" font-family="Arial, Helvetica, sans-serif">Layer 1</text>
+  <text x="140" y="634" fill="#665D53" font-size="18" font-family="Arial, Helvetica, sans-serif">Infrastructure thesis</text>
+
+  <rect x="354" y="566" width="222" height="84" rx="16" fill="#F9F4EC" stroke="#C9B296"/>
+  <text x="380" y="602" fill="#1E2430" font-size="28" font-weight="700" font-family="Arial, Helvetica, sans-serif">NFT culture</text>
+  <text x="380" y="634" fill="#665D53" font-size="18" font-family="Arial, Helvetica, sans-serif">Community and brand</text>
+
+  <text x="114" y="744" fill="#6A6259" font-size="20" font-family="Arial, Helvetica, sans-serif">
+    Built for readers who want comparison, not noise.
+  </text>
+
+  <g filter="url(#shadow)">
+    <rect x="781" y="132" width="670" height="580" rx="28" fill="url(#panel)"/>
+    <rect x="833" y="190" width="566" height="124" rx="22" fill="#F4E8D8"/>
+    <rect x="871" y="228" width="150" height="48" rx="24" fill="#1E2430"/>
+    <text x="897" y="259" fill="#F4E8D8" font-size="24" font-weight="700" font-family="Arial, Helvetica, sans-serif">Featured</text>
+    <text x="1060" y="258" fill="#1E2430" font-size="34" font-weight="700" font-family="Arial, Helvetica, sans-serif">Humanity Protocol</text>
+    <text x="1060" y="290" fill="#5F564D" font-size="20" font-family="Arial, Helvetica, sans-serif">Product-led token research</text>
+
+    <rect x="833" y="344" width="268" height="142" rx="22" fill="#2F3747"/>
+    <rect x="1119" y="344" width="280" height="142" rx="22" fill="url(#accent)"/>
+    <rect x="833" y="510" width="182" height="146" rx="22" fill="#D9C3A5"/>
+    <rect x="1033" y="510" width="174" height="146" rx="22" fill="#F4E8D8"/>
+    <rect x="1225" y="510" width="174" height="146" rx="22" fill="#2F3747"/>
+
+    <text x="864" y="392" fill="#F4E8D8" font-size="18" font-weight="700" letter-spacing="1.5" font-family="Arial, Helvetica, sans-serif">MEME</text>
+    <text x="864" y="432" fill="#F4E8D8" font-size="34" font-weight="700" font-family="Arial, Helvetica, sans-serif">BUILDon</text>
+    <text x="864" y="462" fill="#C9D1DC" font-size="18" font-family="Arial, Helvetica, sans-serif">Narrative vs holder structure</text>
+
+    <text x="1150" y="392" fill="#FFF0E7" font-size="18" font-weight="700" letter-spacing="1.5" font-family="Arial, Helvetica, sans-serif">AI</text>
+    <text x="1150" y="432" fill="#FFF0E7" font-size="34" font-weight="700" font-family="Arial, Helvetica, sans-serif">Bittensor</text>
+    <text x="1150" y="462" fill="#FFE0CC" font-size="18" font-family="Arial, Helvetica, sans-serif">Network design and token role</text>
+
+    <text x="859" y="554" fill="#6D4B32" font-size="16" font-weight="700" letter-spacing="1.5" font-family="Arial, Helvetica, sans-serif">LEGACY</text>
+    <text x="859" y="596" fill="#1E2430" font-size="30" font-weight="700" font-family="Arial, Helvetica, sans-serif">LUNC</text>
+    <text x="859" y="628" fill="#5F564D" font-size="18" font-family="Arial, Helvetica, sans-serif">Burns and governance</text>
+
+    <text x="1057" y="554" fill="#8B5A37" font-size="16" font-weight="700" letter-spacing="1.5" font-family="Arial, Helvetica, sans-serif">NFT</text>
+    <text x="1057" y="596" fill="#1E2430" font-size="30" font-weight="700" font-family="Arial, Helvetica, sans-serif">PENGU</text>
+    <text x="1057" y="628" fill="#5F564D" font-size="18" font-family="Arial, Helvetica, sans-serif">Culture and community</text>
+
+    <text x="1248" y="554" fill="#D8E0EA" font-size="16" font-weight="700" letter-spacing="1.5" font-family="Arial, Helvetica, sans-serif">STRUCTURE</text>
+    <text x="1248" y="596" fill="#F4E8D8" font-size="30" font-weight="700" font-family="Arial, Helvetica, sans-serif">Ethena</text>
+    <text x="1248" y="628" fill="#CAD3DE" font-size="18" font-family="Arial, Helvetica, sans-serif">Mechanism risk</text>
+  </g>
+</svg>
