@@ -2,11 +2,13 @@
 
 from __future__ import annotations
 
+import argparse
 import csv
 import html
 import re
 from collections import Counter, defaultdict
 from dataclasses import dataclass
+from datetime import date
 from pathlib import Path
 from typing import Iterable
 import xml.etree.ElementTree as ET
@@ -17,9 +19,11 @@ DC_NS = {"dc": "http://purl.org/dc/elements/1.1/"}
 CONTENT_NS = {"content": "http://purl.org/rss/1.0/modules/content/"}
 EXCERPT_NS = {"excerpt": "http://wordpress.org/export/1.2/excerpt/"}
 
-ROOT = Path("/home/googleupdate")
-OUTPUT_ROOT = ROOT / "rewrite-and-improve"
-INPUT_PATTERN = "coincu-latestcryptocurrencynewsandanalysis.WordPress.2026-05-05*.xml"
+SCRIPT_ROOT = Path(__file__).resolve().parent
+REPO_ROOT = SCRIPT_ROOT.parent
+DEFAULT_INPUT_ROOT = REPO_ROOT.parent
+DEFAULT_OUTPUT_ROOT = REPO_ROOT
+DEFAULT_INPUT_PATTERN = "coincu-latestcryptocurrencynewsandanalysis.WordPress.2026-05-05*.xml"
 
 TOP_LEVEL_CATEGORIES = [
     "Knowledge",
@@ -478,7 +482,12 @@ def build_hub_rows(unique_rows: list[dict[str, str]]) -> list[dict[str, str]]:
     return hub_rows
 
 
-def build_markdown_summary(raw_rows: list[dict[str, str]], unique_rows: list[dict[str, str]], hub_rows: list[dict[str, str]]) -> str:
+def build_markdown_summary(
+    raw_rows: list[dict[str, str]],
+    unique_rows: list[dict[str, str]],
+    hub_rows: list[dict[str, str]],
+    output_root: Path,
+) -> str:
     raw_source_counts = Counter(row["source_export_clusters"] for row in raw_rows)
     duplicate_count = sum(1 for row in unique_rows if int(row["occurrences"]) > 1)
     status_counts = Counter(row["status"] for row in unique_rows)
@@ -519,19 +528,21 @@ def build_markdown_summary(raw_rows: list[dict[str, str]], unique_rows: list[dic
         "Net Worth / Celebrity",
     ]
 
+    output_root = output_root.resolve()
+
     lines: list[str] = []
     lines.append("# Coincu Export Analysis")
     lines.append("")
-    lines.append("Last updated: 2026-05-05")
+    lines.append(f"Last updated: {date.today().isoformat()}")
     lines.append("")
     lines.append("## Scope")
     lines.append("")
     lines.append(f"- Parsed source files: `{len(raw_source_counts)}`")
     lines.append(f"- Raw post records across all files: `{len(raw_rows)}`")
     lines.append(f"- Unique posts after dedupe by URL/slug/title: `{len(unique_rows)}`")
-    lines.append("- Raw inventory CSV: `/home/googleupdate/rewrite-and-improve/coincu_export_posts_inventory_raw.csv`")
-    lines.append("- Unique inventory CSV: `/home/googleupdate/rewrite-and-improve/coincu_export_posts_inventory.csv`")
-    lines.append("- Hub candidates CSV: `/home/googleupdate/rewrite-and-improve/coincu_hub_candidates.csv`")
+    lines.append(f"- Raw inventory CSV: `{output_root / 'coincu_export_posts_inventory_raw.csv'}`")
+    lines.append(f"- Unique inventory CSV: `{output_root / 'coincu_export_posts_inventory.csv'}`")
+    lines.append(f"- Hub candidates CSV: `{output_root / 'coincu_hub_candidates.csv'}`")
     lines.append("")
     lines.append("## Source Files")
     lines.append("")
@@ -590,13 +601,41 @@ def build_markdown_summary(raw_rows: list[dict[str, str]], unique_rows: list[dic
     return "\n".join(lines)
 
 
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description="Analyze Coincu WordPress exports and build hub planning files.")
+    parser.add_argument(
+        "--input-root",
+        type=Path,
+        default=DEFAULT_INPUT_ROOT,
+        help="Directory that contains the WordPress XML exports.",
+    )
+    parser.add_argument(
+        "--output-root",
+        type=Path,
+        default=DEFAULT_OUTPUT_ROOT,
+        help="Directory where CSV and markdown outputs should be written.",
+    )
+    parser.add_argument(
+        "--input-pattern",
+        default=DEFAULT_INPUT_PATTERN,
+        help="Glob pattern used to locate WordPress XML exports inside the input root.",
+    )
+    return parser.parse_args()
+
+
 def main() -> None:
+    args = parse_args()
+    input_root = args.input_root.expanduser().resolve()
+    output_root = args.output_root.expanduser().resolve()
+
     source_paths = sorted(
-        ROOT.glob(INPUT_PATTERN),
+        input_root.glob(args.input_pattern),
         key=lambda path: int(re.search(r"\((\d+)\)\.xml$", path.name).group(1)) if re.search(r"\((\d+)\)\.xml$", path.name) else 0,
     )
     if not source_paths:
-        raise SystemExit("No Coincu XML exports found.")
+        raise SystemExit(
+            f"No Coincu XML exports found under {input_root} matching {args.input_pattern}."
+        )
 
     raw_rows: list[dict[str, str]] = []
     for path in source_paths:
@@ -639,11 +678,13 @@ def main() -> None:
         "why_fit",
     ]
 
-    write_csv(OUTPUT_ROOT / "coincu_export_posts_inventory_raw.csv", raw_fieldnames, raw_rows)
-    write_csv(OUTPUT_ROOT / "coincu_export_posts_inventory.csv", raw_fieldnames, unique_rows)
-    write_csv(OUTPUT_ROOT / "coincu_hub_candidates.csv", hub_fieldnames, hub_rows)
-    (OUTPUT_ROOT / "coincu_content_cluster_recommendations.md").write_text(
-        build_markdown_summary(raw_rows, unique_rows, hub_rows),
+    output_root.mkdir(parents=True, exist_ok=True)
+
+    write_csv(output_root / "coincu_export_posts_inventory_raw.csv", raw_fieldnames, raw_rows)
+    write_csv(output_root / "coincu_export_posts_inventory.csv", raw_fieldnames, unique_rows)
+    write_csv(output_root / "coincu_hub_candidates.csv", hub_fieldnames, hub_rows)
+    (output_root / "coincu_content_cluster_recommendations.md").write_text(
+        build_markdown_summary(raw_rows, unique_rows, hub_rows, output_root),
         encoding="utf-8",
     )
 

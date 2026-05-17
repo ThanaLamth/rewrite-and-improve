@@ -1,15 +1,15 @@
 # Coincu Export Analysis
 
-Last updated: 2026-05-05
+Last updated: 2026-05-12
 
 ## Scope
 
 - Parsed source files: `9`
 - Raw post records across all files: `1505`
 - Unique posts after dedupe by URL/slug/title: `1484`
-- Raw inventory CSV: `/home/googleupdate/rewrite-and-improve/coincu_export_posts_inventory_raw.csv`
-- Unique inventory CSV: `/home/googleupdate/rewrite-and-improve/coincu_export_posts_inventory.csv`
-- Hub candidates CSV: `/home/googleupdate/rewrite-and-improve/coincu_hub_candidates.csv`
+- Raw inventory CSV: `/home/qcweb/rewrite-and-improve/coincu_export_posts_inventory_raw.csv`
+- Unique inventory CSV: `/home/qcweb/rewrite-and-improve/coincu_export_posts_inventory.csv`
+- Hub candidates CSV: `/home/qcweb/rewrite-and-improve/coincu_hub_candidates.csv`
 
 ## Source Files
 
