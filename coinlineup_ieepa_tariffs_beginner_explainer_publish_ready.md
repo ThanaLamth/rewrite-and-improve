@@ -13,9 +13,12 @@ For beginners, this issue matters because tariffs can affect prices, business co
 
 The short version is that the International Emergency Economic Powers Act, or IEEPA, gives the president broad tools during certain national emergencies, but the law does not clearly say the president can impose tariffs. On February 20, 2026, the U.S. Supreme Court held in *Learning Resources, Inc. v. Trump* and *V.O.S. Selections, Inc. v. United States* that IEEPA does not authorize the president to impose tariffs.
 
+**Suggested media:** Supreme Court / tariffs explainer hero graphic  
+Suggested caption: `The Supreme Court's February 20, 2026 ruling narrowed how IEEPA can be used in tariff policy.`
+
 ## What Is IEEPA in Simple Terms?
 
-IEEPA stands for the International Emergency Economic Powers Act. Congress passed it in 1977. The law allows the president to take certain economic actions after declaring a national emergency tied to an unusual and extraordinary threat that comes largely from outside the United States.
+IEEPA stands for the International Emergency Economic Powers Act. Congress passed it in 1977. The law allows the president to take certain economic actions after declaring a national emergency tied to an unusual and extraordinary threat that comes largely from outside the United States. Readers who want the full statutory text can check [50 U.S. Code Chapter 35](https://www.law.cornell.edu/uscode/text/50/chapter-35).
 
 In plain English, IEEPA is an emergency-powers law for cross-border economic threats. It has often been used for sanctions, asset freezes, and restrictions on transactions. It is a powerful law, but that does not automatically mean it covers every economic tool the government might want to use.
 
@@ -28,6 +31,9 @@ Tariffs are taxes or duties placed on imported goods. If the United States puts 
 People often talk about tariffs as if they were a general economic pressure tool. That is partly true. But legally, tariffs are also a specific kind of power. The U.S. Constitution gives Congress authority over tariffs and foreign commerce, and Congress has created several statutes that let the executive branch impose tariffs in certain situations.
 
 That is why the IEEPA question became so important. The issue was not whether tariffs are possible. The issue was whether IEEPA was one of the laws that actually authorizes them.
+
+**Suggested media:** simple comparison chart  
+Suggested caption: `Tariffs can be imposed under different trade statutes, but the legal source of authority matters.`
 
 ## Why Was IEEPA Used in Tariff Fights?
 
@@ -43,11 +49,13 @@ That argument matters because other tariff laws are far more explicit. Congress 
 
 Those laws come with their own triggers, procedures, and limits. IEEPA does not look like them.
 
+For a concise legal summary, the [Congressional Research Service legal sidebar](https://www.congress.gov/crs_external_products/LSB/PDF/LSB11332/LSB11332.3.pdf) is useful because it explains how courts analyzed tariffs imposed under IEEPA.
+
 ## What Did the Supreme Court Decide?
 
 This part is where many headlines became confusing, so it helps to strip it down.
 
-On February 20, 2026, the Supreme Court issued its opinion in *Learning Resources, Inc. v. Trump* and *V.O.S. Selections, Inc. v. United States*. The Court said IEEPA does not authorize the president to impose tariffs.
+On February 20, 2026, the Supreme Court issued its opinion in *Learning Resources, Inc. v. Trump* and *V.O.S. Selections, Inc. v. United States*. The Court said IEEPA does not authorize the president to impose tariffs. Readers who want the primary source can review the [Supreme Court opinion](https://www.supremecourt.gov/opinions/25pdf/24-1287_new_3135.pdf) or the [case docket](https://www.supremecourt.gov/docket/docketfiles/html/public/24-1287.html).
 
 The decision did not say all tariffs are illegal. It did not say presidents can never impose tariffs. It said this particular law, IEEPA, does not give that power.
 
@@ -68,6 +76,9 @@ For a beginner, the easiest way to understand the ruling is this:
 - IEEPA is broad
 - tariffs are specific
 - courts usually want clear language before treating a broad emergency law as a tariff statute
+
+**Suggested media:** decision breakdown infographic  
+Suggested caption: `The Court's reasoning centered on text, delegated tariff power, and the difference between broad regulation and import duties.`
 
 ## Does This Mean Tariffs Are Gone?
 

@@ -17,13 +17,19 @@ If you understand three things, you will be ahead of most beginners:
 - what futures and open interest mean
 - how those signals can help explain a fast move without guaranteeing what happens next
 
+**Suggested media:** Zcash price-move explainer hero  
+Suggested caption: `Zcash rallies often draw fresh attention to futures activity, open interest, and short-term market structure.`
+
 ## What Is Zcash?
 
-Zcash is a cryptocurrency designed to give users a stronger degree of financial privacy than most public blockchains. It is built from the original Bitcoin code base, but it adds privacy technology that allows users to shield transaction information.
+Zcash is a cryptocurrency designed to give users a stronger degree of financial privacy than most public blockchains. It is built from the original Bitcoin code base, but it adds privacy technology that allows users to shield transaction information. The [official Zcash explainer](https://z.cash/learn/what-is-zcash/) is a good starting point if you want the project's own plain-language overview.
 
 In simple terms, Zcash tries to combine the portability of crypto with optional privacy features. That makes it different from many large-cap coins whose blockchains are fully transparent by default.
 
 The native asset of the network is ZEC, which traders usually refer to as Zcash or just ZEC in market listings.
+
+**Suggested media:** Zcash basics card or shielded-transactions explainer  
+Suggested caption: `Zcash is best known for optional privacy features and its long history among privacy-focused crypto assets.`
 
 ## Why Does Zcash Attract Attention?
 
@@ -62,7 +68,7 @@ Zcash is not as deep or as heavily traded as Bitcoin. Because of that, a relativ
 
 ## What Are Crypto Futures?
 
-Crypto futures are contracts that let traders bet on the future price of an asset without necessarily owning the asset directly in a spot wallet.
+Crypto futures are contracts that let traders bet on the future price of an asset without necessarily owning the asset directly in a spot wallet. If you want the standard market definition, the [CFTC glossary](https://www.cftc.gov/LearnAndProtect/AdvisoriesAndArticles/CFTCGlossary/index.htm) is a reliable reference point for futures-market terms.
 
 For beginners, the important point is not the math. It is the behavior.
 
@@ -76,7 +82,7 @@ That leverage is one reason futures markets can make a Zcash move look more viol
 
 ## What Does Open Interest Mean?
 
-Open interest is the total number of futures contracts that remain open at the end of the trading day. It is not the same as volume.
+Open interest is the total number of futures contracts that remain open at the end of the trading day. It is not the same as volume. The [CME Group explainer on open interest](https://www.cmegroup.com/education/courses/introduction-to-futures/open-interest) is useful here because it shows how open interest differs from trading volume.
 
 The easiest distinction is this:
 
@@ -86,6 +92,9 @@ The easiest distinction is this:
 If new positions are being added, open interest rises. If positions are being closed, open interest falls.
 
 That makes open interest useful because it can hint at whether a move is attracting fresh participation or simply forcing old positions to unwind.
+
+**Suggested media:** simple volume vs. open-interest chart  
+Suggested caption: `Volume shows how much trading happened, while open interest shows how many futures contracts remain open.`
 
 ## Why Open Interest Matters When Zcash Is Moving
 
@@ -123,6 +132,9 @@ This can mean new shorts are building or fresh bearish positions are entering th
 ### Price down + open interest down
 
 This can mean traders are exiting positions rather than aggressively building new ones. Sometimes that points to a move losing energy.
+
+**Suggested media:** four-box price/open-interest matrix  
+Suggested caption: `The most useful beginner framework is to read price direction together with open-interest direction.`
 
 ## Why Zcash Can Be More Volatile Than Beginners Expect
 
