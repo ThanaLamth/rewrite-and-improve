@@ -22,6 +22,14 @@
   <path d="M0 740 C250 650, 540 660, 770 748 S1140 820, 1400 700 L1400 900 L0 900 Z" fill="#090909" opacity="0.56"/>
 
   <rect x="76" y="76" width="760" height="96" rx="28" fill="#0e0e0e" opacity="0.84"/>
+  <g transform="translate(858 74)" filter="url(#shadow)">
+    <circle cx="42" cy="42" r="40" fill="none" stroke="#ffffff" stroke-width="10"/>
+    <circle cx="42" cy="42" r="34" fill="#f7e8cf"/>
+    <path d="M24 34 L60 34 L52 44 L32 44 Z" fill="#b62f1a"/>
+    <rect x="38" y="16" width="8" height="18" rx="4" fill="#b62f1a"/>
+    <rect x="16" y="50" width="52" height="6" rx="3" fill="#b62f1a"/>
+    <rect x="10" y="60" width="64" height="6" rx="3" fill="#b62f1a"/>
+  </g>
   <text x="112" y="118" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#ff8a4c">COINLINEUP BEGINNER EXPLAINER</text>
   <text x="112" y="156" font-family="Arial, sans-serif" font-size="40" font-weight="800" fill="#fff4e4">Why the Court said IEEPA does not authorize tariffs</text>
 

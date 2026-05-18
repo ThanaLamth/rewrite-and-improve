@@ -55,8 +55,12 @@
   <g transform="translate(1095 404)" filter="url(#shadow)">
     <circle cx="0" cy="0" r="116" fill="none" stroke="#ffffff" stroke-width="16"/>
     <circle cx="0" cy="0" r="102" fill="#171717"/>
-    <path d="M-52 -10 L0 -62 L54 -8 L20 -8 L20 58 L-20 58 L-20 -8 Z" fill="#ff7b3d"/>
-    <text x="-52" y="24" font-family="Arial, sans-serif" font-size="30" font-weight="800" fill="#fff8ee">COURT</text>
+    <circle cx="0" cy="0" r="74" fill="#f7e8cf"/>
+    <path d="M-34 -8 L34 -8 L22 12 L-22 12 Z" fill="#a82518"/>
+    <rect x="-8" y="-44" width="16" height="36" rx="8" fill="#a82518"/>
+    <rect x="-48" y="22" width="96" height="12" rx="6" fill="#a82518"/>
+    <rect x="-72" y="38" width="144" height="12" rx="6" fill="#a82518"/>
+    <circle cx="0" cy="-58" r="10" fill="#ff7b3d"/>
   </g>
 
   <path d="M960 522 C1032 472, 1092 448, 1162 432" fill="none" stroke="#ffffff" stroke-width="12" stroke-linecap="round"/>
