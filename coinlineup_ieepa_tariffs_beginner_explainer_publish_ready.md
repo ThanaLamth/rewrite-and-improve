@@ -13,8 +13,9 @@ For beginners, this issue matters because tariffs can affect prices, business co
 
 The short version is that the International Emergency Economic Powers Act, or IEEPA, gives the president broad tools during certain national emergencies, but the law does not clearly say the president can impose tariffs. On February 20, 2026, the U.S. Supreme Court held in *Learning Resources, Inc. v. Trump* and *V.O.S. Selections, Inc. v. United States* that IEEPA does not authorize the president to impose tariffs.
 
-**Suggested media:** Supreme Court / tariffs explainer hero graphic  
-Suggested caption: `The Supreme Court's February 20, 2026 ruling narrowed how IEEPA can be used in tariff policy.`
+![Editorial explainer graphic showing IEEPA, tariffs, and Supreme Court framing](images/coinlineup-ieepa-tariffs-hero.svg)
+
+*The Supreme Court's February 20, 2026 ruling narrowed how IEEPA can be used in tariff policy.*
 
 ## What Is IEEPA in Simple Terms?
 
@@ -31,9 +32,6 @@ Tariffs are taxes or duties placed on imported goods. If the United States puts 
 People often talk about tariffs as if they were a general economic pressure tool. That is partly true. But legally, tariffs are also a specific kind of power. The U.S. Constitution gives Congress authority over tariffs and foreign commerce, and Congress has created several statutes that let the executive branch impose tariffs in certain situations.
 
 That is why the IEEPA question became so important. The issue was not whether tariffs are possible. The issue was whether IEEPA was one of the laws that actually authorizes them.
-
-**Suggested media:** simple comparison chart  
-Suggested caption: `Tariffs can be imposed under different trade statutes, but the legal source of authority matters.`
 
 ## Why Was IEEPA Used in Tariff Fights?
 
@@ -77,8 +75,9 @@ For a beginner, the easiest way to understand the ruling is this:
 - tariffs are specific
 - courts usually want clear language before treating a broad emergency law as a tariff statute
 
-**Suggested media:** decision breakdown infographic  
-Suggested caption: `The Court's reasoning centered on text, delegated tariff power, and the difference between broad regulation and import duties.`
+![Decision flow graphic explaining why the Court said IEEPA does not authorize tariffs](images/coinlineup-ieepa-decision-flow.svg)
+
+*The Court's reasoning centered on text, delegated tariff power, and the difference between broad regulation and import duties.*
 
 ## Does This Mean Tariffs Are Gone?
 

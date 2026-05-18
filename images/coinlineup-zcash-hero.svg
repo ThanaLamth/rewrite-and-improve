@@ -1,0 +1,29 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f4efe3"/>
+      <stop offset="100%" stop-color="#e8dcc8"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#bb4127"/>
+      <stop offset="100%" stop-color="#e66b2e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect x="0" y="610" width="1600" height="290" fill="#8b2718"/>
+  <g transform="translate(170 120)">
+    <circle cx="180" cy="180" r="156" fill="url(#accent)"/>
+    <circle cx="180" cy="180" r="118" fill="#f4efe3"/>
+    <text x="128" y="215" font-family="Georgia, serif" font-size="132" font-weight="700" fill="#8b2718">Z</text>
+  </g>
+  <g transform="translate(700 120)">
+    <rect x="0" y="0" width="620" height="320" rx="28" fill="#fff8ee" stroke="#8b2718" stroke-width="8"/>
+    <polyline points="60,240 170,200 260,210 360,140 470,120 560,72" fill="none" stroke="#e66b2e" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="560" cy="72" r="16" fill="#bb4127"/>
+    <text x="60" y="90" font-family="Arial, sans-serif" font-size="42" font-weight="700" fill="#8b2718">PRICE + OPEN INTEREST</text>
+    <text x="60" y="140" font-family="Arial, sans-serif" font-size="24" fill="#8b2718">A beginner framework for understanding</text>
+    <text x="60" y="174" font-family="Arial, sans-serif" font-size="24" fill="#8b2718">why Zcash can move so fast.</text>
+  </g>
+  <text x="120" y="735" font-family="Arial, sans-serif" font-size="78" font-weight="800" fill="#fff8ee">WHY IS ZCASH UP?</text>
+  <text x="120" y="808" font-family="Arial, sans-serif" font-size="54" font-weight="700" fill="#f5d6c2">ZEC price, futures, and open interest explained</text>
+</svg>

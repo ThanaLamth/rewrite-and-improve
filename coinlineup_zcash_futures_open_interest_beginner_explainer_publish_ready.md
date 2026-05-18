@@ -17,8 +17,9 @@ If you understand three things, you will be ahead of most beginners:
 - what futures and open interest mean
 - how those signals can help explain a fast move without guaranteeing what happens next
 
-**Suggested media:** Zcash price-move explainer hero  
-Suggested caption: `Zcash rallies often draw fresh attention to futures activity, open interest, and short-term market structure.`
+![Editorial explainer graphic showing Zcash, price action, and open interest](images/coinlineup-zcash-hero.svg)
+
+*Zcash rallies often draw fresh attention to futures activity, open interest, and short-term market structure.*
 
 ## What Is Zcash?
 
@@ -27,9 +28,6 @@ Zcash is a cryptocurrency designed to give users a stronger degree of financial 
 In simple terms, Zcash tries to combine the portability of crypto with optional privacy features. That makes it different from many large-cap coins whose blockchains are fully transparent by default.
 
 The native asset of the network is ZEC, which traders usually refer to as Zcash or just ZEC in market listings.
-
-**Suggested media:** Zcash basics card or shielded-transactions explainer  
-Suggested caption: `Zcash is best known for optional privacy features and its long history among privacy-focused crypto assets.`
 
 ## Why Does Zcash Attract Attention?
 
@@ -93,9 +91,6 @@ If new positions are being added, open interest rises. If positions are being cl
 
 That makes open interest useful because it can hint at whether a move is attracting fresh participation or simply forcing old positions to unwind.
 
-**Suggested media:** simple volume vs. open-interest chart  
-Suggested caption: `Volume shows how much trading happened, while open interest shows how many futures contracts remain open.`
-
 ## Why Open Interest Matters When Zcash Is Moving
 
 Open interest does not tell you everything, but it gives context to price action.
@@ -133,8 +128,9 @@ This can mean new shorts are building or fresh bearish positions are entering th
 
 This can mean traders are exiting positions rather than aggressively building new ones. Sometimes that points to a move losing energy.
 
-**Suggested media:** four-box price/open-interest matrix  
-Suggested caption: `The most useful beginner framework is to read price direction together with open-interest direction.`
+![Four-box matrix showing how to read price direction and open interest together](images/coinlineup-zcash-open-interest-matrix.svg)
+
+*The most useful beginner framework is to read price direction together with open-interest direction.*
 
 ## Why Zcash Can Be More Volatile Than Beginners Expect
 

@@ -1,0 +1,29 @@
+<svg width="1400" height="900" viewBox="0 0 1400 900" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1400" height="900" fill="#f4efe3"/>
+  <rect x="90" y="110" width="1220" height="680" rx="36" fill="#fff8ee" stroke="#8f2a1c" stroke-width="8"/>
+  <text x="120" y="175" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#8f2a1c">How the Court Framed the IEEPA Tariff Question</text>
+  <g transform="translate(120 255)">
+    <rect width="340" height="360" rx="28" fill="#d85f2f"/>
+    <text x="36" y="68" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#fff8ee">1. Broad Emergency</text>
+    <text x="36" y="120" font-family="Arial, sans-serif" font-size="25" fill="#fff8ee">IEEPA gives broad</text>
+    <text x="36" y="156" font-family="Arial, sans-serif" font-size="25" fill="#fff8ee">economic powers during</text>
+    <text x="36" y="192" font-family="Arial, sans-serif" font-size="25" fill="#fff8ee">a declared emergency.</text>
+  </g>
+  <g transform="translate(530 255)">
+    <rect width="340" height="360" rx="28" fill="#b53a26"/>
+    <text x="36" y="68" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#fff8ee">2. Tariffs Are Specific</text>
+    <text x="36" y="120" font-family="Arial, sans-serif" font-size="25" fill="#fff8ee">Import duties are treated</text>
+    <text x="36" y="156" font-family="Arial, sans-serif" font-size="25" fill="#fff8ee">as a distinct legal power,</text>
+    <text x="36" y="192" font-family="Arial, sans-serif" font-size="25" fill="#fff8ee">not just any regulation.</text>
+  </g>
+  <g transform="translate(940 255)">
+    <rect width="340" height="360" rx="28" fill="#7d2417"/>
+    <text x="36" y="68" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#fff8ee">3. Clear Delegation</text>
+    <text x="36" y="120" font-family="Arial, sans-serif" font-size="25" fill="#fff8ee">If Congress wants to</text>
+    <text x="36" y="156" font-family="Arial, sans-serif" font-size="25" fill="#fff8ee">delegate tariff power,</text>
+    <text x="36" y="192" font-family="Arial, sans-serif" font-size="25" fill="#fff8ee">courts expect clear text.</text>
+  </g>
+  <path d="M460 435 L515 435" stroke="#8f2a1c" stroke-width="10" stroke-linecap="round"/>
+  <path d="M870 435 L925 435" stroke="#8f2a1c" stroke-width="10" stroke-linecap="round"/>
+  <text x="120" y="715" font-family="Georgia, serif" font-size="52" fill="#8f2a1c">Result: IEEPA is not a blank check for tariffs.</text>
+</svg>

@@ -1,0 +1,36 @@
+<svg width="1400" height="900" viewBox="0 0 1400 900" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1400" height="900" fill="#f4efe3"/>
+  <text x="120" y="130" font-family="Arial, sans-serif" font-size="50" font-weight="700" fill="#8b2718">How to Read ZEC Price and Open Interest Together</text>
+  <rect x="180" y="220" width="1040" height="540" fill="#fff8ee" stroke="#8b2718" stroke-width="8"/>
+  <line x1="700" y1="220" x2="700" y2="760" stroke="#8b2718" stroke-width="8"/>
+  <line x1="180" y1="490" x2="1220" y2="490" stroke="#8b2718" stroke-width="8"/>
+  <text x="605" y="195" font-family="Arial, sans-serif" font-size="28" fill="#8b2718">Open interest</text>
+  <text x="520" y="255" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#8b2718">Up</text>
+  <text x="870" y="255" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#8b2718">Down</text>
+  <text x="96" y="405" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#8b2718" transform="rotate(-90 96 405)">Price Up</text>
+  <text x="96" y="675" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#8b2718" transform="rotate(-90 96 675)">Price Down</text>
+  <g transform="translate(220 275)">
+    <rect width="430" height="180" rx="22" fill="#d85f2f"/>
+    <text x="28" y="56" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#fff8ee">Fresh participation</text>
+    <text x="28" y="105" font-family="Arial, sans-serif" font-size="24" fill="#fff8ee">Price rising with OI often</text>
+    <text x="28" y="140" font-family="Arial, sans-serif" font-size="24" fill="#fff8ee">means new positions are entering.</text>
+  </g>
+  <g transform="translate(750 275)">
+    <rect width="430" height="180" rx="22" fill="#b53a26"/>
+    <text x="28" y="56" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#fff8ee">Short covering</text>
+    <text x="28" y="105" font-family="Arial, sans-serif" font-size="24" fill="#fff8ee">Price up with OI down can point</text>
+    <text x="28" y="140" font-family="Arial, sans-serif" font-size="24" fill="#fff8ee">to positions being closed.</text>
+  </g>
+  <g transform="translate(220 545)">
+    <rect width="430" height="180" rx="22" fill="#8b2718"/>
+    <text x="28" y="56" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#fff8ee">Bearish buildup</text>
+    <text x="28" y="105" font-family="Arial, sans-serif" font-size="24" fill="#fff8ee">Price down with OI up can signal</text>
+    <text x="28" y="140" font-family="Arial, sans-serif" font-size="24" fill="#fff8ee">new shorts or stronger conviction.</text>
+  </g>
+  <g transform="translate(750 545)">
+    <rect width="430" height="180" rx="22" fill="#d18455"/>
+    <text x="28" y="56" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#fff8ee">Positions exiting</text>
+    <text x="28" y="105" font-family="Arial, sans-serif" font-size="24" fill="#fff8ee">Price down with OI down may mean</text>
+    <text x="28" y="140" font-family="Arial, sans-serif" font-size="24" fill="#fff8ee">the move is losing energy.</text>
+  </g>
+</svg>
