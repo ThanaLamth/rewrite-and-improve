@@ -39,8 +39,6 @@ Because they are so powerful, the legal source of tariff authority matters almos
 
 If a president relies on a broad emergency law, the government may be able to move quickly, but the action is more vulnerable to court challenge. If a president relies on a narrower trade statute, the process is usually slower and more constrained, but the legal footing is often stronger.
 
-That is also why traders watch spillover into currencies and safe havens, not just customs policy. We have already seen that dynamic in Coinlineup's coverage of how the [U.S. dollar index can ease when tariff risk dents growth expectations](https://coinlineup.com/us-dollar-index-eases-as-tariff-risks-dent-growth-outlook/) and why [gold can react when courts force a tariff reset](https://coinlineup.com/gold-tracks-tariff-pivot-after-u-s-court-limits-ieepa/).
-
 That tradeoff is what makes this topic evergreen. It is not about one tariff cycle. It is about how the U.S. system allocates tariff power between Congress and the executive branch.
 
 ## What IEEPA Actually Does
@@ -169,7 +167,7 @@ Crypto is not directly a tariff trade, but it still reacts to the macro channels
 
 That does not mean every tariff story is bullish or bearish for digital assets. It means macro-aware crypto readers should understand which tariff lane is actually in play.
 
-In practice, crypto often ends up trading the second-order effects rather than the legal headline itself. That is the same macro chain behind our coverage of how [strong U.S. data can keep Bitcoin pinned under a tighter-policy ceiling](https://coinlineup.com/bitcoin-recovery-hits-fed-ceiling-no-sign-of-cheaper-money/).
+If you want the market-facing version of that same issue, our earlier coverage of how [crypto markets reacted as the White House prepared tariff alternatives during Supreme Court review](https://coinlineup.com/crypto-markets-impact-white-house-tariff-alternatives/) is the faster-news counterpart to this legal explainer.
 
 ## The Evergreen Takeaway
 

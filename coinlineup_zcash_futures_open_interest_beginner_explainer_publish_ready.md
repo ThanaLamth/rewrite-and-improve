@@ -179,8 +179,6 @@ The warning signs are just as important:
 
 ZEC is especially sensitive to these failure modes because the same structure that helps it rally can also make it snap back hard.
 
-That is also why broader market tone still matters. If the market is already slipping into a [reset or consolidation phase](https://coinlineup.com/bitcoin-reset-period-consolidation/), smaller names such as ZEC often lose sponsorship faster than traders expect.
-
 ## Bottom Line
 
 Zcash price does not usually move because of one clean catalyst. It moves because a familiar privacy-coin narrative meets a relatively small market structure and a derivatives complex that can magnify whatever spot demand appears first.
