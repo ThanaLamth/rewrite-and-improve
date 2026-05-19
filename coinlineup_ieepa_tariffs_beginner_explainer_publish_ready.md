@@ -7,11 +7,11 @@
 **Secondary keywords:** supreme court tariffs, tariff supreme court, supreme court ruling on tariffs, trump emergency powers, tariffs illegal  
 **Last updated:** May 19, 2026
 
-The cleanest answer is now clearer than many headlines made it sound: a president cannot rely on IEEPA as a general tariff statute.
+A president cannot use IEEPA as a general tariff statute, and that is the core answer behind the Supreme Court ruling.
 
-That point matters because the real policy fight was never "can the U.S. impose tariffs?" The real fight was "which law authorizes them, and how far can emergency powers stretch before courts push back?"
+The legal chain is more specific than the headlines made it sound. IEEPA gives the executive branch broad emergency economic powers, but tariffs are a separate delegated power that courts expect Congress to authorize clearly. On February 20, 2026, the U.S. Supreme Court held in *Learning Resources, Inc. v. Trump* and *V.O.S. Selections, Inc. v. United States* that IEEPA does not authorize the president to impose tariffs, which means the emergency-powers shortcut failed at the point where broad regulatory language met a more specific customs power.
 
-On February 20, 2026, the U.S. Supreme Court held in *Learning Resources, Inc. v. Trump* and *V.O.S. Selections, Inc. v. United States* that the International Emergency Economic Powers Act, or IEEPA, does not authorize the president to impose tariffs. That ruling did not erase all U.S. tariff authority. It did something more specific and, in practice, more important: it cut off the idea that IEEPA could serve as a catch-all emergency shortcut for peacetime tariff policy.
+That does not mean U.S. tariff authority disappeared. It means future tariff policy has to route back through narrower statutes that actually contemplate duties, surcharges, or trade remedies, which is why the real post-ruling question is no longer whether tariffs exist but which statute can still support them.
 
 <figure class="aligncenter">
   <img src="images/coinlineup-ieepa-tariffs-hero.svg" alt="Editorial explainer graphic showing IEEPA, tariffs, and Supreme Court framing">
