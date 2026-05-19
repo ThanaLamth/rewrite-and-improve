@@ -39,6 +39,8 @@ Because they are so powerful, the legal source of tariff authority matters almos
 
 If a president relies on a broad emergency law, the government may be able to move quickly, but the action is more vulnerable to court challenge. If a president relies on a narrower trade statute, the process is usually slower and more constrained, but the legal footing is often stronger.
 
+That is also why traders watch spillover into currencies and safe havens, not just customs policy. We have already seen that dynamic in Coinlineup's coverage of how the [U.S. dollar index can ease when tariff risk dents growth expectations](https://coinlineup.com/us-dollar-index-eases-as-tariff-risks-dent-growth-outlook/) and why [gold can react when courts force a tariff reset](https://coinlineup.com/gold-tracks-tariff-pivot-after-u-s-court-limits-ieepa/).
+
 That tradeoff is what makes this topic evergreen. It is not about one tariff cycle. It is about how the U.S. system allocates tariff power between Congress and the executive branch.
 
 ## What IEEPA Actually Does
@@ -119,6 +121,8 @@ The narrow but important takeaway is this:
 
 That ruling matters as a case study because it reinforces how courts tend to read tariff authority: if Congress means to delegate it, courts expect Congress to say so clearly.
 
+For importers, the practical follow-through is not just constitutional theory but timing, refunds, and customs treatment. That is why our report on [IEEPA tariff refunds moving ahead after the appeals court denied a delay](https://coinlineup.com/ieepa-tariff-refunds-advance-as-appeals-court-denies-delay/) matters at the operational level.
+
 <figure class="aligncenter">
   <img src="images/coinlineup-ieepa-decision-flow.svg" alt="Decision flow graphic explaining why the Court said IEEPA does not authorize tariffs">
   <figcaption>Courts tend to separate broad emergency powers from specific delegated tariff powers.</figcaption>
@@ -164,6 +168,8 @@ Crypto is not directly a tariff trade, but it still reacts to the macro channels
 - broader risk-on or risk-off shifts
 
 That does not mean every tariff story is bullish or bearish for digital assets. It means macro-aware crypto readers should understand which tariff lane is actually in play.
+
+In practice, crypto often ends up trading the second-order effects rather than the legal headline itself. That is the same macro chain behind our coverage of how [strong U.S. data can keep Bitcoin pinned under a tighter-policy ceiling](https://coinlineup.com/bitcoin-recovery-hits-fed-ceiling-no-sign-of-cheaper-money/).
 
 ## The Evergreen Takeaway
 

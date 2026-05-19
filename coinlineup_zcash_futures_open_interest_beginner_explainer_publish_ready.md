@@ -58,6 +58,8 @@ The cleanest way to think about Zcash price is as a chain, not a single trigger.
 
 Privacy is not always a leading theme in crypto, but it remains a durable one. When traders rotate toward neglected parts of the market, Zcash often becomes one of the first names revisited because it is recognizable and easy to benchmark against prior cycles.
 
+That rotation usually does not happen in isolation. In our earlier market coverage, Zcash often reappeared when [zero-knowledge narratives and whale demand came back into focus](https://coinlineup.com/zkp-takes-center-stage-with-5m-rewards-as-bch-pushes-toward-1k-and-zcash-sees-whale-demand/).
+
 ### 2. Thin liquidity does the first part of the work
 
 With a sub-$1 billion market cap in the current snapshot, ZEC's order book is naturally more sensitive than the order books of larger coins. That means a smaller wave of demand can create a bigger visible price move.
@@ -86,6 +88,8 @@ For Zcash, that distinction matters a lot because price alone cannot tell you wh
 
 In a thinner market, those differences are not academic. They shape how durable the move is likely to look.
 
+That framework becomes clearer when you compare it with larger markets too. Our breakdown of how [Ethereum open interest jumped as leverage piled into ETH](https://coinlineup.com/ethereum-open-interest-jumps-11-6-as-leverage-piles-into-eth/) shows the same mechanic in a deeper asset, where positioning can build without distorting price quite as violently as it can in ZEC.
+
 ## Why Derivatives Matter More in Zcash Than in Bigger Assets
 
 The [CFTC glossary](https://www.cftc.gov/LearnAndProtect/AdvisoriesAndArticles/CFTCGlossary/index.htm) is a good baseline reminder that futures let traders express price views with leverage and without spot custody.
@@ -99,6 +103,8 @@ That is why traders should not read a Zcash move the same way they would read a 
 - a leverage-only ZEC move can also unwind fast
 
 This is where many shallow "why pump" articles stop too early. They treat any rise in open interest as bullish confirmation. In practice, it is only useful when read alongside the rest of the setup.
+
+The risk on the way back down is just as real. Coinlineup's piece on [crypto liquidations wiping out long positions in 24 hours](https://coinlineup.com/144-million-crypto-liquidations-long-positions-24-hours/) is a useful reminder that leverage can confirm momentum on the way up and accelerate damage once the move breaks.
 
 ## How to Read a ZEC Move Properly
 
@@ -172,6 +178,8 @@ The warning signs are just as important:
 - no broader narrative support beyond the initial move
 
 ZEC is especially sensitive to these failure modes because the same structure that helps it rally can also make it snap back hard.
+
+That is also why broader market tone still matters. If the market is already slipping into a [reset or consolidation phase](https://coinlineup.com/bitcoin-reset-period-consolidation/), smaller names such as ZEC often lose sponsorship faster than traders expect.
 
 ## Bottom Line
 
