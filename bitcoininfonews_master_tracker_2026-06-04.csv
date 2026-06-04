@@ -1,0 +1,9 @@
+priority,batch,task_type,action,file,count,status,notes
+1,batch_1_sitemap_and_broken_link_hygiene,keep_noindex,"Keep existing noindex URLs accessible and remove them from sitemap outputs",bitcoininfonews_action_keep_noindex.csv,3932,pending,"Search, author, tag, and similar low-value URLs"
+1,batch_1_sitemap_and_broken_link_hygiene,fix_broken_internal_targets,"Update internal links to stop pointing at broken targets",bitcoininfonews_action_fix_internal_broken_targets.csv,415,pending,"Start from highest inlink counts first"
+1,batch_1_sitemap_and_broken_link_hygiene,review_404_mapping,"Decide whether each 404 should stay 404 or become a 301",bitcoininfonews_action_review_404_mapping.csv,415,pending,"Needs manual mapping decisions"
+2,batch_2_index_bloat_reduction,noindex_now,"Apply noindex,follow to deep paginated archives",bitcoininfonews_action_noindex_now.csv,1446,pending,"Use after sitemap cleanup"
+3,batch_3_duplicate_consolidation,redirect_now,"Apply 301 redirects from numbered duplicates to preferred winners",bitcoininfonews_action_301_now.csv,296,pending,"High-confidence duplicate set"
+3,batch_3_duplicate_consolidation,redirect_taxonomy_review,"Review taxonomy duplicate set before redirecting",bitcoininfonews_action_301_review_taxonomy.csv,0,pending,"Currently empty"
+4,batch_4_content_quality_review,review_content_pruning,"Review promo/search-first pages for prune, consolidate, or keep",bitcoininfonews_action_review_content_pruning.csv,957,pending,"Do after technical cleanup"
+5,batch_5_template_and_hub_review,review_utility_and_taxonomy,"Review thin utility pages and taxonomy hubs for keep vs noindex",bitcoininfonews_action_review_utility_and_taxonomy_indexables.csv,18,pending,"Includes calculators, cmc, sponsored-articles, uncategorized, and similar hubs"
