@@ -1,0 +1,41 @@
+current_parent_slug,current_slug,current_name,current_count,recommended_action,recommended_future_role,recommended_target_or_notes,phase
+,latest-news,News,5904,keep_temporarily,legacy_primary_archive,freeze growth and reduce catch-all use after new primary categories are live,2
+,altcoin-news,Altcoin News,4177,keep,primary_seo_category,retain as primary until coin/topic architecture is redesigned,2
+,cmc,CMC,1256,retire,franchise_or_custom_hub,remove as broad primary category and convert to controlled hub if needed,2
+,news,Crypto News,835,retire,none_or_redirect,merge function into cleaner categories and stop using as broad archive,2
+,sponsored-articles,Sponsored Articles,664,keep,commercial_archive,retain as separated commercial section,2
+,crypto-101,Crypto 101,246,keep_temporarily,legacy_learning_archive,keep while learn-crypto is expanded and cleaned,2
+,blockchain-events,Blockchain Event,36,keep_temporarily,niche_archive,review whether this should stay a category or become a page/hub,2
+,binance,Binance,3,retire,topic_hub_or_tag,too narrow as top-level primary category,2
+,press-releases,Press Releases,3,keep,commercial_archive,retain but merge logic with press-release child handling,2
+,learn-crypto,Learn Crypto,2,keep,primary_seo_category,expand as main educational category,2
+,mining,Mining,1,retire,tag_or_subtopic,too narrow as top-level primary category,2
+,pin-post,Pin Post,1,retire,workflow_only,remove from public taxonomy use,2
+,top-picks,Top Picks,1,retire,custom_hub_or_page,do not use as top-level archive bucket,2
+latest-news,bitcoin-news,Bitcoin News,3521,keep,primary_seo_category,keep as traffic-critical search-led archive,2
+latest-news,press-release,Press Release,107,merge,commercial_archive,consolidate with top-level press-releases section and fix URL logic first,2
+latest-news,analysis,Analysis,3,merge,secondary_hub,move into investigations or market analysis hub not as weak child category,2
+latest-news,blockchain-news,Blockchain News,0,retire,none,no content footprint to justify keeping,2
+crypto-101,cryptocurrencies,Cryptocurrencies,120,review,learn_subcategory,may map into learn-crypto or fundamentals depending content quality,2
+crypto-101,services,Services,24,review,learn_subcategory,may map into learn-crypto or retire if thin,2
+altcoin-news,ethereum,Ethereum,79,review,coin_hub_or_tag,too specific for current conflict-heavy archive layer until architecture is fixed,2
+altcoin-news,ripple,Ripple,79,review,coin_hub_or_tag,review after Phase 1 cleanup,2
+altcoin-news,eos,EOS,13,review,coin_hub_or_tag,review after Phase 1 cleanup,2
+altcoin-news,bitcoin-cash,Bitcoin Cash,12,review,coin_hub_or_tag,review after Phase 1 cleanup,2
+altcoin-news,litecoin,Litecoin,12,review,coin_hub_or_tag,review after Phase 1 cleanup,2
+altcoin-news,cardano,Cardano,6,review,coin_hub_or_tag,review after Phase 1 cleanup,2
+altcoin-news,stellar,Stellar,4,review,coin_hub_or_tag,review after Phase 1 cleanup,2
+altcoin-news,monero,Monero,3,review,coin_hub_or_tag,review after Phase 1 cleanup,2
+learn-crypto,blockchain-technology,Blockchain Technology,169,keep,learn_subcategory,keep only if canonical and redirect behavior is repaired,2
+learn-crypto,crypto-investing,Crypto Investing,0,prepare,new_primary_or_subcategory,can be activated later under learn-crypto if content is built,3
+learn-crypto,fundamentals,Fundamentals,0,prepare,new_primary_or_subcategory,can be activated later under learn-crypto if content is built,3
+learn-crypto,security,Security,0,prepare,new_primary_or_subcategory,can be activated later under learn-crypto if content is built,3
+binance,binance-coin-bnb,Binance Coin (BNB),6,retire,tag_or_coin_hub,do not keep under weak top-level binance primary category,2
+binance,binance-exchange,Binance Exchange,1,retire,tag_or_topic_hub,fold into companies or exchanges hub later,2
+binance,binance-ecosystem,Binance Ecosystem,0,retire,none,no content footprint,2
+binance,binance-influences,Binance Influences,0,retire,none,no content footprint,2
+binance,binance-news,Binance News,0,retire,none,no content footprint,2
+top-picks,crypto-exchanges,Crypto Exchanges,120,review,commercial_or_evergreen_hub,better as curated evergreen hub than category,2
+top-picks,crypto-wallets,Crypto Wallets,29,review,commercial_or_evergreen_hub,better as curated evergreen hub than category,2
+top-picks,crypto-airdrops,Crypto Airdrops,0,retire,none,no content footprint,2
+top-picks,crypto-casino,Crypto Casino,0,retire,none,no content footprint,2
