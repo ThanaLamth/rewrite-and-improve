@@ -3,6 +3,53 @@
 Date: 2026-06-10
 Domain: `https://theccpress.com/`
 
+## Tóm tắt tiếng Việt
+
+### Vấn đề chính
+
+- CCPress không chỉ bị lãng phí crawl do nhiều URL xấu như `404`, redirect cũ, và URL giá trị thấp.
+- Dữ liệu hiện tại còn cho thấy dấu hiệu mạnh của `crawl/access instability`, tức là bot thu thập dữ liệu đôi lúc không lấy được phản hồi ổn định từ site dù URL thực tế vẫn sống.
+
+### Số liệu quan trọng
+
+- GSC Crawl Stats của `theccpress.com` ngày `2026-06-08` cho thấy:
+  - `404` chiếm `51.59%` crawl requests
+  - `200` chỉ chiếm `41.34%`
+  - `other 4XX` chiếm `2.34%`
+  - `unknown failed requests` theo loại tệp chiếm `54.28%`
+  - crawl purpose là `97% refresh`, `3% discovery`
+- GSC cũng ghi nhận server status của `theccpress.com` là `Có vấn đề trước đây`
+
+### Dấu hiệu bất ổn định truy cập bot
+
+- Trong crawl local `2nd`, có `1,844` URL bị `status 0` và `840` URL bị `403`
+- Trong crawl local `3rd`, vẫn còn `737` URL `status 0` và `872` URL `403`
+- Nhưng khi recheck live ngày `2026-06-10`:
+  - top `20` URL từng bị `status 0` đều trả lại `200`
+  - top `15` URL từng bị `403` thì `14` URL trả `200`
+
+Điều này cho thấy không thể kết luận toàn bộ lỗi là do URL hỏng thật. Có khả năng tồn tại vấn đề gián đoạn ở Cloudflare, WAF, LiteSpeed, rate limiting, hoặc origin response.
+
+### Ý nghĩa kỹ thuật
+
+- Google đang dành quá nhiều crawl cho phản hồi xấu hoặc không ổn định
+- Điều này có thể làm chậm quá trình recrawl các bài tốt
+- Nó cũng có thể làm méo tín hiệu chất lượng thu thập dữ liệu ở cấp site
+
+### Dev cần kiểm tra gì
+
+- Cloudflare Security Events
+- WAF rules
+- Bot Fight / managed challenge / rate limiting
+- LiteSpeed / mod_security / origin logs
+- so sánh request của Googlebot với request thường ở các URL từng báo `0` hoặc `403`
+
+### Kết luận ngắn
+
+- Vấn đề hiện tại là `2 lớp cùng lúc`:
+  - `crawl waste` thật do nhiều URL lỗi hoặc URL cũ
+  - `crawl instability` thật do bot có lúc không lấy được phản hồi ổn định từ site
+
 ## Objective
 
 Investigate and fix crawl instability and crawler inefficiency after the main redirect and broken-link cleanup.
