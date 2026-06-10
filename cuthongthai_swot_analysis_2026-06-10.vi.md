@@ -33,6 +33,7 @@ Bản SWOT này **chưa** có các dữ liệu nội bộ sau:
 - dữ liệu click sang tool
 - dữ liệu conversion thật
 - dữ liệu retention hoặc revenue
+- dữ liệu backlink đầy đủ từ Ahrefs, Semrush, Majestic hoặc GSC Links export
 
 Vì vậy, đây là một bản `strategic assessment` rất mạnh ở tầng kiến trúc, nhưng chưa phải `final business verdict`.
 
@@ -78,6 +79,28 @@ Vì vậy, đây là một bản `strategic assessment` rất mạnh ở tầng 
 - một số bài viết trên domain gốc redirect sang subdomain tương ứng
 - sitemap root hiện rất nhỏ so với tổng kích thước toàn hệ
 - nhiều vertical có inventory URL lớn, cho thấy mô hình mở rộng theo chiều ngang có chủ đích
+
+### 2.2.1 Tín hiệu off-page công khai quan sát được
+
+Qua rà nhanh các nguồn công khai trên web, `cuthongthai.vn` **có backlink và brand mentions**, nhưng hiện chưa thấy dấu hiệu của một hồ sơ backlink cực mạnh hoặc được nhắc nhiều trên các publisher lớn.
+
+Các dấu hiệu công khai hiện thấy:
+
+- trang hồ sơ công ty trên TopCV có link website về `cuthongthai.vn`
+- trang hồ sơ doanh nghiệp trên Dun & Bradstreet có nhắc domain
+- một số directory liên quan đến MCP / AI agent có nhắc và trỏ về `vimo.cuthongthai.vn`
+- một số trang analytics / mirror của YouTube channel cũng đặt link về các subdomain
+
+Điều này cho thấy:
+
+- domain **không phải zero-backlink**
+- nhưng từ tín hiệu công khai có thể thấy ngay, hồ sơ off-page hiện nhìn **không giống một domain đang được hỗ trợ mạnh bởi nhiều editorial backlinks chất lượng cao**
+
+Kết luận tạm:
+
+- `có backlink`
+- nhưng nhiều khả năng `off-page chưa phải điểm mạnh cốt lõi`
+- tăng trưởng hiện tại có vẻ đến từ `architecture + inventory + content/tool model` nhiều hơn là từ một hồ sơ backlink vượt trội
 
 ### 2.3 Đọc chiến lược tổng thể
 
@@ -344,6 +367,40 @@ So với `thuế`, `mua nhà`, `tâm linh`, phần `sức khỏe` hiện nhìn:
 
 Điều này khiến nó dễ trở thành một vertical có traffic nhưng chuyển đổi usage kém hơn.
 
+### 6.7 Lớp off-page chưa chứng minh được sức mạnh tương xứng
+
+Từ các tín hiệu công khai hiện quan sát được, domain này có backlinks và mentions, nhưng chưa thấy bằng chứng rõ rằng:
+
+- có nhiều referring domains mạnh
+- có nhiều editorial links chất lượng cao
+- có độ phủ PR hoặc brand mentions đủ lớn để xem off-page là lợi thế cạnh tranh chính
+
+Điều này quan trọng vì:
+
+- mô hình nhiều subdomain càng cần lớp off-page tốt để bù cho authority fragmentation
+- nếu off-page không đủ mạnh, từng vertical sẽ phải dựa rất nhiều vào internal structure và content scale
+
+## 6.8 Rủi ro vận hành của mô hình đa vertical
+
+Mô hình này không chỉ khó ở SEO. Nó còn khó ở vận hành.
+
+Khi cùng lúc đẩy:
+
+- tài chính
+- thuế
+- mua nhà
+- tâm linh
+- sức khỏe
+
+team sẽ phải đối mặt với các bài toán:
+
+- quản trị biên tập đa ngành
+- kiểm soát chất lượng và consistency
+- cập nhật dữ liệu, quy định, công cụ
+- tránh lệch thông điệp giữa các vertical
+
+Nếu vận hành không đủ chặt, breadth sẽ biến thành gánh nặng.
+
 ## 7. Opportunities
 
 ### 7.1 Chuẩn hóa trust signal theo từng vertical
@@ -426,6 +483,24 @@ Hai mảng này có:
 - nhu cầu ra quyết định thật
 - chỗ đứng tốt cho lead gen, affiliate, subscription, tư vấn, hoặc premium tool
 
+### 7.7 Có cơ hội xây lớp digital PR và backlink theo từng vertical
+
+Hiện tại, nếu off-page chưa mạnh, đây lại là cơ hội.
+
+Họ có nhiều angle tốt để lấy link tự nhiên hoặc earned mentions:
+
+- `Vimo`: dữ liệu vĩ mô, market dashboards, community stats
+- `Thuế`: calculator, guide, update theo mùa quyết toán
+- `Mua nhà`: tool affordability, ROI, lãi suất, giá đất
+- `Sức khỏe`: scanner, score, seasonal health utilities
+
+Nếu làm đúng, họ không cần lấy backlink kiểu “SEO cổ điển” quá nhiều, mà có thể dùng:
+
+- data-led assets
+- utility-led outreach
+- tool pages worth citing
+- expert commentary theo từng vertical
+
 ## 8. Threats
 
 ### 8.1 Google có thể siết mạnh hơn ở YMYL
@@ -485,6 +560,19 @@ Về mặt kỹ thuật, Google có thể không gộp mọi thứ đơn giản 
 - perception
 
 một vertical yếu có thể kéo perception xấu cho cả hệ.
+
+### 8.6 Nếu đối thủ bắt đầu copy mô hình nhưng có off-page mạnh hơn
+
+Mô hình `content + tool + multi-vertical` hiện còn khá hiếm ở Việt Nam, đây là lợi thế của `cuthongthai`.
+
+Nhưng nếu một đối thủ:
+
+- chọn ít vertical hơn
+- tập trung hơn
+- làm trust signal tốt hơn
+- có backlink profile mạnh hơn
+
+thì họ có thể vượt lên ở từng mảng riêng lẻ dù breadth nhỏ hơn.
 
 ## 9. Ma Trận Mức Độ Tác Động
 
@@ -600,6 +688,7 @@ Không nên giữ tất cả chỉ vì “đã lỡ tách”. Quyết định cu
 | Root domain có đang làm hub tốt không? | Inlinks, crawl depth, click flow, sitemap completeness |
 | Vertical nào đang chỉ kéo traffic mà không chuyển đổi? | Tool click rate, completion rate, session depth |
 | Có đang cannibalize giữa root và subdomain không? | GSC query overlap, canonical map, redirect map |
+| Off-page hiện mạnh tới đâu? | Ahrefs/Semrush/Majestic/GSC Links export, top referring domains, top linked pages |
 
 ## 11.3 Các Câu Hỏi Còn Treo
 
@@ -620,6 +709,31 @@ Không nên giữ tất cả chỉ vì “đã lỡ tách”. Quyết định cu
 - `https://muanha.cuthongthai.vn/`
 - `https://suckhoe.cuthongthai.vn/`
 - các bài blog và sitemap tương ứng được kiểm tra trực tiếp ngày `2026-06-10`
+
+### 12.1 Nguồn công khai dùng để rà tín hiệu off-page
+
+- `https://www.topcv.vn/cong-ty/ctcp-tap-doan-quan-ly-tai-san-cu-thong-thai/213759/danh-gia`
+- `https://www.dnb.com/business-directory/company-profiles.cu_thong_thai_asset_management_corporation_joint_stock_company.faa1b0d489c95eb3fc9b191aab04e8bf.html`
+- `https://chat.mcp.so/ja/server/vimo-vietnam-stock-intelligence/cuthongthai-vn`
+- `https://open.subsub.io/channels/cuthongthai/view`
+
+### 12.2 Lưu ý về kết luận backlink
+
+Các kết luận trong bản này về backlink là:
+
+- `dựa trên tín hiệu công khai`
+- `không phải số liệu đầy đủ của một backlink tool trả phí`
+
+Vì vậy, có thể kết luận mức:
+
+- domain có backlinks và brand mentions
+- nhưng chưa có bằng chứng công khai cho thấy hồ sơ backlink là một lợi thế cực mạnh
+
+Muốn chốt chính xác hơn cần thêm:
+
+- Ahrefs Backlink Checker / Site Explorer
+- Semrush Backlink Analytics
+- hoặc export `Links` từ GSC nếu có quyền truy cập
 
 ## 13. Kết Luận Cuối Cùng Cho Người Ra Quyết Định
 
