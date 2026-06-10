@@ -61,6 +61,14 @@ Vì vậy, đây là một bản `strategic assessment` rất mạnh ở tầng 
 - tín hiệu kỹ thuật và trust signal chưa đồng đều
 - phạm vi chủ đề quá rộng, đặc biệt ở các mảng nhạy cảm như thuế, tài chính, sức khỏe
 
+Đặc biệt, từ dữ liệu backlink local hiện có, tăng trưởng của site này **có vẻ không được dẫn bởi sức mạnh off-page**, mà chủ yếu đến từ:
+
+- độ phủ content
+- quy mô inventory URL
+- mô hình `content -> tool`
+- internal architecture
+- khả năng khớp intent tìm kiếm
+
 ## 2. Snapshot Hiện Trạng
 
 ### 2.1 Các vertical chính quan sát được
@@ -154,6 +162,12 @@ Kết luận thực dụng từ CSV:
 - `có nhiều backlink rows`
 - nhưng `chất lượng nhìn chung thấp`
 - và `off-page hiện chưa đủ mạnh để bù cho rủi ro authority fragmentation của mô hình nhiều subdomain`
+
+Diễn giải chiến lược:
+
+- backlink hiện tại **không giống growth engine chính**
+- traffic nếu đang tăng nhiều khả năng đến từ `on-site architecture + content/tool model`
+- nghĩa là site này đang thắng bằng `cấu trúc và độ phủ`, không phải bằng một hồ sơ backlink vượt trội
 
 ### 2.3 Đọc chiến lược tổng thể
 
@@ -681,6 +695,15 @@ Mô hình hiện tại lại khá logic:
 `Cuthongthai.vn` mạnh ở breadth và funnel, nhưng chưa chắc đã mạnh tương xứng ở authority architecture và trust architecture.
 
 Nếu đội ngũ của họ tối ưu được hai lớp này, mô hình sẽ rất đáng gờm. Nếu không, họ có nguy cơ chạm trần tăng trưởng hoặc bị loãng sức mạnh giữa quá nhiều mảng.
+
+Một điểm cần nhấn mạnh thêm:
+
+- hiện chưa có bằng chứng cho thấy backlink là động cơ tăng trưởng chính
+- tăng trưởng hiện nhìn giống mô hình `content coverage + tool funnel + internal architecture`
+- vì vậy, nếu muốn tăng bền hơn ở giai đoạn tiếp theo, họ sẽ cần nâng đồng thời:
+  - trust signal
+  - authority architecture
+  - quality của off-page
 
 ## 11. Khuyến Nghị Ưu Tiên
 
