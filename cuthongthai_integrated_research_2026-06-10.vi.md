@@ -465,7 +465,143 @@ Không có dấu hiệu đủ mạnh để nói rằng:
 - backlink là động cơ chính
 - hay root architecture sạch đẹp là động cơ chính
 
-## 10. Những Điều Nghiên Cứu Hiện Tại Chưa Chứng Minh Được
+## 10. SWOT Tổng Hợp Kèm Graphs
+
+Phần này không thay thế 6 luận điểm ở trên. Nó chỉ nén toàn bộ research thành một khung SWOT dễ quét nhanh hơn.
+
+### 10.1 Ma Trận SWOT Một Trang
+
+| Nhóm | Nội dung cô đọng nhất |
+| --- | --- |
+| `Strengths` | 1. Hệ nhiều vertical có dáng product thật. 2. Machine-readable SEO/AEO/GEO mechanics khá mạnh. 3. Funnel `content -> tool -> ecosystem` rõ. 4. `Tamlinh` đã chứng minh được intent-fit SEO rất mạnh. |
+| `Weaknesses` | 1. Authority bị phân mảnh giữa nhiều subdomain. 2. Organic performance hiện lệch nặng về một cluster. 3. Root sitemap không phản ánh toàn hệ một cách tập trung. 4. Off-page hiện chưa cho thấy sức mạnh vượt trội. |
+| `Opportunities` | 1. Mỗi vertical có thể được đọc như một product surface riêng. 2. Inventory lớn tạo điều kiện mở rộng query coverage. 3. Tool utility giúp hệ khác blog thuần. 4. Dữ liệu host-level cho phép đọc từng vertical như những hệ tăng trưởng riêng. |
+| `Threats` | 1. Phụ thuộc traffic mạnh vào cụm tâm linh. 2. Programmatic scale có thể kéo theo hygiene risk. 3. Vertical rộng gây loãng authority và trust. 4. Nếu một cluster chủ lực suy yếu, toàn hệ có thể biến động mạnh. |
+
+### 10.2 Graph 1: Phân Bổ Organic Traffic Theo Host
+
+```mermaid
+pie showData
+    title Organic Traffic Estimate Theo Host
+    "tamlinh.cuthongthai.vn" : 25379
+    "cuthongthai.vn" : 9728
+    "vimo.cuthongthai.vn" : 161
+    "thue.cuthongthai.vn" : 48
+    "muanha.cuthongthai.vn" : 17
+    "suckhoe.cuthongthai.vn" : 1
+```
+
+Điểm đọc chính từ graph này:
+
+- `tamlinh` đang chiếm phần lớn organic traffic estimate
+- root domain đứng thứ hai nhưng kém xa `tamlinh`
+- các vertical còn lại hiện rất nhỏ nếu chỉ nhìn theo file organic pages local
+
+### 10.3 Graph 2: Mức Độ Tập Trung Traffic Ở Top URL
+
+```mermaid
+xychart-beta
+    title "Tỷ Trọng Traffic Theo Nhóm Top URL"
+    x-axis ["Top 1", "Top 3", "Top 10", "Top 20"]
+    y-axis "Tỷ trọng %" 0 --> 100
+    bar [64.05, 80.64, 90.87, 94.87]
+```
+
+Điểm đọc chính:
+
+- traffic không chỉ tập trung vào một vertical
+- mà còn tập trung vào một số rất ít URL đầu tàu trong vertical đó
+
+### 10.4 Graph 3: Quy Mô Một Số Sitemap Chính Đang Được Công Bố
+
+```mermaid
+xychart-beta
+    title "Số URL Trong Một Số Sitemap Chính"
+    x-axis ["root sitemap.xml", "root sitemap_index", "vimo", "thue blog", "tamlinh blog", "muanha", "suckhoe blog"]
+    y-axis "Số URL" 0 --> 20000
+    bar [2, 393, 521, 17641, 18059, 10034, 16094]
+```
+
+Điểm đọc chính:
+
+- root `sitemap.xml` rất nhỏ so với phần còn lại của hệ
+- discovery layer thực tế đang nằm nhiều ở các sitemap riêng của subdomain
+- kiến trúc sitemap hiện phân mảnh mạnh, không phải một bề mặt tập trung
+
+### 10.5 Graph 4: Bản Đồ SWOT Trên Hai Trục
+
+```mermaid
+quadrantChart
+    title SWOT Tổng Hợp Cho Cuthongthai.vn
+    x-axis Nội lực yếu --> Nội lực mạnh
+    y-axis Tác động thấp --> Tác động cao
+    quadrant-1 Strengths
+    quadrant-2 Opportunities
+    quadrant-3 Weaknesses
+    quadrant-4 Threats
+    "S1": [0.88, 0.92]
+    "S2": [0.84, 0.87]
+    "S3": [0.80, 0.82]
+    "W1": [0.22, 0.88]
+    "W2": [0.18, 0.80]
+    "W3": [0.26, 0.70]
+    "O1": [0.76, 0.88]
+    "O2": [0.72, 0.82]
+    "O3": [0.68, 0.76]
+    "T1": [0.28, 0.94]
+    "T2": [0.24, 0.86]
+    "T3": [0.30, 0.78]
+```
+
+### 10.5.1 Chú Giải Quadrant
+
+- `S1`: Mô hình `content -> tool -> ecosystem` rõ
+- `S2`: Machine-readable SEO/AEO/GEO mechanics mạnh
+- `S3`: Mỗi vertical có site identity tương đối riêng
+- `W1`: Authority và performance bị phân mảnh giữa các host
+- `W2`: Root sitemap và root hub chưa phản ánh toàn hệ theo cách tập trung
+- `W3`: Off-page hiện chưa cho thấy sức mạnh đủ lớn để bù fragmentation
+- `O1`: Inventory lớn giúp mở rộng query coverage rất nhanh
+- `O2`: Product surface theo vertical giúp hệ khác blog/publisher thông thường
+- `O3`: Có thể đọc từng vertical như một growth surface riêng
+- `T1`: Phụ thuộc mạnh vào cluster tâm linh
+- `T2`: Scale lớn kéo theo hygiene risk ở URL và sitemap
+- `T3`: Umbrella brand quá rộng có thể làm loãng authority/trust
+
+### 10.6 Flow Map: Cách Hệ Này Tự Tạo Khác Biệt
+
+```mermaid
+flowchart LR
+    A[Long-tail inventory lớn] --> B[Answer-shaped content]
+    B --> C[Tool utility]
+    C --> D[Session depth và ecosystem retention]
+    A --> E[Subdomain vertical identity]
+    E --> C
+    B --> F[Machine-readable SEO / AEO / GEO]
+    F --> G[Crawler dễ đọc và dễ trích]
+    G --> H[Organic visibility]
+    H --> D
+```
+
+Flow này tóm tắt logic cốt lõi của case:
+
+- inventory không đứng một mình
+- content không đứng một mình
+- tool không đứng một mình
+- subdomain cũng không phải yếu tố độc lập
+
+Chúng hoạt động như một hệ.
+
+### 10.7 Kết Luận SWOT Rút Gọn
+
+Nếu nén toàn bộ case thành một kết luận SWOT ngắn nhất:
+
+- `điểm mạnh` của `cuthongthai` nằm ở kiến trúc hệ thống và cách đóng gói nội dung cho cả người dùng lẫn máy đọc
+- `điểm yếu` nằm ở sự phân mảnh và độ lệch hiệu năng giữa các vertical
+- `cơ hội` nằm ở việc mỗi vertical có thể được hiểu như một surface tăng trưởng riêng
+- `rủi ro` nằm ở việc hiện tại organic traffic đang bị phụ thuộc quá mạnh vào một cluster tâm linh
+
+## 11. Những Điều Nghiên Cứu Hiện Tại Chưa Chứng Minh Được
 
 Các dữ liệu hiện có chưa đủ để kết luận chắc các điểm sau:
 
@@ -480,13 +616,13 @@ Các dữ liệu hiện có chưa đủ để kết luận chắc các điểm s
 - research hiện tại đọc rất rõ `search structure`
 - nhưng chưa thể đọc trọn `business outcome`
 
-## 11. Kết Luận Cuối Cùng
+## 12. Kết Luận Cuối Cùng
 
 `Cuthongthai.vn` nổi bật và khác biệt nhất so với nhiều site khác trên thị trường ở chỗ nó không vận hành như một site nội dung thuần, mà như một hệ nhiều mini-product được tăng trưởng bằng search. Họ kết hợp được inventory lớn, answer-oriented content, tool utility, subdomain branding và machine-readable SEO trong cùng một mô hình.`
 
 `Nhưng lớp dữ liệu traffic hiện có cho thấy sức mạnh organic hiện tại chưa phân bổ đều trên toàn hệ. Nó đang tập trung rất mạnh vào cụm tâm linh, đặc biệt là một số URL đầu tàu. Vì vậy, nếu đọc site này cho đúng, phải giữ cùng lúc hai ý: đây là một kiến trúc ecosystem khá khác thường và khá tinh vi, nhưng performance organic đang phản ánh một cluster thắng rất mạnh nhiều hơn là sự trưởng thành đồng đều của toàn bộ hệ.`
 
-## 12. File Liên Quan Để So Sánh
+## 13. File Liên Quan Để So Sánh
 
 - review cũ: `https://github.com/ThanaLamth/rewrite-and-improve/blob/main/2026-06-07-cuthongthai-seo-ai-answer-review.md`
 - funnel map: `https://github.com/ThanaLamth/rewrite-and-improve/blob/main/cuthongthai_subdomain_funnel_map_2026-06-09.vi.md`
