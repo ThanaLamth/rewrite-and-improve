@@ -90,19 +90,34 @@ quadrantChart
     quadrant-2 Opportunities
     quadrant-3 Weaknesses
     quadrant-4 Threats
-    "Content -> Tool Funnel rõ": [0.88, 0.92]
-    "Mỗi vertical có proposition riêng": [0.82, 0.82]
-    "Vimo có dáng product thật": [0.90, 0.85]
-    "E-E-A-T theo vertical chưa đồng đều": [0.22, 0.82]
-    "Root sitemap quá nhỏ so với toàn hệ": [0.18, 0.72]
-    "Cross-link mạnh nhưng silo chưa sạch": [0.28, 0.68]
-    "Chuẩn hóa trust signal theo vertical": [0.72, 0.90]
-    "Tăng conversion từ tool usage": [0.80, 0.88]
-    "Hợp nhất subdomain yếu": [0.70, 0.78]
-    "YMYL bị đánh giá khắt khe hơn": [0.30, 0.92]
-    "Authority bị phân mảnh dài hạn": [0.22, 0.88]
-    "Template lặp lại có thể giảm perceived quality": [0.24, 0.74]
+    "S1": [0.88, 0.92]
+    "S2": [0.82, 0.82]
+    "S3": [0.90, 0.85]
+    "W1": [0.22, 0.82]
+    "W2": [0.18, 0.72]
+    "W3": [0.28, 0.68]
+    "O1": [0.72, 0.90]
+    "O2": [0.80, 0.88]
+    "O3": [0.70, 0.78]
+    "T1": [0.30, 0.92]
+    "T2": [0.22, 0.88]
+    "T3": [0.24, 0.74]
 ```
+
+### Chú Giải Biểu Đồ
+
+- `S1`: Funnel `content -> tool` rõ và mạnh
+- `S2`: Mỗi vertical có proposition riêng
+- `S3`: `Vimo` có dáng một product thật
+- `W1`: Tín hiệu `E-E-A-T` theo vertical chưa đồng đều
+- `W2`: Root sitemap quá nhỏ so với toàn hệ
+- `W3`: Cross-link mạnh nhưng topical silo chưa sạch
+- `O1`: Cơ hội chuẩn hóa trust signal theo từng vertical
+- `O2`: Cơ hội tăng conversion từ usage của tool
+- `O3`: Cơ hội hợp nhất các subdomain yếu
+- `T1`: Google có thể đánh giá khắt khe hơn ở các mảng YMYL
+- `T2`: Authority bị phân mảnh về dài hạn
+- `T3`: Template lặp lại có thể làm giảm cảm nhận chất lượng
 
 ## 5. Strengths
 
