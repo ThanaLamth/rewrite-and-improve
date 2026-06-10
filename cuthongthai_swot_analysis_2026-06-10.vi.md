@@ -102,6 +102,59 @@ Kết luận tạm:
 - nhưng nhiều khả năng `off-page chưa phải điểm mạnh cốt lõi`
 - tăng trưởng hiện tại có vẻ đến từ `architecture + inventory + content/tool model` nhiều hơn là từ một hồ sơ backlink vượt trội
 
+### 2.2.2 Số liệu từ file local `cuthongthai.vn-backlinks.csv`
+
+Từ file `/home/qcweb/cuthongthai.vn-backlinks.csv`, snapshot hiện tại cho thấy:
+
+- `5,091` backlink rows
+- `1,022` source hosts
+- `2,145` target URLs
+- `3,868` dofollow rows
+- `1,223` nofollow rows
+
+Nhưng các con số này **không nên đọc theo nghĩa “hồ sơ backlink mạnh”**, vì dữ liệu bị méo rất rõ bởi:
+
+- số lượng lớn link từ một vài host lặp lại
+- rất nhiều host chất lượng thấp hoặc khó tin cậy
+- rất ít row có `Page ascore` cao
+
+Phân bố `Page ascore` trong file:
+
+- `1` row ở nhóm `40-59`
+- `19` row ở nhóm `20-39`
+- `5,071` row ở nhóm `0-19`
+
+Điều này là tín hiệu khá xấu nếu đánh giá chất lượng tổng thể.
+
+Các host nguồn lớn nhất:
+
+- `bepos.io`: `1,945` rows
+- `sstock.com.vn`: `1,295` rows
+- `enpharmacie.in`: `43` rows
+- `cu-thong-thai-calendar-1lby.vercel.app`: `41` rows
+- `www.baliserati.com`: `27` rows
+
+Phân bổ theo target host:
+
+- `cuthongthai.vn`: `4,665` rows
+- `tamlinh.cuthongthai.vn`: `350` rows
+- `vimo.cuthongthai.vn`: `66` rows
+- `suckhoe.cuthongthai.vn`: `6` rows
+- `thue.cuthongthai.vn`: `4` rows
+
+Những điều số liệu này gợi ý:
+
+- hồ sơ backlink hiện tại **rất lệch về root domain**
+- `tamlinh` có dấu hiệu được kéo link nhiều hơn các subdomain còn lại
+- `thue` và `suckhoe` gần như chưa có footprint off-page đáng kể trong file này
+- số lượng row lớn phần nhiều đến từ vài nguồn lặp, không phải từ một profile editorial mạnh và đa dạng
+
+Kết luận thực dụng từ CSV:
+
+- `có nhiều backlink rows`
+- nhưng `chất lượng nhìn chung thấp`
+- và `off-page hiện chưa đủ mạnh để bù cho rủi ro authority fragmentation của mô hình nhiều subdomain`
+
 ### 2.3 Đọc chiến lược tổng thể
 
 Đây không phải là kiến trúc SEO đơn giản theo kiểu:
@@ -379,6 +432,12 @@ Từ các tín hiệu công khai hiện quan sát được, domain này có back
 
 - mô hình nhiều subdomain càng cần lớp off-page tốt để bù cho authority fragmentation
 - nếu off-page không đủ mạnh, từng vertical sẽ phải dựa rất nhiều vào internal structure và content scale
+
+Từ file backlink local, vấn đề còn rõ hơn:
+
+- profile backlink đang bị phụ thuộc mạnh vào một số host nguồn lặp
+- phân bố quality score rất thấp
+- các vertical quan trọng như `thue` và `suckhoe` gần như chưa có lực off-page đáng kể
 
 ## 6.8 Rủi ro vận hành của mô hình đa vertical
 
