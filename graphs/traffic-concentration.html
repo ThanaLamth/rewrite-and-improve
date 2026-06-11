@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Traffic Concentration</title>
+    <style>
+      body { margin: 0; font-family: Georgia, "Times New Roman", serif; background: #f7f4ed; color: #1f2328; }
+      .wrap { max-width: 1400px; margin: 0 auto; padding: 24px; }
+      .toolbar { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px; }
+      .btn { border: 1px solid #9b4d2f; border-radius: 999px; padding: 10px 14px; text-decoration: none; color: #9b4d2f; background: #fff; }
+      .card { background: #fffdf8; border: 1px solid #ddd4c7; border-radius: 20px; padding: 24px; }
+      .mermaid { overflow: auto; }
+      @media print { .toolbar { display: none; } body { background: #fff; } .card { border: none; } }
+    </style>
+    <script type="module">
+      import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
+      mermaid.initialize({ startOnLoad: true, theme: "base" });
+      window.printPage = () => window.print();
+    </script>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="toolbar">
+        <a class="btn" href="../index.html">Quay lại summary</a>
+        <button class="btn" onclick="printPage()">Print / Save PDF</button>
+      </div>
+      <div class="card">
+        <h1>Tỷ Trọng Traffic Theo Nhóm Top URL</h1>
+        <pre class="mermaid">xychart-beta
+    title "Tỷ Trọng Traffic Theo Nhóm Top URL"
+    x-axis ["Top 1", "Top 3", "Top 10", "Top 20"]
+    y-axis "Tỷ trọng %" 0 --> 100
+    bar [64.05, 80.64, 90.87, 94.87]</pre>
+      </div>
+    </div>
+  </body>
+  </html>

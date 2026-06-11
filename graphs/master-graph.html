@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Master Graph</title>
+    <style>
+      body { margin: 0; font-family: Georgia, "Times New Roman", serif; background: #f7f4ed; color: #1f2328; }
+      .wrap { max-width: 1600px; margin: 0 auto; padding: 24px; }
+      .toolbar { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px; }
+      .btn { border: 1px solid #9b4d2f; border-radius: 999px; padding: 10px 14px; text-decoration: none; color: #9b4d2f; background: #fff; }
+      .card { background: #fffdf8; border: 1px solid #ddd4c7; border-radius: 20px; padding: 24px; }
+      .mermaid { overflow: auto; }
+      @media print { .toolbar { display: none; } body { background: #fff; } .card { border: none; } }
+    </style>
+    <script type="module">
+      import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
+      mermaid.initialize({ startOnLoad: true, theme: "base" });
+      window.printPage = () => window.print();
+    </script>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="toolbar">
+        <a class="btn" href="../index.html">Quay lại summary</a>
+        <button class="btn" onclick="printPage()">Print / Save PDF</button>
+      </div>
+      <div class="card">
+        <h1>Cuthongthai.vn: Master Graph</h1>
+        <pre class="mermaid">flowchart TD
+    A["Cuthongthai.vn<br/>Multi-vertical search ecosystem"]
+
+    A --> B["Kiến trúc hệ"]
+    A --> C["Động cơ tăng trưởng"]
+    A --> D["Reality của traffic"]
+    A --> E["Điểm hạn chế hiện tại"]
+
+    B --> B1["Root domain = brand hub"]
+    B --> B2["Subdomain = vertical product / intent silo"]
+    B --> B3["Content -> Tool -> Ecosystem"]
+    B --> B4["Vimo / Thue / Tamlinh / Muanha / Suckhoe"]
+
+    C --> C1["Inventory URL lớn"]
+    C --> C2["Answer-shaped content"]
+    C --> C3["Machine-readable SEO / AEO / GEO"]
+    C --> C4["Tool utility và internal path rõ"]
+    C --> C5["Mỗi vertical có site identity riêng"]
+
+    D --> D1["Organic estimate: 35,334"]
+    D --> D2["tamlinh.cuthongthai.vn = 71.83%"]
+    D --> D3["Tamlinh-related cluster = 90.07%"]
+    D --> D4["Top 1 URL = 64.05%"]
+    D --> D5["Intent informational = 99.28%"]
+
+    E --> E1["Authority bị phân mảnh giữa nhiều host"]
+    E --> E2["Backlink có nhưng chưa cho thấy sức mạnh áp đảo"]
+    E --> E3["Root sitemap.xml chỉ phản ánh rất nhỏ toàn hệ"]
+    E --> E4["Sitemap discovery đang phân mảnh theo subdomain"]
+    E --> E5["Performance hiện chưa cân bằng giữa các vertical"]
+
+    D2 --> F["Kết luận trung tâm"]
+    D3 --> F
+    C1 --> F
+    C4 --> F
+    E1 --> F
+
+    F["Đây là một ecosystem khá tinh vi về cấu trúc và machine-readable SEO,<br/>nhưng organic performance hiện tại đang được kéo chủ yếu bởi cluster tâm linh,<br/>không phải bởi toàn bộ hệ cùng mạnh như nhau."]</pre>
+      </div>
+    </div>
+  </body>
+  </html>

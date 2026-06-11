@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sitemap Scale</title>
+    <style>
+      body { margin: 0; font-family: Georgia, "Times New Roman", serif; background: #f7f4ed; color: #1f2328; }
+      .wrap { max-width: 1500px; margin: 0 auto; padding: 24px; }
+      .toolbar { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px; }
+      .btn { border: 1px solid #9b4d2f; border-radius: 999px; padding: 10px 14px; text-decoration: none; color: #9b4d2f; background: #fff; }
+      .card { background: #fffdf8; border: 1px solid #ddd4c7; border-radius: 20px; padding: 24px; }
+      .mermaid { overflow: auto; }
+      @media print { .toolbar { display: none; } body { background: #fff; } .card { border: none; } }
+    </style>
+    <script type="module">
+      import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
+      mermaid.initialize({ startOnLoad: true, theme: "base" });
+      window.printPage = () => window.print();
+    </script>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="toolbar">
+        <a class="btn" href="../index.html">Quay lại summary</a>
+        <button class="btn" onclick="printPage()">Print / Save PDF</button>
+      </div>
+      <div class="card">
+        <h1>Số URL Trong Một Số Sitemap Chính</h1>
+        <pre class="mermaid">xychart-beta
+    title "Số URL Trong Một Số Sitemap Chính"
+    x-axis ["root sitemap.xml", "root sitemap_index", "vimo", "thue blog", "tamlinh blog", "muanha", "suckhoe blog"]
+    y-axis "Số URL" 0 --> 20000
+    bar [2, 393, 521, 17641, 18059, 10034, 16094]</pre>
+      </div>
+    </div>
+  </body>
+  </html>

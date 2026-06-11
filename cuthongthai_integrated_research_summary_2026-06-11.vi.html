@@ -167,27 +167,32 @@
         border-radius: 16px;
         background: #fff;
         overflow: auto;
-        cursor: zoom-in;
-        position: relative;
-      }
-
-      .mermaid-wrap::after {
-        content: "Click để zoom";
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        background: rgba(255, 253, 248, 0.92);
-        border: 1px solid var(--line);
-        color: var(--muted);
-        padding: 4px 8px;
-        border-radius: 999px;
-        font-size: 12px;
-        pointer-events: none;
+        cursor: default;
       }
 
       .mermaid-wrap svg {
         max-width: 100%;
         height: auto;
+      }
+
+      .graph-actions {
+        margin-top: 12px;
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      .graph-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px 12px;
+        border: 1px solid var(--accent);
+        border-radius: 999px;
+        color: var(--accent);
+        text-decoration: none;
+        font-size: 14px;
+        background: #fff;
       }
 
       .zoom-modal {
@@ -355,112 +360,6 @@
         window.print();
       };
 
-      let zoomScale = 1;
-
-      function applyZoom() {
-        const target = document.getElementById("zoom-target");
-        if (!target) return;
-        target.style.transform = `scale(${zoomScale})`;
-      }
-
-      async function openZoomFromWrap(wrap) {
-        const source = wrap.dataset.graphSource;
-        const existingSvg = wrap.querySelector("svg");
-        const target = document.getElementById("zoom-target");
-        const modal = document.getElementById("zoom-modal");
-        const title = document.getElementById("zoom-title");
-        if (!target || !modal || !title) return;
-
-        const slide = wrap.closest(".slide");
-        const heading = slide ? slide.querySelector("h2") : null;
-        title.textContent = heading ? heading.textContent : "Graph";
-
-        if (existingSvg) {
-          target.innerHTML = existingSvg.outerHTML;
-          zoomScale = 1;
-          applyZoom();
-          modal.classList.add("open");
-          document.body.style.overflow = "hidden";
-          setTimeout(() => zoomFit(), 60);
-          return;
-        }
-
-        if (!source) {
-          target.innerHTML = "<div style='padding:24px;color:#9b2c2c;font-size:16px;'>Graph chưa sẵn sàng để zoom. Hãy chờ trang render xong rồi thử lại.</div>";
-          modal.classList.add("open");
-          document.body.style.overflow = "hidden";
-          return;
-        }
-
-        target.innerHTML = "<div style='padding:24px;color:#5a6270;font-size:16px;'>Đang render graph...</div>";
-        zoomScale = 1;
-        modal.classList.add("open");
-        document.body.style.overflow = "hidden";
-
-        try {
-          const graphId = `zoom-graph-${Date.now()}`;
-          const rendered = await mermaid.render(graphId, source);
-          target.innerHTML = rendered.svg;
-          zoomScale = 1;
-          applyZoom();
-          setTimeout(() => zoomFit(), 60);
-        } catch (error) {
-          target.innerHTML = "<div style='padding:24px;color:#9b2c2c;font-size:16px;'>Không render được graph trong chế độ zoom.</div>";
-          console.error(error);
-        }
-      }
-
-      function closeZoom() {
-        const modal = document.getElementById("zoom-modal");
-        if (!modal) return;
-        modal.classList.remove("open");
-        document.body.style.overflow = "";
-      }
-
-      function zoomIn() {
-        zoomScale = Math.min(zoomScale + 0.2, 4);
-        applyZoom();
-      }
-
-      function zoomOut() {
-        zoomScale = Math.max(zoomScale - 0.2, 0.4);
-        applyZoom();
-      }
-
-      function zoomReset() {
-        zoomScale = 1;
-        applyZoom();
-      }
-
-      function zoomFit() {
-        const stage = document.getElementById("zoom-stage");
-        const target = document.getElementById("zoom-target");
-        const svg = target ? target.querySelector("svg") : null;
-        if (!stage || !svg) return;
-
-        const stageWidth = stage.clientWidth - 40;
-        const stageHeight = stage.clientHeight - 40;
-        const box = svg.getBBox();
-        if (!box.width || !box.height) {
-          zoomScale = 1;
-          applyZoom();
-          return;
-        }
-
-        const scaleX = stageWidth / box.width;
-        const scaleY = stageHeight / box.height;
-        zoomScale = Math.max(0.4, Math.min(3, Math.min(scaleX, scaleY)));
-        applyZoom();
-      }
-
-      function bindZoomableGraphs() {
-        document.querySelectorAll(".mermaid-wrap").forEach((wrap) => {
-          if (wrap.dataset.zoomBound === "true") return;
-          wrap.dataset.zoomBound = "true";
-          wrap.addEventListener("click", () => openZoomFromWrap(wrap));
-        });
-      }
-
       function captureGraphSources() {
         document.querySelectorAll(".mermaid-wrap .mermaid").forEach((node) => {
           const wrap = node.closest(".mermaid-wrap");
@@ -469,24 +368,11 @@
         });
       }
 
-      window.closeZoom = closeZoom;
-      window.zoomIn = zoomIn;
-      window.zoomOut = zoomOut;
-      window.zoomReset = zoomReset;
-      window.zoomFit = zoomFit;
-
       window.addEventListener("load", async () => {
         captureGraphSources();
         await mermaid.run({
           querySelector: ".mermaid"
         });
-        bindZoomableGraphs();
-      });
-
-      document.addEventListener("keydown", (event) => {
-        const modal = document.getElementById("zoom-modal");
-        if (!modal || !modal.classList.contains("open")) return;
-        if (event.key === "Escape") closeZoom();
       });
     </script>
   </head>
@@ -613,6 +499,9 @@ pie showData
     "suckhoe.cuthongthai.vn" : 1
             </pre>
           </div>
+          <div class="graph-actions">
+            <a class="graph-link" href="graphs/traffic-host.html" target="_blank" rel="noopener noreferrer">Mở graph lớn</a>
+          </div>
         </section>
 
         <section class="slide">
@@ -631,6 +520,9 @@ xychart-beta
     y-axis "Tỷ trọng %" 0 --> 100
     bar [64.05, 80.64, 90.87, 94.87]
             </pre>
+          </div>
+          <div class="graph-actions">
+            <a class="graph-link" href="graphs/traffic-concentration.html" target="_blank" rel="noopener noreferrer">Mở graph lớn</a>
           </div>
           <div class="note">
             Organic performance hiện tại không cân bằng. Nó đang bị kéo rất mạnh bởi một số URL đầu tàu trong cluster <code>tâm linh</code>.
@@ -664,6 +556,9 @@ xychart-beta
     y-axis "Số URL" 0 --> 20000
     bar [2, 393, 521, 17641, 18059, 10034, 16094]
             </pre>
+          </div>
+          <div class="graph-actions">
+            <a class="graph-link" href="graphs/sitemap-scale.html" target="_blank" rel="noopener noreferrer">Mở graph lớn</a>
           </div>
           <div class="note">
             Root không phản ánh toàn hệ theo một lớp sitemap tập trung. Sitemap discovery đang phân mảnh theo từng host.
@@ -735,6 +630,9 @@ quadrantChart
     "T3": [0.30, 0.78]
             </pre>
           </div>
+          <div class="graph-actions">
+            <a class="graph-link" href="graphs/swot-quadrant.html" target="_blank" rel="noopener noreferrer">Mở graph lớn</a>
+          </div>
         </section>
 
         <section class="slide">
@@ -781,6 +679,9 @@ flowchart TD
     F["Đây là một ecosystem khá tinh vi về cấu trúc và machine-readable SEO,<br/>nhưng organic performance hiện tại đang được kéo chủ yếu bởi cluster tâm linh,<br/>không phải bởi toàn bộ hệ cùng mạnh như nhau."]
             </pre>
           </div>
+          <div class="graph-actions">
+            <a class="graph-link" href="graphs/master-graph.html" target="_blank" rel="noopener noreferrer">Mở graph lớn</a>
+          </div>
         </section>
 
         <section class="slide">
@@ -799,27 +700,5 @@ flowchart TD
       </div>
     </div>
 
-    <div id="zoom-modal" class="zoom-modal" onclick="closeZoom()">
-      <div class="zoom-panel" onclick="event.stopPropagation()">
-        <div class="zoom-toolbar">
-          <div class="zoom-toolbar-left">
-            <strong id="zoom-title">Graph</strong>
-            <span class="zoom-title">Bấm Esc để đóng</span>
-          </div>
-          <div class="zoom-toolbar-right">
-            <button class="zoom-btn" onclick="zoomOut()">-</button>
-            <button class="zoom-btn" onclick="zoomIn()">+</button>
-            <button class="zoom-btn" onclick="zoomFit()">Fit</button>
-            <button class="zoom-btn" onclick="zoomReset()">Reset</button>
-            <button class="zoom-btn primary" onclick="closeZoom()">Close</button>
-          </div>
-        </div>
-        <div id="zoom-stage" class="zoom-stage">
-          <div class="zoom-canvas">
-            <div id="zoom-target" class="zoom-target"></div>
-          </div>
-        </div>
-      </div>
-    </div>
   </body>
 </html>
