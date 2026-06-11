@@ -1,0 +1,554 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cuthongthai.vn - Executive Summary With Graphs</title>
+    <style>
+      :root {
+        --bg: #f7f4ed;
+        --paper: #fffdf8;
+        --ink: #1f2328;
+        --muted: #5a6270;
+        --line: #ddd4c7;
+        --accent: #9b4d2f;
+        --accent-soft: #f1e1d6;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        color: var(--ink);
+        background: linear-gradient(180deg, #efe8db 0%, var(--bg) 100%);
+      }
+
+      .wrap {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 32px 20px 64px;
+      }
+
+      .toolbar {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-bottom: 24px;
+      }
+
+      .button {
+        appearance: none;
+        border: 1px solid var(--accent);
+        background: var(--accent);
+        color: #fff;
+        padding: 10px 14px;
+        font: inherit;
+        font-size: 14px;
+        border-radius: 999px;
+        cursor: pointer;
+      }
+
+      .button.secondary {
+        background: transparent;
+        color: var(--accent);
+      }
+
+      .hero,
+      .slide {
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 22px;
+        box-shadow: 0 14px 40px rgba(35, 25, 12, 0.08);
+      }
+
+      .hero {
+        padding: 28px;
+        margin-bottom: 20px;
+      }
+
+      .eyebrow {
+        margin: 0 0 8px;
+        color: var(--accent);
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 0 0 12px;
+        font-size: clamp(34px, 5vw, 56px);
+        line-height: 1;
+      }
+
+      .hero p {
+        margin: 10px 0;
+        font-size: 18px;
+        line-height: 1.6;
+      }
+
+      .meta {
+        color: var(--muted);
+        font-size: 15px;
+      }
+
+      .deck {
+        display: grid;
+        gap: 20px;
+      }
+
+      .slide {
+        padding: 24px;
+      }
+
+      .slide h2 {
+        margin: 0 0 14px;
+        font-size: 30px;
+        line-height: 1.15;
+      }
+
+      .slide p,
+      .slide li {
+        font-size: 17px;
+        line-height: 1.65;
+      }
+
+      .slide ul,
+      .slide ol {
+        margin: 10px 0 0 22px;
+      }
+
+      .lead {
+        font-size: 20px;
+        line-height: 1.65;
+      }
+
+      .note {
+        margin-top: 16px;
+        padding: 14px 16px;
+        background: var(--accent-soft);
+        border-left: 4px solid var(--accent);
+        border-radius: 12px;
+        font-size: 16px;
+      }
+
+      .grid-2 {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 12px;
+        font-size: 15px;
+      }
+
+      th,
+      td {
+        border: 1px solid var(--line);
+        padding: 10px 12px;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      th {
+        background: #faf3ea;
+      }
+
+      .mermaid-wrap {
+        margin-top: 18px;
+        padding: 14px;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        background: #fff;
+        overflow: auto;
+      }
+
+      .links a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+
+      .links a:hover {
+        text-decoration: underline;
+      }
+
+      .print-tip {
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      @media (max-width: 820px) {
+        .grid-2 {
+          grid-template-columns: 1fr;
+        }
+
+        .slide,
+        .hero {
+          padding: 20px;
+        }
+      }
+
+      @media print {
+        body {
+          background: #fff;
+        }
+
+        .wrap {
+          max-width: none;
+          padding: 0;
+        }
+
+        .toolbar {
+          display: none;
+        }
+
+        .hero,
+        .slide {
+          box-shadow: none;
+          border-radius: 0;
+          border: none;
+          break-inside: avoid;
+          page-break-inside: avoid;
+          margin: 0 0 18px;
+        }
+      }
+    </style>
+    <script type="module">
+      import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
+      mermaid.initialize({
+        startOnLoad: true,
+        theme: "base",
+        themeVariables: {
+          primaryColor: "#f5e4d7",
+          primaryTextColor: "#1f2328",
+          primaryBorderColor: "#9b4d2f",
+          lineColor: "#6f4f3c",
+          secondaryColor: "#f8efe5",
+          tertiaryColor: "#fffaf4",
+          fontFamily: "Georgia, Times New Roman, serif"
+        },
+        flowchart: {
+          curve: "basis"
+        }
+      });
+      window.printDeck = function printDeck() {
+        window.print();
+      };
+    </script>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="toolbar">
+        <button class="button" onclick="printDeck()">Print / Save PDF</button>
+        <a class="button secondary" href="https://github.com/ThanaLamth/rewrite-and-improve/blob/main/cuthongthai_integrated_research_2026-06-10.vi.md">Research đầy đủ</a>
+        <a class="button secondary" href="https://github.com/ThanaLamth/rewrite-and-improve/blob/main/cuthongthai_master_graph_2026-06-11.vi.md">Master graph</a>
+      </div>
+
+      <section class="hero">
+        <p class="eyebrow">Executive Summary</p>
+        <h1>Cuthongthai.vn</h1>
+        <p class="lead">
+          Một hệ nhiều mini-product tăng trưởng bằng search, rất khác thường ở cách ghép
+          content, tool, subdomain và machine-readable SEO; nhưng organic performance hiện
+          tại đang phản ánh sức mạnh áp đảo của cluster tâm linh nhiều hơn là sức mạnh cân
+          bằng của toàn bộ hệ.
+        </p>
+        <p class="meta">Ngày biên soạn: 2026-06-11</p>
+        <p class="print-tip">Mở file trên trình duyệt, chờ graph render xong, rồi bấm <strong>Print / Save PDF</strong>.</p>
+      </section>
+
+      <div class="deck">
+        <section class="slide">
+          <h2>Slide 1: Cuthongthai Là Gì</h2>
+          <p>
+            <code>cuthongthai.vn</code> không vận hành như một site nội dung thông thường. Nó giống
+            một <strong>multi-vertical search ecosystem</strong>:
+          </p>
+          <ul>
+            <li><code>cuthongthai.vn</code> là brand hub</li>
+            <li><code>vimo</code>, <code>thue</code>, <code>tamlinh</code>, <code>muanha</code>, <code>suckhoe</code> là các vertical riêng</li>
+            <li>content kéo demand</li>
+            <li>tool/module giữ người dùng trong hệ</li>
+          </ul>
+          <div class="note">
+            Điểm khác biệt lớn nhất là sự kết hợp giữa <code>content scale</code>, <code>tool utility</code>,
+            <code>machine-readable SEO</code> và <code>subdomain branding</code>.
+          </div>
+        </section>
+
+        <section class="slide">
+          <h2>Slide 2: Điều Gì Làm Họ Khác Site Khác</h2>
+          <ol>
+            <li>Inventory URL rất lớn</li>
+            <li>Content đóng gói theo dạng dễ match query và dễ cho máy đọc</li>
+            <li>Tool utility tạo bước đi tiếp sau content</li>
+            <li>Mỗi vertical có site identity riêng</li>
+          </ol>
+          <div class="mermaid-wrap">
+            <pre class="mermaid">
+flowchart LR
+    A[Long-tail inventory lớn] --> B[Answer-shaped content]
+    B --> C[Tool utility]
+    C --> D[Session depth và ecosystem retention]
+    A --> E[Subdomain vertical identity]
+    E --> C
+    B --> F[Machine-readable SEO / AEO / GEO]
+    F --> G[Crawler dễ đọc và dễ trích]
+    G --> H[Organic visibility]
+    H --> D
+            </pre>
+          </div>
+        </section>
+
+        <section class="slide">
+          <h2>Slide 3: Vì Sao Máy Đọc Dễ Hiểu Hệ Này</h2>
+          <ul>
+            <li>HTML render sẵn</li>
+            <li>answer-shaped content</li>
+            <li>FAQ</li>
+            <li>schema dày</li>
+            <li>source section</li>
+            <li>robots khá mở cho search/AI crawlers</li>
+          </ul>
+          <div class="note">
+            Đây không phải một mẹo đơn lẻ. Nó là một pattern xuất hiện xuyên suốt trong hệ.
+          </div>
+        </section>
+
+        <section class="slide">
+          <h2>Slide 4: Subdomain Ở Đây Không Chỉ Là Chia URL</h2>
+          <div class="grid-2">
+            <div>
+              <p>Trong case này, subdomain mang vai trò:</p>
+              <ul>
+                <li>product surface</li>
+                <li>intent silo</li>
+                <li>UX environment</li>
+                <li>measurement surface</li>
+              </ul>
+            </div>
+            <div>
+              <p>Tức là:</p>
+              <ul>
+                <li><code>thue</code> là môi trường thuế</li>
+                <li><code>tamlinh</code> là môi trường tâm linh</li>
+                <li><code>vimo</code> là môi trường tài chính kiểu app</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="slide">
+          <h2>Slide 5: Traffic Đang Đến Từ Đâu</h2>
+          <p>Từ file organic pages local:</p>
+          <ul>
+            <li>tổng estimated traffic: <strong>35,334</strong></li>
+            <li><code>tamlinh.cuthongthai.vn</code>: <strong>25,379</strong> tương đương <strong>71.83%</strong></li>
+            <li><code>cuthongthai.vn</code>: <strong>9,728</strong> tương đương <strong>27.53%</strong></li>
+            <li>các host còn lại cộng lại chưa tới <strong>1%</strong></li>
+          </ul>
+          <div class="mermaid-wrap">
+            <pre class="mermaid">
+pie showData
+    title Organic Traffic Estimate Theo Host
+    "tamlinh.cuthongthai.vn" : 25379
+    "cuthongthai.vn" : 9728
+    "vimo.cuthongthai.vn" : 161
+    "thue.cuthongthai.vn" : 48
+    "muanha.cuthongthai.vn" : 17
+    "suckhoe.cuthongthai.vn" : 1
+            </pre>
+          </div>
+        </section>
+
+        <section class="slide">
+          <h2>Slide 6: Traffic Tập Trung Mạnh Tới Mức Nào</h2>
+          <ul>
+            <li>top <code>1</code> URL chiếm <strong>64.05%</strong></li>
+            <li>top <code>3</code> URL chiếm <strong>80.64%</strong></li>
+            <li>top <code>10</code> URL chiếm <strong>90.87%</strong></li>
+            <li>top <code>20</code> URL chiếm <strong>94.87%</strong></li>
+          </ul>
+          <div class="mermaid-wrap">
+            <pre class="mermaid">
+xychart-beta
+    title "Tỷ Trọng Traffic Theo Nhóm Top URL"
+    x-axis ["Top 1", "Top 3", "Top 10", "Top 20"]
+    y-axis "Tỷ trọng %" 0 --> 100
+    bar [64.05, 80.64, 90.87, 94.87]
+            </pre>
+          </div>
+          <div class="note">
+            Organic performance hiện tại không cân bằng. Nó đang bị kéo rất mạnh bởi một số URL đầu tàu trong cluster <code>tâm linh</code>.
+          </div>
+        </section>
+
+        <section class="slide">
+          <h2>Slide 7: Sitemap Và Quy Mô Hệ</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Sitemap</th>
+                <th>Số URL</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>root <code>sitemap.xml</code></td><td>2</td></tr>
+              <tr><td>root <code>sitemap_index.xml</code></td><td>393</td></tr>
+              <tr><td><code>vimo</code></td><td>521</td></tr>
+              <tr><td><code>thue blog</code></td><td>17,641</td></tr>
+              <tr><td><code>tamlinh blog</code></td><td>18,059</td></tr>
+              <tr><td><code>muanha</code></td><td>10,034</td></tr>
+              <tr><td><code>suckhoe blog</code></td><td>16,094</td></tr>
+            </tbody>
+          </table>
+          <div class="mermaid-wrap">
+            <pre class="mermaid">
+xychart-beta
+    title "Số URL Trong Một Số Sitemap Chính"
+    x-axis ["root sitemap.xml", "root sitemap_index", "vimo", "thue blog", "tamlinh blog", "muanha", "suckhoe blog"]
+    y-axis "Số URL" 0 --> 20000
+    bar [2, 393, 521, 17641, 18059, 10034, 16094]
+            </pre>
+          </div>
+          <div class="note">
+            Root không phản ánh toàn hệ theo một lớp sitemap tập trung. Sitemap discovery đang phân mảnh theo từng host.
+          </div>
+        </section>
+
+        <section class="slide">
+          <h2>Slide 8: Backlink Có Phải Động Cơ Chính Không</h2>
+          <ul>
+            <li>có backlink</li>
+            <li>nhưng quality profile nhìn chưa mạnh</li>
+            <li>dữ liệu bị lệch bởi vài source host lớn</li>
+            <li><code>Page ascore</code> chủ yếu ở nhóm thấp</li>
+          </ul>
+          <div class="note">
+            Kết luận ở mức phân tích: backlink hiện chưa phải lời giải thích chính cho tăng trưởng đang thấy.
+          </div>
+        </section>
+
+        <section class="slide">
+          <h2>Slide 9: SWOT Một Trang</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Nhóm</th>
+                <th>Ý chính</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>Strengths</code></td>
+                <td>product-like ecosystem, machine-readable SEO mạnh, funnel <code>content -&gt; tool</code>, <code>tamlinh</code> có intent-fit rất mạnh</td>
+              </tr>
+              <tr>
+                <td><code>Weaknesses</code></td>
+                <td>authority phân mảnh, traffic lệch nặng, root sitemap yếu, off-page chưa nổi bật</td>
+              </tr>
+              <tr>
+                <td><code>Opportunities</code></td>
+                <td>inventory lớn, mỗi vertical là một growth surface riêng, tool utility khác blog thuần</td>
+              </tr>
+              <tr>
+                <td><code>Threats</code></td>
+                <td>phụ thuộc mạnh vào cluster tâm linh, hygiene risk khi scale lớn, umbrella brand quá rộng</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="mermaid-wrap">
+            <pre class="mermaid">
+quadrantChart
+    title SWOT Tổng Hợp Cho Cuthongthai.vn
+    x-axis Nội lực yếu --> Nội lực mạnh
+    y-axis Tác động thấp --> Tác động cao
+    quadrant-1 Strengths
+    quadrant-2 Opportunities
+    quadrant-3 Weaknesses
+    quadrant-4 Threats
+    "S1": [0.88, 0.92]
+    "S2": [0.84, 0.87]
+    "S3": [0.80, 0.82]
+    "W1": [0.22, 0.88]
+    "W2": [0.18, 0.80]
+    "W3": [0.26, 0.70]
+    "O1": [0.76, 0.88]
+    "O2": [0.72, 0.82]
+    "O3": [0.68, 0.76]
+    "T1": [0.28, 0.94]
+    "T2": [0.24, 0.86]
+    "T3": [0.30, 0.78]
+            </pre>
+          </div>
+        </section>
+
+        <section class="slide">
+          <h2>Slide 10: Master Graph</h2>
+          <div class="mermaid-wrap">
+            <pre class="mermaid">
+flowchart TD
+    A["Cuthongthai.vn<br/>Multi-vertical search ecosystem"]
+
+    A --> B["Kiến trúc hệ"]
+    A --> C["Động cơ tăng trưởng"]
+    A --> D["Reality của traffic"]
+    A --> E["Điểm hạn chế hiện tại"]
+
+    B --> B1["Root domain = brand hub"]
+    B --> B2["Subdomain = vertical product / intent silo"]
+    B --> B3["Content -> Tool -> Ecosystem"]
+    B --> B4["Vimo / Thue / Tamlinh / Muanha / Suckhoe"]
+
+    C --> C1["Inventory URL lớn"]
+    C --> C2["Answer-shaped content"]
+    C --> C3["Machine-readable SEO / AEO / GEO"]
+    C --> C4["Tool utility và internal path rõ"]
+    C --> C5["Mỗi vertical có site identity riêng"]
+
+    D --> D1["Organic estimate: 35,334"]
+    D --> D2["tamlinh.cuthongthai.vn = 71.83%"]
+    D --> D3["Tamlinh-related cluster = 90.07%"]
+    D --> D4["Top 1 URL = 64.05%"]
+    D --> D5["Intent informational = 99.28%"]
+
+    E --> E1["Authority bị phân mảnh giữa nhiều host"]
+    E --> E2["Backlink có nhưng chưa cho thấy sức mạnh áp đảo"]
+    E --> E3["Root sitemap.xml chỉ phản ánh rất nhỏ toàn hệ"]
+    E --> E4["Sitemap discovery đang phân mảnh theo subdomain"]
+    E --> E5["Performance hiện chưa cân bằng giữa các vertical"]
+
+    D2 --> F["Kết luận trung tâm"]
+    D3 --> F
+    C1 --> F
+    C4 --> F
+    E1 --> F
+
+    F["Đây là một ecosystem khá tinh vi về cấu trúc và machine-readable SEO,<br/>nhưng organic performance hiện tại đang được kéo chủ yếu bởi cluster tâm linh,<br/>không phải bởi toàn bộ hệ cùng mạnh như nhau."]
+            </pre>
+          </div>
+        </section>
+
+        <section class="slide">
+          <h2>Slide 11: Câu Kết Một Dòng</h2>
+          <p class="lead">
+            <code>Cuthongthai.vn</code> là một hệ nhiều mini-product tăng trưởng bằng search,
+            rất khác thường ở cách ghép content, tool, subdomain và machine-readable SEO;
+            nhưng organic performance hiện tại đang phản ánh sức mạnh áp đảo của cluster
+            tâm linh nhiều hơn là sức mạnh cân bằng của toàn bộ hệ.
+          </p>
+          <p class="links">
+            Link research đầy đủ:
+            <a href="https://github.com/ThanaLamth/rewrite-and-improve/blob/main/cuthongthai_integrated_research_2026-06-10.vi.md">Markdown đầy đủ</a>
+          </p>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
