@@ -336,7 +336,7 @@
     <script type="module">
       import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
       mermaid.initialize({
-        startOnLoad: true,
+        startOnLoad: false,
         theme: "base",
         themeVariables: {
           primaryColor: "#f5e4d7",
@@ -363,17 +363,15 @@
         target.style.transform = `scale(${zoomScale})`;
       }
 
-      function openZoomFromWrap(wrap) {
-        const svg = wrap.querySelector("svg");
+      async function openZoomFromWrap(wrap) {
+        const source = wrap.dataset.graphSource;
         const target = document.getElementById("zoom-target");
         const modal = document.getElementById("zoom-modal");
         const title = document.getElementById("zoom-title");
-        if (!svg || !target || !modal || !title) return;
+        if (!source || !target || !modal || !title) return;
 
-        target.innerHTML = "";
-        target.appendChild(svg.cloneNode(true));
+        target.innerHTML = "<div style='padding:24px;color:#5a6270;font-size:16px;'>Đang render graph...</div>";
         zoomScale = 1;
-        applyZoom();
 
         const slide = wrap.closest(".slide");
         const heading = slide ? slide.querySelector("h2") : null;
@@ -381,6 +379,18 @@
 
         modal.classList.add("open");
         document.body.style.overflow = "hidden";
+
+        try {
+          const graphId = `zoom-graph-${Date.now()}`;
+          const rendered = await mermaid.render(graphId, source);
+          target.innerHTML = rendered.svg;
+          zoomScale = 1;
+          applyZoom();
+          setTimeout(() => zoomFit(), 60);
+        } catch (error) {
+          target.innerHTML = "<div style='padding:24px;color:#9b2c2c;font-size:16px;'>Không render được graph trong chế độ zoom.</div>";
+          console.error(error);
+        }
       }
 
       function closeZoom() {
@@ -434,14 +444,26 @@
         });
       }
 
+      function captureGraphSources() {
+        document.querySelectorAll(".mermaid-wrap .mermaid").forEach((node) => {
+          const wrap = node.closest(".mermaid-wrap");
+          if (!wrap) return;
+          wrap.dataset.graphSource = node.textContent.trim();
+        });
+      }
+
       window.closeZoom = closeZoom;
       window.zoomIn = zoomIn;
       window.zoomOut = zoomOut;
       window.zoomReset = zoomReset;
       window.zoomFit = zoomFit;
 
-      window.addEventListener("load", () => {
-        setTimeout(bindZoomableGraphs, 400);
+      window.addEventListener("load", async () => {
+        captureGraphSources();
+        await mermaid.run({
+          querySelector: ".mermaid"
+        });
+        bindZoomableGraphs();
       });
 
       document.addEventListener("keydown", (event) => {
