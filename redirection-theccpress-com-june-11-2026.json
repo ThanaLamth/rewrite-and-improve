@@ -1,0 +1,1930 @@
+{
+    "plugin": {
+        "version": "5.7.5",
+        "date": "Thu, 11 Jun 2026 07:54:13 +0000"
+    },
+    "groups": [
+        {
+            "id": 1,
+            "name": "Redirections",
+            "redirects": 74,
+            "module_id": 1,
+            "moduleName": "WordPress",
+            "enabled": true
+        },
+        {
+            "id": 2,
+            "name": "Modified Posts",
+            "redirects": 0,
+            "module_id": 1,
+            "moduleName": "WordPress",
+            "enabled": true
+        }
+    ],
+    "redirects": [
+        {
+            "id": 3,
+            "url": "/wp-content/uploads/2019/11/Paraguay-Mining-Farm.jpg",
+            "match_url": "/wp-content/uploads/2019/11/paraguay-mining-farm.jpg",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": true,
+                    "flag_trailing": true,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 301,
+            "action_type": "url",
+            "action_data": {
+                "url": "https://theccpress.com/wp-content/uploads/2019/11/Paraguay-Mining-Farm1-1.jpg"
+            },
+            "match_type": "url",
+            "title": "",
+            "hits": 8,
+            "regex": false,
+            "group_id": 1,
+            "position": 0,
+            "last_access": "December 4, 2024",
+            "enabled": true
+        },
+        {
+            "id": 4,
+            "url": "/altcoin-news/",
+            "match_url": "/altcoin-news",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": false,
+                    "flag_trailing": true,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 301,
+            "action_type": "url",
+            "action_data": {
+                "url": "/category/altcoin-news/"
+            },
+            "match_type": "url",
+            "title": "",
+            "hits": 7413,
+            "regex": false,
+            "group_id": 1,
+            "position": 1,
+            "last_access": "June 9, 2026",
+            "enabled": false
+        },
+        {
+            "id": 5,
+            "url": "/crypto-101/",
+            "match_url": "/crypto-101",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": false,
+                    "flag_trailing": true,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 301,
+            "action_type": "url",
+            "action_data": {
+                "url": "/category/crypto-101/"
+            },
+            "match_type": "url",
+            "title": "",
+            "hits": 8073,
+            "regex": false,
+            "group_id": 1,
+            "position": 2,
+            "last_access": "June 9, 2026",
+            "enabled": false
+        },
+        {
+            "id": 6,
+            "url": "/latest-news/bitcoin-news/",
+            "match_url": "/latest-news/bitcoin-news",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": false,
+                    "flag_trailing": true,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 301,
+            "action_type": "url",
+            "action_data": {
+                "url": "/category/latest-news/bitcoin-news/"
+            },
+            "match_type": "url",
+            "title": "",
+            "hits": 9083,
+            "regex": false,
+            "group_id": 1,
+            "position": 3,
+            "last_access": "June 9, 2026",
+            "enabled": false
+        },
+        {
+            "id": 7,
+            "url": "/blockchain-events/",
+            "match_url": "/blockchain-events",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": false,
+                    "flag_trailing": true,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 301,
+            "action_type": "url",
+            "action_data": {
+                "url": "/category/blockchain-events/"
+            },
+            "match_type": "url",
+            "title": "",
+            "hits": 7521,
+            "regex": false,
+            "group_id": 1,
+            "position": 4,
+            "last_access": "June 9, 2026",
+            "enabled": false
+        },
+        {
+            "id": 8,
+            "url": "/crypto-101/services/",
+            "match_url": "/crypto-101/services",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": false,
+                    "flag_trailing": true,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 301,
+            "action_type": "url",
+            "action_data": {
+                "url": "/category/crypto-101/services/"
+            },
+            "match_type": "url",
+            "title": "",
+            "hits": 6810,
+            "regex": false,
+            "group_id": 1,
+            "position": 5,
+            "last_access": "June 9, 2026",
+            "enabled": false
+        },
+        {
+            "id": 9,
+            "url": "/latest-news/",
+            "match_url": "/latest-news",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": true,
+                    "flag_trailing": true,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 301,
+            "action_type": "url",
+            "action_data": {
+                "url": "/category/latest-news/"
+            },
+            "match_type": "url",
+            "title": "",
+            "hits": 370,
+            "regex": false,
+            "group_id": 1,
+            "position": 6,
+            "last_access": "June 9, 2026",
+            "enabled": false
+        },
+        {
+            "id": 10,
+            "url": "/cmc/",
+            "match_url": "/cmc",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": false,
+                    "flag_trailing": true,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 301,
+            "action_type": "url",
+            "action_data": {
+                "url": "/category/cmc/"
+            },
+            "match_type": "url",
+            "title": "",
+            "hits": 60,
+            "regex": false,
+            "group_id": 1,
+            "position": 7,
+            "last_access": "June 9, 2026",
+            "enabled": false
+        },
+        {
+            "id": 11,
+            "url": "/sponsored-articles/",
+            "match_url": "/sponsored-articles",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": false,
+                    "flag_trailing": true,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 301,
+            "action_type": "url",
+            "action_data": {
+                "url": "/category/latest-news/sponsored-articles/"
+            },
+            "match_type": "url",
+            "title": "",
+            "hits": 62,
+            "regex": false,
+            "group_id": 1,
+            "position": 8,
+            "last_access": "June 10, 2026",
+            "enabled": true
+        },
+        {
+            "id": 12,
+            "url": "^/(.+)/amp/?$",
+            "match_url": "regex",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": false,
+                    "flag_trailing": false,
+                    "flag_regex": true
+                }
+            },
+            "action_code": 301,
+            "action_type": "url",
+            "action_data": {
+                "url": "/$1/"
+            },
+            "match_type": "url",
+            "title": "",
+            "hits": 55233,
+            "regex": true,
+            "group_id": 1,
+            "position": 9,
+            "last_access": "June 11, 2026",
+            "enabled": true
+        },
+        {
+            "id": 13,
+            "url": "/bdag-testnet-0-0025-window-doge-resists-polygon-expands/?noamp=mobile",
+            "match_url": "/bdag-testnet-0-0025-window-doge-resists-polygon-expands",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": false,
+                    "flag_trailing": false,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 301,
+            "action_type": "url",
+            "action_data": {
+                "url": "/bdag-testnet-0-0025-window-doge-resists-polygon-expands/"
+            },
+            "match_type": "url",
+            "title": "",
+            "hits": 1,
+            "regex": false,
+            "group_id": 1,
+            "position": 10,
+            "last_access": "April 17, 2026",
+            "enabled": true
+        },
+        {
+            "id": 14,
+            "url": "/bitmex-has-announced-plans-to-settle-all-bch-contracts-with-bchabc-after-the-hard-fork/?noamp=mobile",
+            "match_url": "/bitmex-has-announced-plans-to-settle-all-bch-contracts-with-bchabc-after-the-hard-fork",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": false,
+                    "flag_trailing": false,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 301,
+            "action_type": "url",
+            "action_data": {
+                "url": "/bitmex-has-announced-plans-to-settle-all-bch-contracts-with-bchabc-after-the-hard-fork/"
+            },
+            "match_type": "url",
+            "title": "",
+            "hits": 0,
+            "regex": false,
+            "group_id": 1,
+            "position": 11,
+            "last_access": "-",
+            "enabled": true
+        },
+        {
+            "id": 15,
+            "url": "/founder-of-weexchange-and-bitfunder-was-found-guilty-of-security-fraud/?noamp=mobile",
+            "match_url": "/founder-of-weexchange-and-bitfunder-was-found-guilty-of-security-fraud",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": false,
+                    "flag_trailing": false,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 301,
+            "action_type": "url",
+            "action_data": {
+                "url": "/founder-of-weexchange-and-bitfunder-was-found-guilty-of-security-fraud/"
+            },
+            "match_type": "url",
+            "title": "",
+            "hits": 0,
+            "regex": false,
+            "group_id": 1,
+            "position": 12,
+            "last_access": "-",
+            "enabled": true
+        },
+        {
+            "id": 16,
+            "url": "/iohk-launches-its-second-cardano-smart-contract-dubbed-iele/?noamp=mobile",
+            "match_url": "/iohk-launches-its-second-cardano-smart-contract-dubbed-iele",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": true,
+                    "flag_trailing": true,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 301,
+            "action_type": "url",
+            "action_data": {
+                "url": "/iohk-launches-its-second-cardano-smart-contract-dubbed-iele/"
+            },
+            "match_type": "url",
+            "title": "",
+            "hits": 1,
+            "regex": false,
+            "group_id": 1,
+            "position": 13,
+            "last_access": "April 17, 2026",
+            "enabled": true
+        },
+        {
+            "id": 17,
+            "url": "/?utm_source=blockspot",
+            "match_url": "/",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": false,
+                    "flag_trailing": false,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 301,
+            "action_type": "url",
+            "action_data": {
+                "url": "/"
+            },
+            "match_type": "url",
+            "title": "",
+            "hits": 3,
+            "regex": false,
+            "group_id": 1,
+            "position": 14,
+            "last_access": "June 10, 2026",
+            "enabled": true
+        },
+        {
+            "id": 18,
+            "url": "/the-tron-trx-sun-network-testnet-is-set-for-release/?utm_source=CryptoNews&utm_medium=app",
+            "match_url": "/the-tron-trx-sun-network-testnet-is-set-for-release",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": false,
+                    "flag_trailing": false,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 301,
+            "action_type": "url",
+            "action_data": {
+                "url": "/the-tron-trx-sun-network-testnet-is-set-for-release/"
+            },
+            "match_type": "url",
+            "title": "",
+            "hits": 2,
+            "regex": false,
+            "group_id": 1,
+            "position": 15,
+            "last_access": "May 21, 2026",
+            "enabled": true
+        },
+        {
+            "id": 19,
+            "url": "/category/bitcoin/",
+            "match_url": "/category/bitcoin",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": false,
+                    "flag_trailing": false,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 301,
+            "action_type": "url",
+            "action_data": {
+                "url": "/category/latest-news/bitcoin-news/"
+            },
+            "match_type": "url",
+            "title": "",
+            "hits": 13736,
+            "regex": false,
+            "group_id": 1,
+            "position": 16,
+            "last_access": "June 11, 2026",
+            "enabled": true
+        },
+        {
+            "id": 20,
+            "url": "/category/crypto-101/exchanges/",
+            "match_url": "/category/crypto-101/exchanges",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": false,
+                    "flag_trailing": false,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 301,
+            "action_type": "url",
+            "action_data": {
+                "url": "/category/crypto-101/"
+            },
+            "match_type": "url",
+            "title": "",
+            "hits": 12538,
+            "regex": false,
+            "group_id": 1,
+            "position": 17,
+            "last_access": "June 11, 2026",
+            "enabled": true
+        },
+        {
+            "id": 21,
+            "url": "/category/crypto-101/wallets/",
+            "match_url": "/category/crypto-101/wallets",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": false,
+                    "flag_trailing": false,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 301,
+            "action_type": "url",
+            "action_data": {
+                "url": "/category/crypto-101/"
+            },
+            "match_type": "url",
+            "title": "",
+            "hits": 103,
+            "regex": false,
+            "group_id": 1,
+            "position": 18,
+            "last_access": "June 11, 2026",
+            "enabled": true
+        },
+        {
+            "id": 22,
+            "url": "/category/knowledge/",
+            "match_url": "/category/knowledge",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": false,
+                    "flag_trailing": false,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 301,
+            "action_type": "url",
+            "action_data": {
+                "url": "/category/crypto-101/"
+            },
+            "match_type": "url",
+            "title": "",
+            "hits": 8,
+            "regex": false,
+            "group_id": 1,
+            "position": 19,
+            "last_access": "May 28, 2026",
+            "enabled": true
+        },
+        {
+            "id": 23,
+            "url": "/category/finance-blockchain/",
+            "match_url": "/category/finance-blockchain",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": false,
+                    "flag_trailing": false,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 301,
+            "action_type": "url",
+            "action_data": {
+                "url": "/category/latest-news/"
+            },
+            "match_type": "url",
+            "title": "",
+            "hits": 1730,
+            "regex": false,
+            "group_id": 1,
+            "position": 20,
+            "last_access": "June 11, 2026",
+            "enabled": true
+        },
+        {
+            "id": 24,
+            "url": "/press-releases/",
+            "match_url": "/press-releases",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": false,
+                    "flag_trailing": false,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 301,
+            "action_type": "url",
+            "action_data": {
+                "url": "/"
+            },
+            "match_type": "url",
+            "title": "",
+            "hits": 91,
+            "regex": false,
+            "group_id": 1,
+            "position": 21,
+            "last_access": "June 9, 2026",
+            "enabled": false
+        },
+        {
+            "id": 25,
+            "url": "/top-5-trends-driving-crypto-betting-growth-in-2025-spartans-vs-legacy-platforms/",
+            "match_url": "/top-5-trends-driving-crypto-betting-growth-in-2025-spartans-vs-legacy-platforms",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": false,
+                    "flag_trailing": false,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 410,
+            "action_type": "error",
+            "action_data": null,
+            "match_type": "url",
+            "title": "",
+            "hits": 0,
+            "regex": false,
+            "group_id": 1,
+            "position": 22,
+            "last_access": "-",
+            "enabled": true
+        },
+        {
+            "id": 26,
+            "url": "/top-10-casinos-of-2025-why-spartans-cashrake-leads/",
+            "match_url": "/top-10-casinos-of-2025-why-spartans-cashrake-leads",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": false,
+                    "flag_trailing": false,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 410,
+            "action_type": "error",
+            "action_data": null,
+            "match_type": "url",
+            "title": "",
+            "hits": 0,
+            "regex": false,
+            "group_id": 1,
+            "position": 23,
+            "last_access": "-",
+            "enabled": true
+        },
+        {
+            "id": 27,
+            "url": "/best-betting-sites-2025-in-depth-comparison-of-spartans-hard-rock-bet-stake-com-betano/",
+            "match_url": "/best-betting-sites-2025-in-depth-comparison-of-spartans-hard-rock-bet-stake-com-betano",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": false,
+                    "flag_trailing": false,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 410,
+            "action_type": "error",
+            "action_data": null,
+            "match_type": "url",
+            "title": "",
+            "hits": 0,
+            "regex": false,
+            "group_id": 1,
+            "position": 24,
+            "last_access": "-",
+            "enabled": true
+        },
+        {
+            "id": 28,
+            "url": "/spartans-betting-sports-crash-games-crypto-in-one/",
+            "match_url": "/spartans-betting-sports-crash-games-crypto-in-one",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": false,
+                    "flag_trailing": false,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 410,
+            "action_type": "error",
+            "action_data": null,
+            "match_type": "url",
+            "title": "",
+            "hits": 0,
+            "regex": false,
+            "group_id": 1,
+            "position": 25,
+            "last_access": "-",
+            "enabled": true
+        },
+        {
+            "id": 29,
+            "url": "/spartans-vs-stake-com-betano-live-betting-test-2025/",
+            "match_url": "/spartans-vs-stake-com-betano-live-betting-test-2025",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": false,
+                    "flag_trailing": false,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 410,
+            "action_type": "error",
+            "action_data": null,
+            "match_type": "url",
+            "title": "",
+            "hits": 0,
+            "regex": false,
+            "group_id": 1,
+            "position": 26,
+            "last_access": "-",
+            "enabled": true
+        },
+        {
+            "id": 30,
+            "url": "/top-4-best-betting-sites-in-2025-spartans-bet365-william-hill-unibet-compared/",
+            "match_url": "/top-4-best-betting-sites-in-2025-spartans-bet365-william-hill-unibet-compared",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": false,
+                    "flag_trailing": false,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 410,
+            "action_type": "error",
+            "action_data": null,
+            "match_type": "url",
+            "title": "",
+            "hits": 0,
+            "regex": false,
+            "group_id": 1,
+            "position": 27,
+            "last_access": "-",
+            "enabled": true
+        },
+        {
+            "id": 31,
+            "url": "/top-crypto-casinos-for-high-stakes-gamblers-in-2025-how-to-grab-betting-bonus-instantly/",
+            "match_url": "/top-crypto-casinos-for-high-stakes-gamblers-in-2025-how-to-grab-betting-bonus-instantly",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": false,
+                    "flag_trailing": false,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 410,
+            "action_type": "error",
+            "action_data": null,
+            "match_type": "url",
+            "title": "",
+            "hits": 0,
+            "regex": false,
+            "group_id": 1,
+            "position": 28,
+            "last_access": "-",
+            "enabled": true
+        },
+        {
+            "id": 32,
+            "url": "/best-crypto-casinos-for-sports-and-slots-in-2025-top-6-ranked/",
+            "match_url": "/best-crypto-casinos-for-sports-and-slots-in-2025-top-6-ranked",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": false,
+                    "flag_trailing": false,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 410,
+            "action_type": "error",
+            "action_data": null,
+            "match_type": "url",
+            "title": "",
+            "hits": 0,
+            "regex": false,
+            "group_id": 1,
+            "position": 29,
+            "last_access": "-",
+            "enabled": true
+        },
+        {
+            "id": 33,
+            "url": "/spartans-beats-stake-com-and-bc-game-with-the-fastest-user-friendly-casino-experience/",
+            "match_url": "/spartans-beats-stake-com-and-bc-game-with-the-fastest-user-friendly-casino-experience",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": false,
+                    "flag_trailing": false,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 410,
+            "action_type": "error",
+            "action_data": null,
+            "match_type": "url",
+            "title": "",
+            "hits": 0,
+            "regex": false,
+            "group_id": 1,
+            "position": 30,
+            "last_access": "-",
+            "enabled": true
+        },
+        {
+            "id": 34,
+            "url": "/spartans-the-top-crypto-casino-for-gen-z-with-43-providers-and-no-loss-cashrake/",
+            "match_url": "/spartans-the-top-crypto-casino-for-gen-z-with-43-providers-and-no-loss-cashrake",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": false,
+                    "flag_trailing": false,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 410,
+            "action_type": "error",
+            "action_data": null,
+            "match_type": "url",
+            "title": "",
+            "hits": 0,
+            "regex": false,
+            "group_id": 1,
+            "position": 31,
+            "last_access": "-",
+            "enabled": true
+        },
+        {
+            "id": 35,
+            "url": "/what-is-cryptocurrency-beginners-guide/",
+            "match_url": "/what-is-cryptocurrency-beginners-guide",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": false,
+                    "flag_trailing": false,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 301,
+            "action_type": "url",
+            "action_data": {
+                "url": "/crypto-101/cryptocurrencies/"
+            },
+            "match_type": "url",
+            "title": "",
+            "hits": 3,
+            "regex": false,
+            "group_id": 1,
+            "position": 32,
+            "last_access": "June 10, 2026",
+            "enabled": true
+        },
+        {
+            "id": 36,
+            "url": "/bitcoin-drops-powell-no-rate-cuts-march-2026-fomc/",
+            "match_url": "/bitcoin-drops-powell-no-rate-cuts-march-2026-fomc",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": true,
+                    "flag_trailing": true,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 301,
+            "action_type": "url",
+            "action_data": {
+                "url": "/bitcoin-drops-powell-no-rate-cuts-fomc-2026/"
+            },
+            "match_type": "url",
+            "title": "",
+            "hits": 2,
+            "regex": false,
+            "group_id": 1,
+            "position": 33,
+            "last_access": "June 10, 2026",
+            "enabled": true
+        },
+        {
+            "id": 37,
+            "url": "/bitcoin-etfs-saw-more-than-733m-in-outflows-on-may-27/",
+            "match_url": "/bitcoin-etfs-saw-more-than-733m-in-outflows-on-may-27",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": true,
+                    "flag_trailing": true,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 301,
+            "action_type": "url",
+            "action_data": {
+                "url": "/bitcoin-etfs-733-million-outflows-may-27/"
+            },
+            "match_type": "url",
+            "title": "",
+            "hits": 3,
+            "regex": false,
+            "group_id": 1,
+            "position": 34,
+            "last_access": "June 10, 2026",
+            "enabled": true
+        },
+        {
+            "id": 38,
+            "url": "/bitcoin-under-pressure-oil-prices-surge-us-israel-strikes-iran-energy-facilities/",
+            "match_url": "/bitcoin-under-pressure-oil-prices-surge-us-israel-strikes-iran-energy-facilities",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": true,
+                    "flag_trailing": true,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 301,
+            "action_type": "url",
+            "action_data": {
+                "url": "/bitcoin-price-pressure-oil-surge-us-israel-iran-energy-strike/"
+            },
+            "match_type": "url",
+            "title": "",
+            "hits": 1,
+            "regex": false,
+            "group_id": 1,
+            "position": 35,
+            "last_access": "June 9, 2026",
+            "enabled": true
+        },
+        {
+            "id": 39,
+            "url": "/us-spot-bitcoin-etfs-post-163-5m-in-outflows-ending-seven-day-inflow-streak/",
+            "match_url": "/us-spot-bitcoin-etfs-post-163-5m-in-outflows-ending-seven-day-inflow-streak",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": true,
+                    "flag_trailing": true,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 301,
+            "action_type": "url",
+            "action_data": {
+                "url": "/us-spot-bitcoin-etf-outflows-163-million-seven-day-streak/"
+            },
+            "match_type": "url",
+            "title": "",
+            "hits": 1,
+            "regex": false,
+            "group_id": 1,
+            "position": 36,
+            "last_access": "June 9, 2026",
+            "enabled": true
+        },
+        {
+            "id": 40,
+            "url": "/average-usdc-across-coinbase-products-hit-19b-in-q1-2026/",
+            "match_url": "/average-usdc-across-coinbase-products-hit-19b-in-q1-2026",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": true,
+                    "flag_trailing": true,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 301,
+            "action_type": "url",
+            "action_data": {
+                "url": "/average-usdc-held-across-coinbase-products-reached-19-billion-q1-2026/"
+            },
+            "match_type": "url",
+            "title": "",
+            "hits": 2,
+            "regex": false,
+            "group_id": 1,
+            "position": 37,
+            "last_access": "June 10, 2026",
+            "enabled": true
+        },
+        {
+            "id": 41,
+            "url": "/bitcoin-falls-below-66000-as-k33-warns-of-liquidity-drain/",
+            "match_url": "/bitcoin-falls-below-66000-as-k33-warns-of-liquidity-drain",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": true,
+                    "flag_trailing": true,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 301,
+            "action_type": "url",
+            "action_data": {
+                "url": "/bitcoin-falls-below-66000-k33-research-liquidity-drain/"
+            },
+            "match_type": "url",
+            "title": "",
+            "hits": 1,
+            "regex": false,
+            "group_id": 1,
+            "position": 38,
+            "last_access": "June 9, 2026",
+            "enabled": true
+        },
+        {
+            "id": 42,
+            "url": "/bitcoin-miner-canaan-reports-88-7m-q1-loss/",
+            "match_url": "/bitcoin-miner-canaan-reports-88-7m-q1-loss",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": true,
+                    "flag_trailing": true,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 301,
+            "action_type": "url",
+            "action_data": {
+                "url": "/bitcoin-miner-canaan-reports-88-7-million-q1-loss/"
+            },
+            "match_type": "url",
+            "title": "",
+            "hits": 3,
+            "regex": false,
+            "group_id": 1,
+            "position": 39,
+            "last_access": "June 11, 2026",
+            "enabled": true
+        },
+        {
+            "id": 43,
+            "url": "/bitmine-buys-another-26497-eth-ethereum-holdings-top-5-4m-eth/",
+            "match_url": "/bitmine-buys-another-26497-eth-ethereum-holdings-top-5-4m-eth",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": true,
+                    "flag_trailing": true,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 301,
+            "action_type": "url",
+            "action_data": {
+                "url": "/bitmine-buys-26497-eth-ethereum-holdings-above-5-4-million/"
+            },
+            "match_type": "url",
+            "title": "",
+            "hits": 3,
+            "regex": false,
+            "group_id": 1,
+            "position": 40,
+            "last_access": "June 10, 2026",
+            "enabled": true
+        },
+        {
+            "id": 44,
+            "url": "/bitmine-reports-9-6b-in-crypto-assets-as-of-june-8-2026/",
+            "match_url": "/bitmine-reports-9-6b-in-crypto-assets-as-of-june-8-2026",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": true,
+                    "flag_trailing": true,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 301,
+            "action_type": "url",
+            "action_data": {
+                "url": "/bitmine-reports-9-6-billion-crypto-assets-strategic-investments-june-8-2026/"
+            },
+            "match_type": "url",
+            "title": "",
+            "hits": 3,
+            "regex": false,
+            "group_id": 1,
+            "position": 41,
+            "last_access": "June 10, 2026",
+            "enabled": true
+        },
+        {
+            "id": 45,
+            "url": "/canada-revokes-registrations-of-23-crypto-firms-in-major-regulatory-crackdown/",
+            "match_url": "/canada-revokes-registrations-of-23-crypto-firms-in-major-regulatory-crackdown",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": true,
+                    "flag_trailing": true,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 301,
+            "action_type": "url",
+            "action_data": {
+                "url": "/canada-revokes-registrations-23-crypto-firms/"
+            },
+            "match_type": "url",
+            "title": "",
+            "hits": 1,
+            "regex": false,
+            "group_id": 1,
+            "position": 42,
+            "last_access": "June 9, 2026",
+            "enabled": true
+        },
+        {
+            "id": 46,
+            "url": "/certik-ceo-defi-ai-attacks-are-an-unfair-game/",
+            "match_url": "/certik-ceo-defi-ai-attacks-are-an-unfair-game",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": true,
+                    "flag_trailing": true,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 301,
+            "action_type": "url",
+            "action_data": {
+                "url": "/certik-ceo-defi-ai-attacks-unfair-game/"
+            },
+            "match_type": "url",
+            "title": "",
+            "hits": 2,
+            "regex": false,
+            "group_id": 1,
+            "position": 43,
+            "last_access": "June 9, 2026",
+            "enabled": true
+        },
+        {
+            "id": 47,
+            "url": "/cme-group-plans-nasdaq-crypto-futures-index-for-major-cryptocurrencies/",
+            "match_url": "/cme-group-plans-nasdaq-crypto-futures-index-for-major-cryptocurrencies",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": true,
+                    "flag_trailing": true,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 301,
+            "action_type": "url",
+            "action_data": {
+                "url": "/cme-group-plans-nasdaq-crypto-futures-index-major-cryptocurrencies/"
+            },
+            "match_type": "url",
+            "title": "",
+            "hits": 3,
+            "regex": false,
+            "group_id": 1,
+            "position": 44,
+            "last_access": "June 10, 2026",
+            "enabled": true
+        },
+        {
+            "id": 48,
+            "url": "/grayscale-canton-coin-etf-filing-explained/",
+            "match_url": "/grayscale-canton-coin-etf-filing-explained",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": true,
+                    "flag_trailing": true,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 301,
+            "action_type": "url",
+            "action_data": {
+                "url": "/grayscale-files-for-canton-coin-etf/"
+            },
+            "match_type": "url",
+            "title": "",
+            "hits": 3,
+            "regex": false,
+            "group_id": 1,
+            "position": 45,
+            "last_access": "June 10, 2026",
+            "enabled": true
+        },
+        {
+            "id": 49,
+            "url": "/house-oversight-chair-probes-kalshi-polymarket-insider-trading-claims/",
+            "match_url": "/house-oversight-chair-probes-kalshi-polymarket-insider-trading-claims",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": true,
+                    "flag_trailing": true,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 301,
+            "action_type": "url",
+            "action_data": {
+                "url": "/house-oversight-chair-probe-kalshi-polymarket-insider-trading/"
+            },
+            "match_type": "url",
+            "title": "",
+            "hits": 2,
+            "regex": false,
+            "group_id": 1,
+            "position": 46,
+            "last_access": "June 9, 2026",
+            "enabled": true
+        },
+        {
+            "id": 50,
+            "url": "/hyperliquid-review-2026-the-on-chain-perp-dex-trying-to-replace-cex-execution/",
+            "match_url": "/hyperliquid-review-2026-the-on-chain-perp-dex-trying-to-replace-cex-execution",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": true,
+                    "flag_trailing": true,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 301,
+            "action_type": "url",
+            "action_data": {
+                "url": "/hyperliquid-review-on-chain-perp-dex/"
+            },
+            "match_type": "url",
+            "title": "",
+            "hits": 2,
+            "regex": false,
+            "group_id": 1,
+            "position": 47,
+            "last_access": "June 10, 2026",
+            "enabled": true
+        },
+        {
+            "id": 51,
+            "url": "/markets-price-fed-rate-hold-through-2026-first-cut-now-expected-in-september/",
+            "match_url": "/markets-price-fed-rate-hold-through-2026-first-cut-now-expected-in-september",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": true,
+                    "flag_trailing": true,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 301,
+            "action_type": "url",
+            "action_data": {
+                "url": "/fed-rate-hold-2026-first-cut-september/"
+            },
+            "match_type": "url",
+            "title": "",
+            "hits": 1,
+            "regex": false,
+            "group_id": 1,
+            "position": 48,
+            "last_access": "June 9, 2026",
+            "enabled": true
+        },
+        {
+            "id": 52,
+            "url": "/mastercard-expands-stablecoin-settlement-support-with-usdc-rlusd-pyusd-and-usdg/",
+            "match_url": "/mastercard-expands-stablecoin-settlement-support-with-usdc-rlusd-pyusd-and-usdg",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": true,
+                    "flag_trailing": true,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 301,
+            "action_type": "url",
+            "action_data": {
+                "url": "/mastercard-expands-stablecoin-settlement-support-usdc-rlusd-pyusd-usdg/"
+            },
+            "match_type": "url",
+            "title": "",
+            "hits": 2,
+            "regex": false,
+            "group_id": 1,
+            "position": 49,
+            "last_access": "June 9, 2026",
+            "enabled": true
+        },
+        {
+            "id": 53,
+            "url": "/mubadala-reveals-566m-bitcoin-etf-holdings/",
+            "match_url": "/mubadala-reveals-566m-bitcoin-etf-holdings",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": true,
+                    "flag_trailing": true,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 301,
+            "action_type": "url",
+            "action_data": {
+                "url": "/mubadala-discloses-566m-bitcoin-etf-holdings/"
+            },
+            "match_type": "url",
+            "title": "",
+            "hits": 3,
+            "regex": false,
+            "group_id": 1,
+            "position": 50,
+            "last_access": "June 10, 2026",
+            "enabled": true
+        },
+        {
+            "id": 54,
+            "url": "/new-york-court-sets-july-14-hearing-in-226b-bitcoin-ownership-lawsuit/",
+            "match_url": "/new-york-court-sets-july-14-hearing-in-226b-bitcoin-ownership-lawsuit",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": true,
+                    "flag_trailing": true,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 301,
+            "action_type": "url",
+            "action_data": {
+                "url": "/new-york-court-july-14-hearing-226-billion-bitcoin-ownership-lawsuit/"
+            },
+            "match_type": "url",
+            "title": "",
+            "hits": 7,
+            "regex": false,
+            "group_id": 1,
+            "position": 51,
+            "last_access": "June 11, 2026",
+            "enabled": true
+        },
+        {
+            "id": 55,
+            "url": "/opinion-warren-warns-meta-stablecoin-deal-could-hurt-competition/",
+            "match_url": "/opinion-warren-warns-meta-stablecoin-deal-could-hurt-competition",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": true,
+                    "flag_trailing": true,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 301,
+            "action_type": "url",
+            "action_data": {
+                "url": "/opinion-elizabeth-warren-meta-stablecoin-partnership-competition/"
+            },
+            "match_type": "url",
+            "title": "",
+            "hits": 1,
+            "regex": false,
+            "group_id": 1,
+            "position": 52,
+            "last_access": "June 9, 2026",
+            "enabled": true
+        },
+        {
+            "id": 56,
+            "url": "/polymarket-faces-scrutiny-after-reported-exploit/",
+            "match_url": "/polymarket-faces-scrutiny-after-reported-exploit",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": true,
+                    "flag_trailing": true,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 301,
+            "action_type": "url",
+            "action_data": {
+                "url": "/polymarket-faces-scrutiny-reported-exploit/"
+            },
+            "match_type": "url",
+            "title": "",
+            "hits": 2,
+            "regex": false,
+            "group_id": 1,
+            "position": 53,
+            "last_access": "June 9, 2026",
+            "enabled": true
+        },
+        {
+            "id": 57,
+            "url": "/polymarket-records-first-monthly-trading-volume-decline-in-eight-months/",
+            "match_url": "/polymarket-records-first-monthly-trading-volume-decline-in-eight-months",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": true,
+                    "flag_trailing": true,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 301,
+            "action_type": "url",
+            "action_data": {
+                "url": "/polymarket-first-monthly-trading-volume-decline-eight-months/"
+            },
+            "match_type": "url",
+            "title": "",
+            "hits": 1,
+            "regex": false,
+            "group_id": 1,
+            "position": 54,
+            "last_access": "June 9, 2026",
+            "enabled": true
+        },
+        {
+            "id": 58,
+            "url": "/report-cme-group-to-launch-nasdaq-cme-crypto-index-futures/",
+            "match_url": "/report-cme-group-to-launch-nasdaq-cme-crypto-index-futures",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": true,
+                    "flag_trailing": true,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 301,
+            "action_type": "url",
+            "action_data": {
+                "url": "/cme-group-nasdaq-cme-crypto-index-futures-report/"
+            },
+            "match_type": "url",
+            "title": "",
+            "hits": 3,
+            "regex": false,
+            "group_id": 1,
+            "position": 55,
+            "last_access": "June 11, 2026",
+            "enabled": true
+        },
+        {
+            "id": 59,
+            "url": "/report-us-senate-confirms-kevin-warsh-as-federal-reserve-governor/",
+            "match_url": "/report-us-senate-confirms-kevin-warsh-as-federal-reserve-governor",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": true,
+                    "flag_trailing": true,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 301,
+            "action_type": "url",
+            "action_data": {
+                "url": "/us-senate-confirms-kevin-warsh-federal-reserve-governor-report/"
+            },
+            "match_type": "url",
+            "title": "",
+            "hits": 3,
+            "regex": false,
+            "group_id": 1,
+            "position": 56,
+            "last_access": "June 10, 2026",
+            "enabled": true
+        },
+        {
+            "id": 60,
+            "url": "/sec-clears-key-hurdle-for-grayscales-hyperliquid-staking-etf/",
+            "match_url": "/sec-clears-key-hurdle-for-grayscales-hyperliquid-staking-etf",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": true,
+                    "flag_trailing": true,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 301,
+            "action_type": "url",
+            "action_data": {
+                "url": "/sec-clears-key-regulatory-hurdle-for-grayscales-hyperliquid-staking-etf/"
+            },
+            "match_type": "url",
+            "title": "",
+            "hits": 3,
+            "regex": false,
+            "group_id": 1,
+            "position": 57,
+            "last_access": "June 10, 2026",
+            "enabled": true
+        },
+        {
+            "id": 61,
+            "url": "/sol-price-forecast-kalshi-traders-see-57-low-this-month/",
+            "match_url": "/sol-price-forecast-kalshi-traders-see-57-low-this-month",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": true,
+                    "flag_trailing": true,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 301,
+            "action_type": "url",
+            "action_data": {
+                "url": "/sol-price-forecast-kalshi-traders-57-low-this-month/"
+            },
+            "match_type": "url",
+            "title": "",
+            "hits": 7,
+            "regex": false,
+            "group_id": 1,
+            "position": 58,
+            "last_access": "June 11, 2026",
+            "enabled": true
+        },
+        {
+            "id": 62,
+            "url": "/solana-etfs-drew-106m-in-may-led-by-bsol/",
+            "match_url": "/solana-etfs-drew-106m-in-may-led-by-bsol",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": true,
+                    "flag_trailing": true,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 301,
+            "action_type": "url",
+            "action_data": {
+                "url": "/solana-etfs-drew-about-106-million-in-net-inflows-in-may-led-by-bsol/"
+            },
+            "match_type": "url",
+            "title": "",
+            "hits": 8,
+            "regex": false,
+            "group_id": 1,
+            "position": 59,
+            "last_access": "June 11, 2026",
+            "enabled": true
+        },
+        {
+            "id": 63,
+            "url": "/south-korea-crypto-tax-petition-reaches-50000-moves-to-committee/",
+            "match_url": "/south-korea-crypto-tax-petition-reaches-50000-moves-to-committee",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": true,
+                    "flag_trailing": true,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 301,
+            "action_type": "url",
+            "action_data": {
+                "url": "/south-korea-crypto-tax-petition-hits-50000-moves-to-committee/"
+            },
+            "match_type": "url",
+            "title": "",
+            "hits": 3,
+            "regex": false,
+            "group_id": 1,
+            "position": 60,
+            "last_access": "June 11, 2026",
+            "enabled": true
+        },
+        {
+            "id": 64,
+            "url": "/south-korea-reviews-plan-to-scrap-22-crypto-tax-after-petition/",
+            "match_url": "/south-korea-reviews-plan-to-scrap-22-crypto-tax-after-petition",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": true,
+                    "flag_trailing": true,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 301,
+            "action_type": "url",
+            "action_data": {
+                "url": "/south-korea-review-proposal-eliminate-22-percent-crypto-tax-public-petition/"
+            },
+            "match_type": "url",
+            "title": "",
+            "hits": 4,
+            "regex": false,
+            "group_id": 1,
+            "position": 61,
+            "last_access": "June 10, 2026",
+            "enabled": true
+        },
+        {
+            "id": 65,
+            "url": "/spot-bitcoin-etf-outflows-drove-bitcoins-recent-decline-citigroup-analysts-say/",
+            "match_url": "/spot-bitcoin-etf-outflows-drove-bitcoins-recent-decline-citigroup-analysts-say",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": true,
+                    "flag_trailing": true,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 301,
+            "action_type": "url",
+            "action_data": {
+                "url": "/citigroup-analysts-spot-bitcoin-etf-outflows-drove-bitcoin-recent-decline/"
+            },
+            "match_type": "url",
+            "title": "",
+            "hits": 4,
+            "regex": false,
+            "group_id": 1,
+            "position": 62,
+            "last_access": "June 11, 2026",
+            "enabled": true
+        },
+        {
+            "id": 66,
+            "url": "/strive-announces-daily-dividends-for-sata-stock-in-q1-earnings/",
+            "match_url": "/strive-announces-daily-dividends-for-sata-stock-in-q1-earnings",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": true,
+                    "flag_trailing": true,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 301,
+            "action_type": "url",
+            "action_data": {
+                "url": "/strive-announces-daily-dividends-sata-stock-q1-earnings/"
+            },
+            "match_type": "url",
+            "title": "",
+            "hits": 2,
+            "regex": false,
+            "group_id": 1,
+            "position": 63,
+            "last_access": "June 11, 2026",
+            "enabled": true
+        },
+        {
+            "id": 67,
+            "url": "/thorchain-reportedly-suffers-10m-exploit-affecting-cross-chain-assets/",
+            "match_url": "/thorchain-reportedly-suffers-10m-exploit-affecting-cross-chain-assets",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": true,
+                    "flag_trailing": true,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 301,
+            "action_type": "url",
+            "action_data": {
+                "url": "/thorchain-reportedly-suffers-10-million-exploit-affecting-assets-across-multiple-blockchains/"
+            },
+            "match_type": "url",
+            "title": "",
+            "hits": 2,
+            "regex": false,
+            "group_id": 1,
+            "position": 64,
+            "last_access": "June 10, 2026",
+            "enabled": true
+        },
+        {
+            "id": 68,
+            "url": "/tokenized-stocks-market-cap-tops-1-6b-as-ethereum-leads/",
+            "match_url": "/tokenized-stocks-market-cap-tops-1-6b-as-ethereum-leads",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": true,
+                    "flag_trailing": true,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 301,
+            "action_type": "url",
+            "action_data": {
+                "url": "/tokenized-stocks-market-cap-surpasses-1-6-billion-ethereum-41-1-share/"
+            },
+            "match_type": "url",
+            "title": "",
+            "hits": 3,
+            "regex": false,
+            "group_id": 1,
+            "position": 65,
+            "last_access": "June 10, 2026",
+            "enabled": true
+        },
+        {
+            "id": 69,
+            "url": "/whitebit-launches-whitebit-uk-for-the-uk-market/",
+            "match_url": "/whitebit-launches-whitebit-uk-for-the-uk-market",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": true,
+                    "flag_trailing": true,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 301,
+            "action_type": "url",
+            "action_data": {
+                "url": "/whitebit-launches-whitebit-uk-dedicated-platform-uk-market/"
+            },
+            "match_type": "url",
+            "title": "",
+            "hits": 3,
+            "regex": false,
+            "group_id": 1,
+            "position": 66,
+            "last_access": "June 11, 2026",
+            "enabled": true
+        },
+        {
+            "id": 70,
+            "url": "/winklevoss-twins-inject-100-million-in-bitcoin-into-gemini-report/",
+            "match_url": "/winklevoss-twins-inject-100-million-in-bitcoin-into-gemini-report",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": true,
+                    "flag_trailing": true,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 301,
+            "action_type": "url",
+            "action_data": {
+                "url": "/winklevoss-twins-inject-100-million-bitcoin-into-gemini-report/"
+            },
+            "match_type": "url",
+            "title": "",
+            "hits": 2,
+            "regex": false,
+            "group_id": 1,
+            "position": 67,
+            "last_access": "June 10, 2026",
+            "enabled": true
+        },
+        {
+            "id": 71,
+            "url": "/xrp-market-capitalization-reaches-91-7-billion-as-altcoin-momentum-builds/",
+            "match_url": "/xrp-market-capitalization-reaches-91-7-billion-as-altcoin-momentum-builds",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": true,
+                    "flag_trailing": true,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 301,
+            "action_type": "url",
+            "action_data": {
+                "url": "/xrp-market-capitalization-reaches-91-7-billion/"
+            },
+            "match_type": "url",
+            "title": "",
+            "hits": 3,
+            "regex": false,
+            "group_id": 1,
+            "position": 68,
+            "last_access": "June 11, 2026",
+            "enabled": true
+        },
+        {
+            "id": 72,
+            "url": "/binance-to-end-nft-support-on-exchange-shift-service-to-wallet/",
+            "match_url": "/binance-to-end-nft-support-on-exchange-shift-service-to-wallet",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": true,
+                    "flag_trailing": true,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 301,
+            "action_type": "url",
+            "action_data": {
+                "url": "/binance-shut-down-nft-support-exchange-move-service-wallet/"
+            },
+            "match_type": "url",
+            "title": "",
+            "hits": 2,
+            "regex": false,
+            "group_id": 1,
+            "position": 69,
+            "last_access": "June 10, 2026",
+            "enabled": true
+        },
+        {
+            "id": 73,
+            "url": "/bitcoin-long-shows-5-88m-unrealized-profit-on-chain-analyst-says/",
+            "match_url": "/bitcoin-long-shows-5-88m-unrealized-profit-on-chain-analyst-says",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": true,
+                    "flag_trailing": true,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 301,
+            "action_type": "url",
+            "action_data": {
+                "url": "/on-chain-analyst-trader-bitcoin-long-5-88m-unrealized-profit/"
+            },
+            "match_type": "url",
+            "title": "",
+            "hits": 4,
+            "regex": false,
+            "group_id": 1,
+            "position": 70,
+            "last_access": "June 10, 2026",
+            "enabled": true
+        },
+        {
+            "id": 74,
+            "url": "/colombian-president-clean-energy-bitcoin-mining-venezuela/",
+            "match_url": "/colombian-president-clean-energy-bitcoin-mining-venezuela",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": true,
+                    "flag_trailing": true,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 301,
+            "action_type": "url",
+            "action_data": {
+                "url": "/colombian-president-bitcoin-mining-venezuela-investment/"
+            },
+            "match_type": "url",
+            "title": "",
+            "hits": 2,
+            "regex": false,
+            "group_id": 1,
+            "position": 71,
+            "last_access": "June 9, 2026",
+            "enabled": true
+        },
+        {
+            "id": 75,
+            "url": "/crypto-hacker-mints-1-1b-in-polkadot-cashes-out-237k/",
+            "match_url": "/crypto-hacker-mints-1-1b-in-polkadot-cashes-out-237k",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": true,
+                    "flag_trailing": true,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 301,
+            "action_type": "url",
+            "action_data": {
+                "url": "/crypto-hacker-mints-1-1b-polkadot-ethereum-bridge-cashes-out-237k/"
+            },
+            "match_type": "url",
+            "title": "",
+            "hits": 1,
+            "regex": false,
+            "group_id": 1,
+            "position": 72,
+            "last_access": "June 9, 2026",
+            "enabled": true
+        },
+        {
+            "id": 76,
+            "url": "/defi-development-corp-sol-per-share-up-108-yoy/",
+            "match_url": "/defi-development-corp-sol-per-share-up-108-yoy",
+            "match_data": {
+                "source": {
+                    "flag_query": "exact",
+                    "flag_case": true,
+                    "flag_trailing": true,
+                    "flag_regex": false
+                }
+            },
+            "action_code": 301,
+            "action_type": "url",
+            "action_data": {
+                "url": "/defi-development-corp-sol-per-share-up-108-percent-yoy/"
+            },
+            "match_type": "url",
+            "title": "",
+            "hits": 2,
+            "regex": false,
+            "group_id": 1,
+            "position": 73,
+            "last_access": "June 10, 2026",
+            "enabled": true
+        }
+    ]
+}
