@@ -365,18 +365,35 @@
 
       async function openZoomFromWrap(wrap) {
         const source = wrap.dataset.graphSource;
+        const existingSvg = wrap.querySelector("svg");
         const target = document.getElementById("zoom-target");
         const modal = document.getElementById("zoom-modal");
         const title = document.getElementById("zoom-title");
-        if (!source || !target || !modal || !title) return;
-
-        target.innerHTML = "<div style='padding:24px;color:#5a6270;font-size:16px;'>Đang render graph...</div>";
-        zoomScale = 1;
+        if (!target || !modal || !title) return;
 
         const slide = wrap.closest(".slide");
         const heading = slide ? slide.querySelector("h2") : null;
         title.textContent = heading ? heading.textContent : "Graph";
 
+        if (existingSvg) {
+          target.innerHTML = existingSvg.outerHTML;
+          zoomScale = 1;
+          applyZoom();
+          modal.classList.add("open");
+          document.body.style.overflow = "hidden";
+          setTimeout(() => zoomFit(), 60);
+          return;
+        }
+
+        if (!source) {
+          target.innerHTML = "<div style='padding:24px;color:#9b2c2c;font-size:16px;'>Graph chưa sẵn sàng để zoom. Hãy chờ trang render xong rồi thử lại.</div>";
+          modal.classList.add("open");
+          document.body.style.overflow = "hidden";
+          return;
+        }
+
+        target.innerHTML = "<div style='padding:24px;color:#5a6270;font-size:16px;'>Đang render graph...</div>";
+        zoomScale = 1;
         modal.classList.add("open");
         document.body.style.overflow = "hidden";
 
