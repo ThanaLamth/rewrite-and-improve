@@ -1,0 +1,890 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Crypto Tax Top-5 Estimator</title>
+    <style>
+      :root {
+        --bg: #f4efe7;
+        --panel: #fffdf9;
+        --ink: #10212b;
+        --muted: #52606b;
+        --line: #d9d1c2;
+        --accent: #0f766e;
+        --accent-2: #d97706;
+        --accent-soft: #e4f4f1;
+        --warn-soft: #fff2df;
+        --shadow: 0 18px 44px rgba(20, 25, 25, 0.08);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at top left, rgba(15, 118, 110, 0.08), transparent 28%),
+          radial-gradient(circle at top right, rgba(217, 119, 6, 0.12), transparent 24%),
+          linear-gradient(180deg, #efe8da 0%, var(--bg) 100%);
+        font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+      }
+
+      a {
+        color: var(--accent);
+      }
+
+      .page {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 28px 20px 56px;
+      }
+
+      .hero,
+      .panel {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        box-shadow: var(--shadow);
+      }
+
+      .hero {
+        padding: 28px;
+        margin-bottom: 22px;
+      }
+
+      .eyebrow {
+        margin: 0 0 8px;
+        color: var(--accent);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 0 0 12px;
+        font-size: clamp(34px, 4vw, 56px);
+        line-height: 1;
+      }
+
+      .hero p {
+        margin: 10px 0;
+        color: var(--muted);
+        font-size: 18px;
+        line-height: 1.65;
+      }
+
+      .hero-grid,
+      .main-grid,
+      .cards {
+        display: grid;
+        gap: 18px;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1.2fr 0.8fr;
+        margin-top: 20px;
+      }
+
+      .fact-box {
+        padding: 18px;
+        border-radius: 20px;
+        background: #f8f5ee;
+        border: 1px solid var(--line);
+      }
+
+      .fact-box strong {
+        display: block;
+        margin-bottom: 6px;
+        font-size: 15px;
+      }
+
+      .fact-box p {
+        margin: 0;
+        font-size: 15px;
+      }
+
+      .main-grid {
+        grid-template-columns: 1.05fr 0.95fr;
+        align-items: start;
+      }
+
+      .panel {
+        padding: 22px;
+      }
+
+      .panel h2 {
+        margin: 0 0 14px;
+        font-size: 28px;
+      }
+
+      .panel h3 {
+        margin: 0 0 10px;
+        font-size: 18px;
+      }
+
+      .panel p,
+      .panel li,
+      .panel label,
+      .panel input,
+      .panel select {
+        font-size: 15px;
+        line-height: 1.6;
+      }
+
+      .field-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .field {
+        display: grid;
+        gap: 8px;
+      }
+
+      .field.full {
+        grid-column: 1 / -1;
+      }
+
+      label {
+        font-weight: 600;
+      }
+
+      input,
+      select {
+        width: 100%;
+        border: 1px solid #c7bdad;
+        border-radius: 14px;
+        padding: 12px 14px;
+        background: #fff;
+        color: var(--ink);
+        font: inherit;
+      }
+
+      input:focus,
+      select:focus {
+        outline: 2px solid rgba(15, 118, 110, 0.18);
+        border-color: var(--accent);
+      }
+
+      .field small,
+      .muted {
+        color: var(--muted);
+      }
+
+      .result-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+        margin-bottom: 16px;
+      }
+
+      .stat {
+        padding: 16px;
+        border-radius: 18px;
+        border: 1px solid var(--line);
+        background: #f9f7f2;
+      }
+
+      .stat .label {
+        display: block;
+        color: var(--muted);
+        font-size: 13px;
+        margin-bottom: 8px;
+      }
+
+      .stat .value {
+        display: block;
+        font-size: clamp(24px, 2.6vw, 34px);
+        line-height: 1.05;
+        font-weight: 700;
+      }
+
+      .assumption {
+        margin-top: 14px;
+        padding: 14px 16px;
+        border-radius: 16px;
+        background: var(--accent-soft);
+        border-left: 4px solid var(--accent);
+      }
+
+      .warning {
+        margin-top: 14px;
+        padding: 14px 16px;
+        border-radius: 16px;
+        background: var(--warn-soft);
+        border-left: 4px solid var(--accent-2);
+      }
+
+      .cards {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        margin-top: 18px;
+      }
+
+      .card {
+        padding: 16px;
+        border-radius: 20px;
+        border: 1px solid var(--line);
+        background: #fbfaf7;
+      }
+
+      .card .rank {
+        color: var(--accent);
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .card h3 {
+        margin: 8px 0 8px;
+        font-size: 20px;
+      }
+
+      .card .rate {
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 1.1;
+      }
+
+      .list-tight {
+        margin: 10px 0 0 18px;
+        padding: 0;
+      }
+
+      .source-list {
+        margin: 12px 0 0 18px;
+        padding: 0;
+      }
+
+      .country-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 12px;
+        border-radius: 999px;
+        background: #eef6f5;
+        border: 1px solid #cae4e0;
+        color: var(--accent);
+        font-weight: 700;
+        font-size: 13px;
+      }
+
+      .footnote {
+        margin-top: 18px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      @media (max-width: 960px) {
+        .hero-grid,
+        .main-grid,
+        .cards,
+        .field-grid,
+        .result-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <section class="hero">
+        <p class="eyebrow">Crypto Tax Product Prototype</p>
+        <h1>Crypto Tax Top-5 Estimator</h1>
+        <p>
+          Prototype này chọn 1 trong 5 quốc gia đang có gánh thuế crypto rất nặng trong các scenario retail
+          phổ biến, rồi tính nhanh theo tiền tệ nội địa. Đây là <strong>estimator theo giả định</strong>, không
+          phải engine kê khai thuế đầy đủ.
+        </p>
+        <div class="hero-grid">
+          <div class="fact-box">
+            <strong>Top 5 dùng cho bản v1</strong>
+            <p>Japan, Denmark, South Africa, Ireland, India.</p>
+          </div>
+          <div class="fact-box">
+            <strong>Logic product phù hợp với CúHồng</strong>
+            <p>Country selector + gain input + rate engine riêng cho từng nước + official sources ngay trên page.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="main-grid">
+        <div class="panel">
+          <h2>Nhập dữ liệu</h2>
+          <div class="field-grid">
+            <div class="field full">
+              <label for="country">Quốc gia</label>
+              <select id="country"></select>
+              <small>Feature này chỉ support 5 quốc gia có rule đủ rõ để model trong bản v1.</small>
+            </div>
+
+            <div class="field">
+              <label for="gain">Net crypto gain</label>
+              <input id="gain" type="number" min="0" step="0.01" value="1000000">
+              <small id="gainHelp">Nhập lãi ròng đã quy đổi sang tiền tệ quốc gia đang chọn.</small>
+            </div>
+
+            <div class="field" id="otherIncomeField">
+              <label for="otherIncome">Other taxable income</label>
+              <input id="otherIncome" type="number" min="0" step="0.01" value="0">
+              <small id="otherIncomeHelp">Dùng để tính incremental tax với các nước progressive.</small>
+            </div>
+
+            <div class="field" id="residentTaxField">
+              <label for="residentTax">Resident tax rate</label>
+              <input id="residentTax" type="number" min="0" max="100" step="0.1" value="10">
+              <small>Mặc định 10% cho Japan local inhabitant tax layer.</small>
+            </div>
+
+            <div class="field" id="municipalTaxField">
+              <label for="municipalTax">Municipal tax rate</label>
+              <input id="municipalTax" type="number" min="0" max="100" step="0.1" value="25">
+              <small>Default 25% để ước tính Denmark municipal layer. Chưa gồm church tax.</small>
+            </div>
+
+            <div class="field" id="irishExemptionField">
+              <label for="irishExemption">Unused annual exemption</label>
+              <input id="irishExemption" type="number" min="0" step="0.01" value="1270">
+              <small>Mặc định EUR 1,270 cho Ireland annual CGT exemption.</small>
+            </div>
+
+            <div class="field" id="indiaSurchargeField">
+              <label for="indiaSurcharge">Surcharge rate</label>
+              <input id="indiaSurcharge" type="number" min="0" max="100" step="0.1" value="0">
+              <small>Ấn Độ đánh 30% plus surcharge and cess. Nhập surcharge nếu case của bạn có.</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="country-tag" id="countryTag"></div>
+          <h2 id="resultTitle">Kết quả ước tính</h2>
+          <div class="result-grid">
+            <div class="stat">
+              <span class="label">Estimated tax</span>
+              <span class="value" id="taxValue">-</span>
+            </div>
+            <div class="stat">
+              <span class="label">After-tax gain</span>
+              <span class="value" id="afterTaxValue">-</span>
+            </div>
+            <div class="stat">
+              <span class="label">Effective rate</span>
+              <span class="value" id="effectiveRateValue">-</span>
+            </div>
+          </div>
+
+          <div class="assumption">
+            <h3>Assumptions</h3>
+            <p id="assumptionText"></p>
+          </div>
+
+          <div class="warning">
+            <h3>Không cover trong v1</h3>
+            <p id="warningText"></p>
+          </div>
+
+          <div class="panel" style="padding: 0; margin-top: 14px; box-shadow: none; background: transparent; border: none;">
+            <h3>Official sources</h3>
+            <ul class="source-list" id="sourceList"></ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel" style="margin-top: 22px;">
+        <h2>Top 5 đang model trong feature</h2>
+        <div class="cards">
+          <article class="card">
+            <div class="rank">#1 Japan</div>
+            <h3>Misc. income</h3>
+            <div class="rate">~55%+</div>
+            <ul class="list-tight">
+              <li>National income tax tới 45%</li>
+              <li>Reconstruction surtax 2.1% trên income tax</li>
+              <li>Resident tax thường khoảng 10%</li>
+            </ul>
+          </article>
+          <article class="card">
+            <div class="rank">#2 Denmark</div>
+            <h3>Personal income</h3>
+            <div class="rate">~53%</div>
+            <ul class="list-tight">
+              <li>SKAT nói gains có thể lên tới 53%</li>
+              <li>Losses thường chỉ deduct ở mức 26%</li>
+              <li>Rate thực tế phụ thuộc municipal layer</li>
+            </ul>
+          </article>
+          <article class="card">
+            <div class="rank">#3 South Africa</div>
+            <h3>Revenue account</h3>
+            <div class="rate">45%</div>
+            <ul class="list-tight">
+              <li>Dùng khi crypto bị xem là trading/income</li>
+              <li>Normal individual rates apply</li>
+              <li>CGT case có thể thấp hơn</li>
+            </ul>
+          </article>
+          <article class="card">
+            <div class="rank">#4 Ireland</div>
+            <h3>CGT</h3>
+            <div class="rate">33%</div>
+            <ul class="list-tight">
+              <li>Annual exemption EUR 1,270</li>
+              <li>Rate rõ, model dễ</li>
+              <li>Phù hợp retail disposal case</li>
+            </ul>
+          </article>
+          <article class="card">
+            <div class="rank">#5 India</div>
+            <h3>VDA regime</h3>
+            <div class="rate">30%+</div>
+            <ul class="list-tight">
+              <li>30% plus surcharge and cess</li>
+              <li>Rule khá cứng với retail users</li>
+              <li>Set-off loss bị hạn chế mạnh</li>
+            </ul>
+          </article>
+        </div>
+
+        <p class="footnote">
+          Ranking này là ranking theo scenario đủ rõ để model thành calculator v1, không phải bảng xếp hạng tuyệt đối
+          cho mọi residency, mọi structure và mọi loại giao dịch crypto.
+        </p>
+      </section>
+    </div>
+
+    <script>
+      const countries = {
+        japan: {
+          label: "Japan",
+          rank: 1,
+          currency: "JPY",
+          locale: "ja-JP",
+          tag: "Japan • JPY • progressive misc. income",
+          defaults: {
+            gain: 1000000,
+            otherIncome: 0,
+            residentTax: 10,
+            municipalTax: 25,
+            irishExemption: 1270,
+            indiaSurcharge: 0
+          },
+          assumptions:
+            "Crypto gain được model như miscellaneous income. Công thức dùng biểu thuế lũy tiến quốc gia, cộng 2.1% reconstruction surtax trên phần income tax và cộng local resident tax mặc định 10%. Ô other taxable income giúp tính phần thuế tăng thêm do gain crypto.",
+          warnings:
+            "Chưa model deductions riêng, offset losses, insurance/pension interactions, hoặc case corporate. Đây là estimate cho resident individual.",
+          sources: [
+            {
+              label: "NTA crypto tax handling",
+              url: "https://www.nta.go.jp/publication/pamph/shotoku/kakuteishinkokukankei/kasoutuka/index.htm"
+            },
+            {
+              label: "NTA income tax rates",
+              url: "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/2260.htm"
+            },
+            {
+              label: "NTA reconstruction surtax guide",
+              url: "https://www.nta.go.jp/english/taxes/individual/incometax_2025.htm"
+            },
+            {
+              label: "Tokyo tax guide",
+              url: "https://www.tax.metro.tokyo.lg.jp/book/guidebookgaigo/guidebook2024e.pdf"
+            }
+          ],
+          compute(values) {
+            const gain = Math.max(0, values.gain);
+            const other = Math.max(0, values.otherIncome);
+            const residentRate = clamp(values.residentTax / 100, 0, 1);
+            const total = other + gain;
+            const national = japanIncomeTax(total) - japanIncomeTax(other);
+            const surtax = national * 0.021;
+            const resident = gain * residentRate;
+            const tax = national + surtax + resident;
+            return result(gain, tax);
+          }
+        },
+        denmark: {
+          label: "Denmark",
+          rank: 2,
+          currency: "DKK",
+          locale: "da-DK",
+          tag: "Denmark • DKK • private speculation / personal income",
+          defaults: {
+            gain: 1000000,
+            otherIncome: 0,
+            residentTax: 10,
+            municipalTax: 25,
+            irishExemption: 1270,
+            indiaSurcharge: 0
+          },
+          assumptions:
+            "V1 model theo private individual speculation scenario. Gain crypto được đưa vào personal income estimate với bottom-bracket 12.01%, middle-bracket 7.5% trên phần vượt DKK 641,200 và top-bracket 7.5% trên phần vượt DKK 777,900, rồi cộng municipal tax mặc định 25%.",
+          warnings:
+            "Chưa model personal allowance, church tax, additional top-bracket, hoặc loss deduction 26%. Đây là rough estimate, không thay thế advice cụ thể theo municipality.",
+          sources: [
+            {
+              label: "SKAT crypto gains and losses",
+              url: "https://skat.dk/en-us/individuals/shares-and-securities/tax-on-cryptocurrency-know-the-rules-and-avoid-a-tax-bill/calculate-and-declare-gains-and-losses-on-cryptoassets"
+            },
+            {
+              label: "SKAT 2026 thresholds",
+              url: "https://skat.dk/en-us/help/botton-bracket-middle-bracket-top-bracket-and-additional-top-bracket-tax"
+            },
+            {
+              label: "SKAT tax types",
+              url: "https://skat.dk/en-us/individuals/taxation-in-denmark/types-of-tax"
+            }
+          ],
+          compute(values) {
+            const gain = Math.max(0, values.gain);
+            const other = Math.max(0, values.otherIncome);
+            const municipalRate = clamp(values.municipalTax / 100, 0, 1);
+            const total = other + gain;
+            const tax =
+              denmarkTax(total, municipalRate) -
+              denmarkTax(other, municipalRate);
+            return result(gain, tax);
+          }
+        },
+        southAfrica: {
+          label: "South Africa",
+          rank: 3,
+          currency: "ZAR",
+          locale: "en-ZA",
+          tag: "South Africa • ZAR • trading / revenue account scenario",
+          defaults: {
+            gain: 1000000,
+            otherIncome: 0,
+            residentTax: 10,
+            municipalTax: 25,
+            irishExemption: 1270,
+            indiaSurcharge: 0
+          },
+          assumptions:
+            "V1 chỉ model scenario nặng nhất có thể support gọn: crypto bị xem là trading hoặc revenue account, nên đi theo normal individual income tax rates. Ô other taxable income giúp tính incremental tax.",
+          warnings:
+            "Chưa model personal rebates, CGT scenario, annual exclusions, hoặc facts-and-circumstances test để phân biệt capital vs revenue. Nếu bạn là long-term investor, kết quả này có thể cao hơn thực tế.",
+          sources: [
+            {
+              label: "SARS crypto assets tax",
+              url: "https://www.sars.gov.za/individuals/crypto-assets-tax/"
+            },
+            {
+              label: "SARS budget FAQ",
+              url: "https://www.sars.gov.za/about/sars-tax-and-customs-system/budget/budget-2026-frequently-asked-questions/"
+            },
+            {
+              label: "SARS individual tax rates",
+              url: "https://www.sars.gov.za/tax-rates/income-tax/rates-of-tax-for-individuals/"
+            }
+          ],
+          compute(values) {
+            const gain = Math.max(0, values.gain);
+            const other = Math.max(0, values.otherIncome);
+            const total = other + gain;
+            const tax =
+              southAfricaTax(total) -
+              southAfricaTax(other);
+            return result(gain, tax);
+          }
+        },
+        ireland: {
+          label: "Ireland",
+          rank: 4,
+          currency: "EUR",
+          locale: "en-IE",
+          tag: "Ireland • EUR • CGT 33%",
+          defaults: {
+            gain: 100000,
+            otherIncome: 0,
+            residentTax: 10,
+            municipalTax: 25,
+            irishExemption: 1270,
+            indiaSurcharge: 0
+          },
+          assumptions:
+            "Model này coi gain crypto là chargeable gain chịu CGT 33%. V1 cho phép trừ phần annual exemption chưa dùng, mặc định EUR 1,270.",
+          warnings:
+            "Chưa model transfer costs, pooling rules, non-resident issues, hoặc loss carry-forward. Đây chỉ là estimate cho personal disposal case.",
+          sources: [
+            {
+              label: "Revenue crypto-assets",
+              url: "https://www.revenue.ie/en/companies-and-charities/financial-services/cryptocurrencies/index.aspx"
+            },
+            {
+              label: "Revenue CGT rate",
+              url: "https://www.revenue.ie/en/gains-gifts-and-inheritance/transfering-an-asset/index.aspx"
+            },
+            {
+              label: "Revenue CGT calculation",
+              url: "https://www.revenue.ie/en/gains-gifts-and-inheritance/transfering-an-asset/how-to-calculate-cgt.aspx"
+            },
+            {
+              label: "Revenue annual exempt amount manual",
+              url: "https://www.revenue.ie/en/tax-professionals/tdm/income-tax-capital-gains-tax-corporation-tax/part-19/19-07-01.pdf"
+            }
+          ],
+          compute(values) {
+            const gain = Math.max(0, values.gain);
+            const exemption = Math.max(0, values.irishExemption);
+            const taxableGain = Math.max(0, gain - exemption);
+            const tax = taxableGain * 0.33;
+            return result(gain, tax);
+          }
+        },
+        india: {
+          label: "India",
+          rank: 5,
+          currency: "INR",
+          locale: "en-IN",
+          tag: "India • INR • VDA 30% + surcharge + cess",
+          defaults: {
+            gain: 1000000,
+            otherIncome: 0,
+            residentTax: 10,
+            municipalTax: 25,
+            irishExemption: 1270,
+            indiaSurcharge: 0
+          },
+          assumptions:
+            "Model này dùng VDA regime: 30% tax cơ bản, cộng surcharge người dùng nhập và cộng health & education cess 4% trên tax cộng surcharge.",
+          warnings:
+            "Chưa model transaction-level restrictions, TDS timing, cost-basis nuance, hoặc prohibited loss set-off ngoài note chính sách. Đây là estimate cho gain ròng đã xác định xong.",
+          sources: [
+            {
+              label: "Income Tax Department VDA explainer",
+              url: "https://www.incometaxindia.gov.in/w/taxation-of-virtual-digital-asset-vda-"
+            },
+            {
+              label: "Section 115BBH",
+              url: "https://www.incometaxindia.gov.in/w/section-115bbh-2"
+            },
+            {
+              label: "Section 194S",
+              url: "https://www.incometaxindia.gov.in/w/tds-on-payment-for-the-transfer-of-virtual-digital-assets-vdas-"
+            }
+          ],
+          compute(values) {
+            const gain = Math.max(0, values.gain);
+            const surchargeRate = clamp(values.indiaSurcharge / 100, 0, 1);
+            const baseTax = gain * 0.30;
+            const surcharge = baseTax * surchargeRate;
+            const cess = (baseTax + surcharge) * 0.04;
+            const tax = baseTax + surcharge + cess;
+            return result(gain, tax);
+          }
+        }
+      };
+
+      const els = {
+        country: document.getElementById("country"),
+        gain: document.getElementById("gain"),
+        otherIncome: document.getElementById("otherIncome"),
+        residentTax: document.getElementById("residentTax"),
+        municipalTax: document.getElementById("municipalTax"),
+        irishExemption: document.getElementById("irishExemption"),
+        indiaSurcharge: document.getElementById("indiaSurcharge"),
+        taxValue: document.getElementById("taxValue"),
+        afterTaxValue: document.getElementById("afterTaxValue"),
+        effectiveRateValue: document.getElementById("effectiveRateValue"),
+        assumptionText: document.getElementById("assumptionText"),
+        warningText: document.getElementById("warningText"),
+        sourceList: document.getElementById("sourceList"),
+        countryTag: document.getElementById("countryTag"),
+        resultTitle: document.getElementById("resultTitle"),
+        gainHelp: document.getElementById("gainHelp"),
+        otherIncomeField: document.getElementById("otherIncomeField"),
+        residentTaxField: document.getElementById("residentTaxField"),
+        municipalTaxField: document.getElementById("municipalTaxField"),
+        irishExemptionField: document.getElementById("irishExemptionField"),
+        indiaSurchargeField: document.getElementById("indiaSurchargeField")
+      };
+
+      function clamp(value, min, max) {
+        return Math.min(max, Math.max(min, Number.isFinite(value) ? value : min));
+      }
+
+      function result(gain, tax) {
+        const safeTax = Math.max(0, tax);
+        return {
+          tax: safeTax,
+          afterTax: Math.max(0, gain - safeTax),
+          effectiveRate: gain > 0 ? safeTax / gain : 0
+        };
+      }
+
+      function currencyFormatter(countryKey) {
+        const country = countries[countryKey];
+        return new Intl.NumberFormat(country.locale, {
+          style: "currency",
+          currency: country.currency,
+          maximumFractionDigits: country.currency === "JPY" ? 0 : 2
+        });
+      }
+
+      function percentFormatter(value) {
+        return `${(value * 100).toFixed(2)}%`;
+      }
+
+      function progressiveTax(amount, bands) {
+        if (amount <= 0) {
+          return 0;
+        }
+        let tax = 0;
+        let lower = 0;
+        for (const band of bands) {
+          const upper = band.upper;
+          const taxable = Math.min(amount, upper) - lower;
+          if (taxable > 0) {
+            tax += taxable * band.rate;
+          }
+          if (amount <= upper) {
+            break;
+          }
+          lower = upper;
+        }
+        return tax;
+      }
+
+      function japanIncomeTax(amount) {
+        return progressiveTax(amount, [
+          { upper: 1950000, rate: 0.05 },
+          { upper: 3300000, rate: 0.10 },
+          { upper: 6950000, rate: 0.20 },
+          { upper: 9000000, rate: 0.23 },
+          { upper: 18000000, rate: 0.33 },
+          { upper: 40000000, rate: 0.40 },
+          { upper: Infinity, rate: 0.45 }
+        ]);
+      }
+
+      function denmarkTax(amount, municipalRate) {
+        if (amount <= 0) {
+          return 0;
+        }
+        const base = amount * 0.1201;
+        const middle = Math.max(amount - 641200, 0) * 0.075;
+        const top = Math.max(amount - 777900, 0) * 0.075;
+        const municipal = amount * municipalRate;
+        return base + middle + top + municipal;
+      }
+
+      function southAfricaTax(amount) {
+        return progressiveTax(amount, [
+          { upper: 237100, rate: 0.18 },
+          { upper: 370500, rate: 0.26 },
+          { upper: 512800, rate: 0.31 },
+          { upper: 673000, rate: 0.36 },
+          { upper: 857900, rate: 0.39 },
+          { upper: 1817000, rate: 0.41 },
+          { upper: Infinity, rate: 0.45 }
+        ]);
+      }
+
+      function setVisibility(countryKey) {
+        const showOther = countryKey === "japan" || countryKey === "denmark" || countryKey === "southAfrica";
+        const showResident = countryKey === "japan";
+        const showMunicipal = countryKey === "denmark";
+        const showIrish = countryKey === "ireland";
+        const showIndia = countryKey === "india";
+
+        els.otherIncomeField.style.display = showOther ? "grid" : "none";
+        els.residentTaxField.style.display = showResident ? "grid" : "none";
+        els.municipalTaxField.style.display = showMunicipal ? "grid" : "none";
+        els.irishExemptionField.style.display = showIrish ? "grid" : "none";
+        els.indiaSurchargeField.style.display = showIndia ? "grid" : "none";
+      }
+
+      function renderSources(country) {
+        els.sourceList.innerHTML = "";
+        country.sources.forEach((source) => {
+          const li = document.createElement("li");
+          const link = document.createElement("a");
+          link.href = source.url;
+          link.textContent = source.label;
+          link.target = "_blank";
+          link.rel = "noopener noreferrer";
+          li.appendChild(link);
+          els.sourceList.appendChild(li);
+        });
+      }
+
+      function readValues() {
+        return {
+          gain: Number(els.gain.value) || 0,
+          otherIncome: Number(els.otherIncome.value) || 0,
+          residentTax: Number(els.residentTax.value) || 0,
+          municipalTax: Number(els.municipalTax.value) || 0,
+          irishExemption: Number(els.irishExemption.value) || 0,
+          indiaSurcharge: Number(els.indiaSurcharge.value) || 0
+        };
+      }
+
+      function applyDefaults(countryKey) {
+        const defaults = countries[countryKey].defaults;
+        els.gain.value = defaults.gain;
+        els.otherIncome.value = defaults.otherIncome;
+        els.residentTax.value = defaults.residentTax;
+        els.municipalTax.value = defaults.municipalTax;
+        els.irishExemption.value = defaults.irishExemption;
+        els.indiaSurcharge.value = defaults.indiaSurcharge;
+      }
+
+      function render() {
+        const countryKey = els.country.value;
+        const country = countries[countryKey];
+        const values = readValues();
+        const calc = country.compute(values);
+        const fmt = currencyFormatter(countryKey);
+
+        els.countryTag.textContent = `#${country.rank} ${country.tag}`;
+        els.resultTitle.textContent = `Kết quả ước tính cho ${country.label}`;
+        els.taxValue.textContent = fmt.format(calc.tax);
+        els.afterTaxValue.textContent = fmt.format(calc.afterTax);
+        els.effectiveRateValue.textContent = percentFormatter(calc.effectiveRate);
+        els.assumptionText.textContent = country.assumptions;
+        els.warningText.textContent = country.warnings;
+        els.gainHelp.textContent = `Nhập lãi ròng đã quy đổi sang ${country.currency}.`;
+
+        setVisibility(countryKey);
+        renderSources(country);
+      }
+
+      function init() {
+        Object.entries(countries).forEach(([key, country]) => {
+          const option = document.createElement("option");
+          option.value = key;
+          option.textContent = `#${country.rank} ${country.label}`;
+          els.country.appendChild(option);
+        });
+
+        els.country.value = "japan";
+        applyDefaults("japan");
+        render();
+
+        els.country.addEventListener("change", () => {
+          applyDefaults(els.country.value);
+          render();
+        });
+
+        [
+          els.gain,
+          els.otherIncome,
+          els.residentTax,
+          els.municipalTax,
+          els.irishExemption,
+          els.indiaSurcharge
+        ].forEach((input) => {
+          input.addEventListener("input", render);
+        });
+      }
+
+      init();
+    </script>
+  </body>
+</html>
