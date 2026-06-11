@@ -13,6 +13,7 @@ OUTPUT_DIR = Path("/home/qcweb/rewrite-and-improve")
 OUTPUT_DECISION = OUTPUT_DIR / "theccpress_duplicate_cluster_decision_sheet_2026-06-11.csv"
 OUTPUT_SAFE_IMPORT = OUTPUT_DIR / "theccpress_duplicate_301_safe_import_2026-06-11.csv"
 OUTPUT_TIER1_IMPORT = OUTPUT_DIR / "theccpress_duplicate_301_tier1_review_import_2026-06-11.csv"
+OUTPUT_FULL_IMPORT = OUTPUT_DIR / "theccpress_duplicate_301_full_import_2026-06-11.csv"
 
 SUFFIX_RE = re.compile(r"-(\d+)/?$")
 
@@ -85,6 +86,7 @@ def main() -> None:
     decision_rows: list[dict[str, str]] = []
     safe_import_rows: list[list[str]] = []
     tier1_import_rows: list[list[str]] = []
+    full_import_rows: list[list[str]] = []
 
     for title, rows in sorted(clusters.items(), key=lambda item: (-len(item[1]), item[0].lower())):
         rows_sorted = sorted(rows, key=lambda row: row["Address"])
@@ -122,6 +124,8 @@ def main() -> None:
                     safe_import_rows.append([path_only(url), path_only(keeper)])
                 elif title in MANUAL_KEEPERS:
                     tier1_import_rows.append([path_only(url), path_only(keeper)])
+
+                full_import_rows.append([path_only(url), path_only(keeper)])
 
             decision_rows.append(
                 {
@@ -171,12 +175,19 @@ def main() -> None:
         writer.writerow(["source URL", "target URL"])
         writer.writerows(sorted(set(tuple(row) for row in tier1_import_rows)))
 
+    with OUTPUT_FULL_IMPORT.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.writer(handle)
+        writer.writerow(["source URL", "target URL"])
+        writer.writerows(sorted(set(tuple(row) for row in full_import_rows)))
+
     print(f"decision_rows={len(decision_rows)}")
     print(f"safe_import_rows={len(set(tuple(row) for row in safe_import_rows))}")
     print(f"tier1_import_rows={len(set(tuple(row) for row in tier1_import_rows))}")
+    print(f"full_import_rows={len(set(tuple(row) for row in full_import_rows))}")
     print(OUTPUT_DECISION)
     print(OUTPUT_SAFE_IMPORT)
     print(OUTPUT_TIER1_IMPORT)
+    print(OUTPUT_FULL_IMPORT)
 
 
 if __name__ == "__main__":
