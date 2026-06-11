@@ -167,6 +167,120 @@
         border-radius: 16px;
         background: #fff;
         overflow: auto;
+        cursor: zoom-in;
+        position: relative;
+      }
+
+      .mermaid-wrap::after {
+        content: "Click để zoom";
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: rgba(255, 253, 248, 0.92);
+        border: 1px solid var(--line);
+        color: var(--muted);
+        padding: 4px 8px;
+        border-radius: 999px;
+        font-size: 12px;
+        pointer-events: none;
+      }
+
+      .mermaid-wrap svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .zoom-modal {
+        position: fixed;
+        inset: 0;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        background: rgba(21, 17, 12, 0.78);
+        z-index: 9999;
+        padding: 24px;
+      }
+
+      .zoom-modal.open {
+        display: flex;
+      }
+
+      .zoom-panel {
+        width: min(96vw, 1500px);
+        height: min(92vh, 980px);
+        background: #fffdf8;
+        border-radius: 20px;
+        border: 1px solid var(--line);
+        box-shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
+        display: grid;
+        grid-template-rows: auto 1fr;
+        overflow: hidden;
+      }
+
+      .zoom-toolbar {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px 16px;
+        border-bottom: 1px solid var(--line);
+        background: #faf3ea;
+      }
+
+      .zoom-toolbar-left,
+      .zoom-toolbar-right {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+
+      .zoom-title {
+        font-size: 14px;
+        color: var(--muted);
+      }
+
+      .zoom-btn {
+        appearance: none;
+        border: 1px solid var(--accent);
+        background: #fff;
+        color: var(--accent);
+        border-radius: 999px;
+        padding: 8px 12px;
+        font: inherit;
+        font-size: 14px;
+        cursor: pointer;
+      }
+
+      .zoom-btn.primary {
+        background: var(--accent);
+        color: #fff;
+      }
+
+      .zoom-stage {
+        overflow: auto;
+        padding: 20px;
+        background:
+          radial-gradient(circle at 1px 1px, rgba(111, 79, 60, 0.14) 1px, transparent 0);
+        background-size: 18px 18px;
+      }
+
+      .zoom-canvas {
+        min-width: max-content;
+        min-height: 100%;
+        display: grid;
+        place-items: center;
+      }
+
+      .zoom-target {
+        transform-origin: center center;
+      }
+
+      .zoom-target svg {
+        width: auto;
+        height: auto;
+        max-width: none;
       }
 
       .links a {
@@ -240,6 +354,101 @@
       window.printDeck = function printDeck() {
         window.print();
       };
+
+      let zoomScale = 1;
+
+      function applyZoom() {
+        const target = document.getElementById("zoom-target");
+        if (!target) return;
+        target.style.transform = `scale(${zoomScale})`;
+      }
+
+      function openZoomFromWrap(wrap) {
+        const svg = wrap.querySelector("svg");
+        const target = document.getElementById("zoom-target");
+        const modal = document.getElementById("zoom-modal");
+        const title = document.getElementById("zoom-title");
+        if (!svg || !target || !modal || !title) return;
+
+        target.innerHTML = "";
+        target.appendChild(svg.cloneNode(true));
+        zoomScale = 1;
+        applyZoom();
+
+        const slide = wrap.closest(".slide");
+        const heading = slide ? slide.querySelector("h2") : null;
+        title.textContent = heading ? heading.textContent : "Graph";
+
+        modal.classList.add("open");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeZoom() {
+        const modal = document.getElementById("zoom-modal");
+        if (!modal) return;
+        modal.classList.remove("open");
+        document.body.style.overflow = "";
+      }
+
+      function zoomIn() {
+        zoomScale = Math.min(zoomScale + 0.2, 4);
+        applyZoom();
+      }
+
+      function zoomOut() {
+        zoomScale = Math.max(zoomScale - 0.2, 0.4);
+        applyZoom();
+      }
+
+      function zoomReset() {
+        zoomScale = 1;
+        applyZoom();
+      }
+
+      function zoomFit() {
+        const stage = document.getElementById("zoom-stage");
+        const target = document.getElementById("zoom-target");
+        const svg = target ? target.querySelector("svg") : null;
+        if (!stage || !svg) return;
+
+        const stageWidth = stage.clientWidth - 40;
+        const stageHeight = stage.clientHeight - 40;
+        const box = svg.getBBox();
+        if (!box.width || !box.height) {
+          zoomScale = 1;
+          applyZoom();
+          return;
+        }
+
+        const scaleX = stageWidth / box.width;
+        const scaleY = stageHeight / box.height;
+        zoomScale = Math.max(0.4, Math.min(3, Math.min(scaleX, scaleY)));
+        applyZoom();
+      }
+
+      function bindZoomableGraphs() {
+        document.querySelectorAll(".mermaid-wrap").forEach((wrap) => {
+          if (wrap.dataset.zoomBound === "true") return;
+          wrap.dataset.zoomBound = "true";
+          wrap.addEventListener("click", () => openZoomFromWrap(wrap));
+        });
+      }
+
+      window.closeZoom = closeZoom;
+      window.zoomIn = zoomIn;
+      window.zoomOut = zoomOut;
+      window.zoomReset = zoomReset;
+      window.zoomFit = zoomFit;
+
+      window.addEventListener("load", () => {
+        setTimeout(bindZoomableGraphs, 400);
+      });
+
+      document.addEventListener("keydown", (event) => {
+        const modal = document.getElementById("zoom-modal");
+        if (!modal || !modal.classList.contains("open")) return;
+        if (event.key === "Escape") closeZoom();
+      });
     </script>
   </head>
   <body>
@@ -548,6 +757,29 @@ flowchart TD
             <a href="https://github.com/ThanaLamth/rewrite-and-improve/blob/main/cuthongthai_integrated_research_2026-06-10.vi.md">Markdown đầy đủ</a>
           </p>
         </section>
+      </div>
+    </div>
+
+    <div id="zoom-modal" class="zoom-modal" onclick="closeZoom()">
+      <div class="zoom-panel" onclick="event.stopPropagation()">
+        <div class="zoom-toolbar">
+          <div class="zoom-toolbar-left">
+            <strong id="zoom-title">Graph</strong>
+            <span class="zoom-title">Bấm Esc để đóng</span>
+          </div>
+          <div class="zoom-toolbar-right">
+            <button class="zoom-btn" onclick="zoomOut()">-</button>
+            <button class="zoom-btn" onclick="zoomIn()">+</button>
+            <button class="zoom-btn" onclick="zoomFit()">Fit</button>
+            <button class="zoom-btn" onclick="zoomReset()">Reset</button>
+            <button class="zoom-btn primary" onclick="closeZoom()">Close</button>
+          </div>
+        </div>
+        <div id="zoom-stage" class="zoom-stage">
+          <div class="zoom-canvas">
+            <div id="zoom-target" class="zoom-target"></div>
+          </div>
+        </div>
       </div>
     </div>
   </body>
