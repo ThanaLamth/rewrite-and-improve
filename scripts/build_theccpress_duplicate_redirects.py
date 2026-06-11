@@ -54,6 +54,10 @@ def path_only(url: str) -> str:
     return path if path.endswith("/") else f"{path}/"
 
 
+def absolute_url(url: str) -> str:
+    return f"https://theccpress.com{path_only(url)}"
+
+
 def choose_heuristic_keeper(rows: list[dict[str, str]]) -> str:
     def sort_key(row: dict[str, str]) -> tuple[int, int, int, str]:
         url = row["Address"]
@@ -201,11 +205,11 @@ def main() -> None:
                 {
                     "id": "",
                     "source": source,
-                    "matching": "",
-                    "destination": destination,
-                    "type": "",
-                    "category": "",
-                    "status": "",
+                    "matching": "exact",
+                    "destination": absolute_url(destination),
+                    "type": "301",
+                    "category": "theccpress_duplicate_batch_1",
+                    "status": "active",
                     "ignore": "",
                 }
             )
