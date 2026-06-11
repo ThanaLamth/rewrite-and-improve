@@ -185,3 +185,82 @@ For the current WordPress site, the safest move is:
 2. merge only the obvious synonym pairs
 3. stop new one-off tag creation
 4. defer deep tag pruning until the broader rebuild or taxonomy project
+
+## Final Phase 3 Decision
+
+Do not preserve all `55` rows that were initially flagged as `review_keep`.
+
+That bucket was only a shortlist for review, not a final keep set.
+
+The practical final decision is to keep a much smaller editorial tag core.
+
+### Keep Core Now
+
+These are the tags worth keeping as the active newsroom tag vocabulary for the current site:
+
+1. `cryptocurrency`
+2. `blockchain`
+3. `bitcoin`
+4. `ethereum`
+5. `xrp`
+6. `altcoins`
+7. `crypto-exchange`
+8. `mining`
+9. `wallet`
+10. `smart-contracts`
+11. `coinbase`
+12. `binance`
+
+Why these stay:
+
+1. they are broad recurring editorial topics or major recurring entities
+2. they are understandable to readers
+3. they can span multiple categories and article types without becoming one-off clutter
+
+### Optional Keep Only If Editorial Reuses Them Often
+
+These can stay only if the newsroom genuinely reuses them across many non-promo stories:
+
+1. `cardano`
+2. `litecoin`
+3. `stellar`
+4. `monero`
+5. `tron`
+6. `sec`
+
+If editorial does not actively use them as recurring cross-story labels, leave them noindex and stop assigning them going forward.
+
+### Do Not Treat These As Keepers
+
+Even though some of these landed in the initial `review_keep` bucket, they should not be part of the final active tag core:
+
+1. `latest-news`
+2. `altcoin-news`
+3. `exchange`
+4. `cryptocurrencies`
+5. `technology`
+6. `token`
+7. `crypto-trading`
+8. `investment`
+9. `partnership`
+10. `media`
+11. `event`
+12. `ico`
+13. `blockdag`
+14. `trollercat`
+15. `trollercat-com`
+
+Why these should not be kept:
+
+1. they duplicate category or section intent
+2. they are too vague to be useful taxonomy labels
+3. they are brand or promo-specific clutter
+4. they do not justify a stable long-term tag vocabulary
+
+### Practical Rule For Editors
+
+From now on, a new tag should be allowed only if all three are true:
+
+1. it will be reused across multiple future stories
+2. it is not already covered by a category
+3. it is not just a coin ticker, promo phrase, or campaign label
