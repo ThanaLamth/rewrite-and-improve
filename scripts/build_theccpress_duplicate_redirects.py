@@ -14,6 +14,7 @@ OUTPUT_DECISION = OUTPUT_DIR / "theccpress_duplicate_cluster_decision_sheet_2026
 OUTPUT_SAFE_IMPORT = OUTPUT_DIR / "theccpress_duplicate_301_safe_import_2026-06-11.csv"
 OUTPUT_TIER1_IMPORT = OUTPUT_DIR / "theccpress_duplicate_301_tier1_review_import_2026-06-11.csv"
 OUTPUT_FULL_IMPORT = OUTPUT_DIR / "theccpress_duplicate_301_full_import_2026-06-11.csv"
+OUTPUT_RANKMATH_IMPORT = OUTPUT_DIR / "theccpress_duplicate_301_rankmath_import_2026-06-11.csv"
 
 SUFFIX_RE = re.compile(r"-(\d+)/?$")
 
@@ -180,6 +181,35 @@ def main() -> None:
         writer.writerow(["source URL", "target URL"])
         writer.writerows(sorted(set(tuple(row) for row in full_import_rows)))
 
+    with OUTPUT_RANKMATH_IMPORT.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=[
+                "id",
+                "source",
+                "matching",
+                "destination",
+                "type",
+                "category",
+                "status",
+                "ignore",
+            ],
+        )
+        writer.writeheader()
+        for source, destination in sorted(set(tuple(row) for row in full_import_rows)):
+            writer.writerow(
+                {
+                    "id": "",
+                    "source": source,
+                    "matching": "",
+                    "destination": destination,
+                    "type": "",
+                    "category": "",
+                    "status": "",
+                    "ignore": "",
+                }
+            )
+
     print(f"decision_rows={len(decision_rows)}")
     print(f"safe_import_rows={len(set(tuple(row) for row in safe_import_rows))}")
     print(f"tier1_import_rows={len(set(tuple(row) for row in tier1_import_rows))}")
@@ -188,6 +218,7 @@ def main() -> None:
     print(OUTPUT_SAFE_IMPORT)
     print(OUTPUT_TIER1_IMPORT)
     print(OUTPUT_FULL_IMPORT)
+    print(OUTPUT_RANKMATH_IMPORT)
 
 
 if __name__ == "__main__":
