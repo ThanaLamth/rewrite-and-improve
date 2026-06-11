@@ -1,0 +1,7 @@
+old_slug,new_slug,status,old_id,new_id,old_count_before,new_count_before,posts_seen,posts_updated,old_count_after,new_count_after,delete_status
+btc,bitcoin,ok,46,47,59,109,59,59,0,117,deleted
+eth,ethereum,ok,49,48,30,65,30,30,0,71,deleted
+ripple,xrp,ok,51,50,63,45,63,63,0,74,deleted
+ripple-xrp,xrp,ok,622,50,33,74,33,33,0,92,deleted
+crypto,cryptocurrency,ok,81,79,117,271,117,117,0,307,deleted
+cryptocurrency-exchange,crypto-exchange,ok,110,213,27,28,27,27,0,49,delete_http_404

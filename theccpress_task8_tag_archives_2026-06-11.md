@@ -107,6 +107,29 @@ Practical handling:
 2. if the weaker tag becomes empty, delete it
 3. keep the archive `noindex` unless there is a deliberate reason to change the tag strategy later
 
+### Phase 2 Status On 2026-06-11
+
+These six merges were executed live via WordPress REST and rechecked by slug lookup afterward.
+
+Verified outcomes:
+
+1. `btc -> bitcoin`
+   `btc` no longer exists, `bitcoin` now has `117` posts
+2. `eth -> ethereum`
+   `eth` no longer exists, `ethereum` now has `71` posts
+3. `ripple -> xrp`
+   `ripple` no longer exists, `xrp` rose to `74` after this step
+4. `ripple-xrp -> xrp`
+   `ripple-xrp` no longer exists, `xrp` now has `92` posts
+5. `crypto -> cryptocurrency`
+   `crypto` no longer exists, `cryptocurrency` now has `307` posts
+6. `cryptocurrency-exchange -> crypto-exchange`
+   `cryptocurrency-exchange` no longer exists, `crypto-exchange` now has `49` posts
+
+Detailed execution log:
+
+- [`/home/qcweb/rewrite-and-improve/theccpress_tag_merge_results_2026-06-11.csv`](/home/qcweb/rewrite-and-improve/theccpress_tag_merge_results_2026-06-11.csv)
+
 ### Phase 3: Review the Small Keep Set
 
 Use the `review_keep` rows as the only candidate set worth preserving as genuine editorial tags.
