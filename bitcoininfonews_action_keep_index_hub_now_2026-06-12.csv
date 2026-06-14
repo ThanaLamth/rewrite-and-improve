@@ -1,0 +1,2 @@
+url,title,word_count,inlinks,live_status,live_final_url,live_robots,batch,recommended_action,why
+https://bitcoininfonews.com/news/,News - BtcInfoNews,840,53580,200,https://bitcoininfonews.com/news/,"follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large",batch_7_utility_and_taxonomy_cleanup,keep_index_now,Functional 200 hub page with canonical to itself; keep indexed as the main news landing page.
